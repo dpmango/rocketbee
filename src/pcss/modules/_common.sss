@@ -1,0 +1,111 @@
+// THIS MIGHT INCLUDE HEADER, FOOTER AND OTHER
+// COMMON ELEMENTS ACROSS THE SITE
+
+// HEADER
+.header
+  position: fixed
+  left: 0
+  width: 100%
+  height: 90px
+  z-index: 9
+  background: white
+  box-shadow: 0px 2px 20px color($fontColor a(10%))
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 90px
+  &__el
+    flex: 0 1 auto
+  &__menu
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    margin-left: auto
+    margin-right: auto
+    li
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+  &__logo
+    margin-right: 20px
+  &__cta
+    margin-left: 20px
+
+
+@media($wide)
+  .header
+    &__menu
+      li
+        margin-right: 17px
+
+@media($desktop)
+  .header
+    &__menu
+      display: none
+    &__cta
+      margin-left: auto
+
+@media($mobile)
+  .header
+    height: 60px
+    &__wrapper
+      height: 60px
+
+.h2-title
+  font-size: 36px
+  line-height: 1.25
+  letter-spacing: -.7px
+  margin-top: 0
+  margin-bottom: 20px
+
+.h3-title
+  font-size: 24px
+  line-height: 40px
+  letter-spacing: -.45px
+  margin-top: 0
+  margin-bottom: 20px
+
+.section-text
+  font-size: 16px
+  line-height: 1.8
+
+
+// NAVI MOBILE
+.navi-mobile
+  background: white
+  position: fixed
+  top: 90px
+  left: 0
+  width: 100%
+  z-index: 8
+  transform: translate3d(0, -100%, 0)
+  pointer-events: none
+  opacity: 0
+  transition: all .4s ease-in
+  &.is-active
+    opacity: 1
+    pointer-events: all
+    transform: translate3d(0, 0%, 0)
+  &__wrapper
+    min-height: 100vh
+  &__list
+    flex: 1
+    margin-top: 40px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    li
+      flex: 1 1 auto
+      font-size: 18px
+      font-weight: 700
+      margin-bottom: 20px
+  .btn--ghost
+    margin-top: 20px
+    margin-bottom: 50px
+
+
+
+// FOOTER
+.footer
+  flex: 0

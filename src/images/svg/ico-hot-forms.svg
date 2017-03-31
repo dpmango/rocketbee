@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="70px" viewBox="0 0 52 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-hot-forms</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICN/features/forms" transform="translate(-30.000000, -21.000000)" fill="#000000">
+            <g id="ico-hot-forms">
+                <g style="mix-blend-mode: multiply;" transform="translate(30.000000, 21.000000)">
+                    <path d="M44,8 L52,8 L52,70 L8,70 L8,62 L0,62 L0,0 L44,0 L44,8 Z M10,62 L10,68 L50,68 L50,10 L44,10 L44,62 L10,62 Z M2,60 L42,60 L42,2 L2,2 L2,60 Z" id="Combined-Shape"></path>
+                    <path d="M10,52 L20,52 L20,44 L10,44 L10,52 Z M8,42 L22,42 L22,54 L8,54 L8,42 Z" id="Rectangle-12-Copy-5"></path>
+                    <polygon id="Path-5" points="8 10 36 10 36 8 8 8"></polygon>
+                    <polygon id="Path-5-Copy" points="8 16 36 16 36 14 8 14"></polygon>
+                    <polygon id="Path-5-Copy-2" points="8 22 28 22 28 20 8 20"></polygon>
+                    <polygon id="Path-5-Copy-3" points="8 28 28 28 28 26 8 26"></polygon>
+                    <polygon id="Path-5-Copy-11" points="26 44 36 44 36 42 26 42"></polygon>
+                    <polygon id="Path-5-Copy-12" points="26 49 36 49 36 47 26 47"></polygon>
+                    <polygon id="Path-5-Copy-13" points="26 54 36 54 36 52 26 52"></polygon>
+                    <polygon id="Path-5-Copy-4" points="2 36 6 36 6 34 2 34"></polygon>
+                    <polygon id="Path-5-Copy-5" points="8 36 12 36 12 34 8 34"></polygon>
+                    <polygon id="Path-5-Copy-6" points="14 36 18 36 18 34 14 34"></polygon>
+                    <polygon id="Path-5-Copy-7" points="20 36 24 36 24 34 20 34"></polygon>
+                    <polygon id="Path-5-Copy-8" points="26 36 30 36 30 34 26 34"></polygon>
+                    <polygon id="Path-5-Copy-9" points="32 36 36 36 36 34 32 34"></polygon>
+                    <polygon id="Path-5-Copy-10" points="38 36 42 36 42 34 38 34"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

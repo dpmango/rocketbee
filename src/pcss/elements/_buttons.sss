@@ -1,0 +1,48 @@
+// buttons
+button
+  outline: none
+
+.btn
+  outline: none
+  border-radius: 3px
+  display: inline-block
+  font-weight: 700
+  position: relative
+  transition: all .4s ease-in-out
+  span
+    transition: all .4s ease-in-out
+    
+  &:focus, &:active
+    outline: none
+
+  &--ghost
+    font-size: 12px
+    &::after
+      display: block
+      content: ' '
+      position: absolute -2px
+      background: linear-gradient(to right, $colorYellow, $colorOrange)
+      border-radius: 3px
+      z-index: 1
+    span
+      display: inline-block
+      position: relative
+      z-index: 2
+      padding: 12px 35px
+      text-transform: uppercase
+      background: white
+    &:hover
+      span
+        background: transparent
+        color: white
+    &--gray
+      span
+        background: #F6F6F6
+
+
+  &--block
+    display: block
+    width: 100%
+
+  &--h40
+    padding: 7px 35px

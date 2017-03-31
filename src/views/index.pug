@@ -1,0 +1,101 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app
+      
+      include shared/header.pug
+      
+      .app__content
+      
+        // INFO::START
+        .info.info--mega-pad
+          .container
+            .row
+              .col.col--4-6 
+                h1.info__title Отправка заказов? Легко!
+                .info__subtitle Доставляйте заказы вашим клиентам любыми удобными для них способами
+                .section-text.info__short Мы помогаем организовать работу с курьерскими службами, пунктами выдачи заказов, постоматами и транспортными компаниями. Мы максимально упростим весь цикл обработки заказа от расчета стоимости до отслеживания вручения клиенту.
+              .col.col--2-6
+                .info__picture.info__picture--absolute
+                  i.ico.ico-info-hero-abstract-1
+                    
+        // HOT LINKS:: START
+        .hot-links
+          .container
+            .row
+              .col.col--auto
+                .hot-links__wrapper
+                  a(href="#").hot-links__card
+                    i.ico.ico-hot-calc
+                    .hot-links__card__title Расчет стоимости <br> отправки
+                  a(href="#").hot-links__card
+                    i.ico.ico-hot-forms
+                    .hot-links__card__title Заполнение бланков <br> и документов
+                  a(href="#").hot-links__card
+                    i.ico.ico-hot-search
+                    .hot-links__card__title Отслеживание <br> отправлений
+                  a(href="#").hot-links__card
+                    i.ico.ico-hot-agregate
+                    .hot-links__card__label СКОРО
+                    .hot-links__card__title Агрегация служб <br> доставки
+                    
+        // NEWS
+        .news.mt70
+          .container
+            .row
+              .col.col--auto
+                h3.h3-title Новости сервиса
+            .news__wrapper
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_1.png")
+                .news__card__content
+                  .news__card__date 10 февраля
+                  .news__card__title Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_2.png")
+                .news__card__content
+                  .news__card__date 28 января
+                  .news__card__title Миграция на RocketAPI v 2.0  
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_3.png")
+                .news__card__content
+                  .news__card__date 15 января
+                  .news__card__title Неполадки устранены, работаем дальше
+                    
+            
+            .row.row--jcc.mt35
+              .col.col--auto.text-center
+                a(href='#').btn.btn--ghost.btn--ghost--gray
+                  span Все новости
+        
+        // CALCULATOR
+        .calculator.mt50
+          .container
+            .calculator__wrapper
+              .calculator__head
+                h2.h2-title Мы учли все нюансы доставки
+                .section-text EMS не берет грузы длиннее 150 см, коробка с роликами не влезет в ячейку постомата, Hermes не даст примерить кеды перед оплатой — мы знаем все нюансы служб доставки и подскажем их вам.
+                
+                .ui-select
+                  label Санкт-Петербург
+                  .ui-select__drop
+                    span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
+                    span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
+                    span(data-select='анкт-Петербург_3') Санкт-Петербург_3
+                    span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
+                  // selected value will be passed to this input 
+                  input(type="hidden" name="" value="")
+                      
+                      
+              .calclualtor__inputs
+              
+              .calculator__results
+                
+                
+
+        include shared/footer.pug

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="61px" viewBox="0 0 64 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-hot-search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICN/features/search" transform="translate(-26.000000, -25.000000)" fill="#000000">
+            <g id="ico-hot-search">
+                <g style="mix-blend-mode: multiply;" transform="translate(26.000000, 25.000000)">
+                    <path d="M2,31 L2,14 L21.1321713,14 C21.2230692,13.3177698 21.3598232,12.6500363 21.5392327,12 L21.5392327,12 L0,12 L0,51 L44,51 L44,43 L62,43 L62,59 L22,59 L22,51 L20,51 L20,61 L64,61 L64,22 L50,22 L49,24 L62,24 L62,41 L44,41 L44,28.6908782 C43.3640348,29.0926165 42.6957771,29.447871 42,29.7518689 L42,49 L2,49 L2,33 L25,33 L25,31 L2,31 Z" id="Combined-Shape"></path>
+                    <path d="M36,30 C43.7319865,30 50,23.7319865 50,16 C50,8.2680135 43.7319865,2 36,2 C28.2680135,2 22,8.2680135 22,16 C22,23.7319865 28.2680135,30 36,30 Z M36,32 C27.163444,32 20,24.836556 20,16 C20,7.163444 27.163444,0 36,0 C44.836556,0 52,7.163444 52,16 C52,24.836556 44.836556,32 36,32 Z M47.0391091,27.9533226 L55.2991422,36.2133558 L56.7133558,34.7991422 L48.4533226,26.5391091 L47.0391091,27.9533226 Z" id="Combined-Shape"></path>
+                    <polygon id="Path-5-Copy-9" points="42 23 44 23 44 9 29 9 29 11 42 11"></polygon>
+                    <polygon id="Path-5-Copy-14" points="36 26 38 26 38 15 26 15 26 17 36 17"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

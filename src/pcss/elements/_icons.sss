@@ -1,0 +1,42 @@
+// ICONS
+
+// all elements are either 2x png or svg
+// Mind the size attributes for png
+
+.ico
+  display: inline-block
+  font-style: normal
+  content: ' '
+  background-repeat: no-repeat
+  background-size: contain
+  vertical-align: middle
+  background-position: center
+
+  &-logo
+    background-image: url(../images/logo.png)
+    size: 215px 50px
+    @media($mobile)
+      size: 135px 31px
+
+  &-info-hero-abstract-1
+    background-image: url(../images/el/heroPic.png)
+    size: 1200px
+
+.hot-links__card
+  .ico
+    size: 110px
+    border-radius: 50%
+    border: 2px dashed black
+
+.ico-hot-calc
+  background-image: svg-load('../../images/svg/ico-hot-calc.svg')
+  background-size: 43px 66px
+.ico-hot-forms
+  background-image: svg-load('../../images/svg/ico-hot-forms.svg')
+  background-size: 50px 70px
+.ico-hot-search
+  background-image: svg-load('../../images/svg/ico-hot-search.svg')
+  background-size: 61px 61px
+.ico-hot-agregate
+  background-image: svg-load('../../images/svg/ico-hot-agregate.svg')
+  background-size: 70px 60px

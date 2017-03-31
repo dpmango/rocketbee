@@ -1,0 +1,115 @@
+// INDEX PAGE
+.info
+  &--mega-pad
+    padding-top: 130px
+  &__title
+    position: relative
+    z-index: 2
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 54px
+    font-weight: 700
+    line-height: 1.1
+    letter-spacing: -.9px
+  &__subtitle
+    position: relative
+    z-index: 2
+    font-size: 14px
+    color: $fontColorA50
+  &__short
+    position: relative
+    z-index: 2
+    margin-top: 20px
+
+  &__picture
+    &--absolute
+      position: absolute
+      top: -840px
+      left: -220px
+      z-index: 1
+
+
+// HOT LINKS
+.hot-links
+  margin-top: 60px
+  position: relative
+  z-index: 2
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    background: white
+    border-radius: 5px
+    box-shadow: 0 20px 40px color(black a(10%))
+    padding: 45px 0
+
+  &__card
+    text-align: center
+    position: relative
+    flex: 1 1 25%
+    border-right: 1px solid #D8D8D8
+    &:last-child
+      border-right: 0
+    &__title
+      margin-top: 15px
+      font-size: 14px
+      font-weight: 700
+      color: $colorBlue
+    &__label
+      display: inline-block
+      background: $colorRed
+      color: white
+      position: absolute
+      top: 103px
+      left: 50%
+      transform: translateX(-50%)
+      padding: 4px 15px
+      font-size: 10px
+      font-weight: 700
+      text-align: center
+
+// NEWS
+.news
+  &__wrapper
+    display: flex
+    justify-content: space-between
+  &__card
+    flex: 0 1 31.5%
+    background: white
+    border-radius: 5px
+    overflow: hidden
+    box-shadow: 0 10px 20px color(black a(5%))
+    &:hover
+      box-shadow: none
+    &__image
+      position: relative
+      height: 175px
+      overflow: hidden
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        max-width: 102%
+    &__content
+      padding: 10px 20px
+
+    &__date
+      font-size: 12px
+      color: $fontColorA50
+
+    &__title
+      font-size: 14px
+      line-height: 1.35
+      margin-top: 10px
+
+// CALC
+.calculator
+  &__wrapper
+    display: flex
+    flex-direction: column
+    background: white
+    border-radius: 5px
+    box-shadow: 0 20px 40px color(black a(10%))
+  &__head
+    padding: 50px 7% 30px 7%
+    text-align: center
