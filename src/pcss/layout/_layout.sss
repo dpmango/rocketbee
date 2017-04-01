@@ -16,7 +16,7 @@ ul
 
 
 body, html
-  background: #F6F6F6
+  background: transparent
   color: $fontColor
   font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
   font-size: 16px
@@ -50,10 +50,16 @@ body, html
   display: flex
   flex-direction: column
   min-height: 100vh
+
+
   &__content
     flex-grow: 1
     // heading pad
     margin-top: 90px
+    padding-bottom: 100px
+    position: relative
+    z-index: 1
+    background: #F6F6F6
   &.lock
     overflow-y: hidden
     max-height: 100vh

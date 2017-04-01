@@ -10,10 +10,17 @@ button
   position: relative
   transition: all .4s ease-in-out
   span
+    text-align: center
     transition: all .4s ease-in-out
-    
+
   &:focus, &:active
     outline: none
+
+  &--primary
+    background: linear-gradient(to right, $colorYellow, $colorOrange)
+    padding: 18px 35px
+    text-transform: uppercase
+    
 
   &--ghost
     font-size: 12px
@@ -28,7 +35,7 @@ button
       display: inline-block
       position: relative
       z-index: 2
-      padding: 12px 35px
+      padding: 18px 35px
       text-transform: uppercase
       background: white
     &:hover
@@ -38,11 +45,19 @@ button
     &--gray
       span
         background: #F6F6F6
+    &--dark
+      &::after
+        background: color(white a(50%))
+      span
+        background: #555
 
 
   &--block
     display: block
     width: 100%
+    span
+      display: block
 
   &--h40
-    padding: 7px 35px
+    span
+      padding: 13px 35px

@@ -12,6 +12,8 @@
   vertical-align: middle
   background-position: center
 
+  // generic
+
   &-logo
     background-image: url(../images/logo.png)
     size: 215px 50px
@@ -22,21 +24,70 @@
     background-image: url(../images/el/heroPic.png)
     size: 1200px
 
+  &-arrow-right
+    background-image: svg-load('../../images/svg/ico-arrow-right.svg')
+    size: 16px 9px
+
+  &-plus-big
+    border-radius: 50%
+    border: 2px solid $fontColorA50
+    background-image: svg-load('../../images/svg/ico-plus-big.svg')
+    size: 60px
+    background-size: 34px 34px
+
+
+  // block related
+
+  &-hot
+    &-calc
+      background-image: svg-load('../../images/svg/ico-hot-calc.svg')
+      background-size: 43px 66px
+    &-forms
+      background-image: svg-load('../../images/svg/ico-hot-forms.svg')
+      background-size: 50px 70px
+    &-search
+      background-image: svg-load('../../images/svg/ico-hot-search.svg')
+      background-size: 61px 61px
+    &-agregate
+      background-image: svg-load('../../images/svg/ico-hot-agregate.svg')
+      background-size: 70px 60px
+
+  &-feature
+    &-calc-btns
+      background-image: svg-load('../../images/svg/ico-calc-btns.svg')
+      size: 76px
+    &-forms-bars
+      background-image: svg-load('../../images/svg/ico-forms-bars.svg')
+      size: 76px 68px
+    &-form-print
+      background-image: svg-load('../../images/svg/ico-form-print.svg')
+      size: 76px
+    &-map-track
+      background-image: svg-load('../../images/svg/ico-map-track.svg')
+      size: 70px
+    &-ico-export
+      background-image: svg-load('../../images/svg/ico-export.svg')
+      size: 65px 65px
+
+  &-footer-social
+    display: inline-block
+    border: 2px dashed color(white a(40%))
+    border-radius: 50%
+    size: 40px
+    &--youtube
+      background-image: svg-load('../../images/svg/ico-youtube.svg')
+      background-size: 18px 12px
+    &--vk
+      background-image: svg-load('../../images/svg/ico-vk.svg')
+      background-size: 20px 11px
+    &--git
+      background-image: svg-load('../../images/svg/ico-git.svg')
+      background-size: 16px
+
+
+// MODIFIRES and CONTEXT SPECIFIC
 .hot-links__card
   .ico
     size: 110px
     border-radius: 50%
     border: 2px dashed black
-
-.ico-hot-calc
-  background-image: svg-load('../../images/svg/ico-hot-calc.svg')
-  background-size: 43px 66px
-.ico-hot-forms
-  background-image: svg-load('../../images/svg/ico-hot-forms.svg')
-  background-size: 50px 70px
-.ico-hot-search
-  background-image: svg-load('../../images/svg/ico-hot-search.svg')
-  background-size: 61px 61px
-.ico-hot-agregate
-  background-image: svg-load('../../images/svg/ico-hot-agregate.svg')
-  background-size: 70px 60px

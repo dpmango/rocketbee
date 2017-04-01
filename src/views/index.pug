@@ -80,22 +80,202 @@ html
               .calculator__head
                 h2.h2-title Мы учли все нюансы доставки
                 .section-text EMS не берет грузы длиннее 150 см, коробка с роликами не влезет в ячейку постомата, Hermes не даст примерить кеды перед оплатой — мы знаем все нюансы служб доставки и подскажем их вам.
-                
-                .ui-select
-                  label Санкт-Петербург
-                  .ui-select__drop
-                    span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
-                    span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
-                    span(data-select='анкт-Петербург_3') Санкт-Петербург_3
-                    span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
-                  // selected value will be passed to this input 
-                  input(type="hidden" name="" value="")
+                .calculator__location-input
+                  .ui-row
+                    .ui-group
+                      label откуда:
+                      .ui-select
+                        label Санкт-Петербург
+                        .ui-select__drop
+                          span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
+                          span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
+                          span(data-select='анкт-Петербург_3') Санкт-Петербург_3
+                          span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
+                        // selected value will be passed to this input 
+                        input(type="hidden" name="" value="")
+                    i.ico.ico-arrow-right.mt45
+                    .ui-group
+                      label откуда:
+                      .ui-select
+                        label Санкт-Петербург
+                        .ui-select__drop
+                          span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
+                          span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
+                          span(data-select='анкт-Петербург_3') Санкт-Петербург_3
+                          span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
+                        // selected value will be passed to this input 
+                        input(type="hidden" name="" value="")
                       
+              .calculator__inputs
+                .row
+                  .col.col--4-6
+                    .ui-group
+                      label вес:
+                      .ui-input.ui-input--short
+                        input(type="text")
+                        .ui-input__placeholder кг
                       
-              .calclualtor__inputs
+                  .col.col--2-6
               
               .calculator__results
                 
-                
+        
+        // FEATURES
+        .features.mt80
+          .container
+            .text-center
+              h2.h2-title Бесплатные функции
+              .section-text Всем интернет-магазинам мы предоставляем возможность автоматизировать отправку заказов. В личном кабинете доступны:
+            
+            .row.row--wrap
+              .col.col--2-6
+                .features__card
+                  .blot.blot--one
+                    i.ico.ico-feature-calc-btns
+                  .feature__card__title Расчет стоимости отправки
+              .col.col--2-6
+                .features__card
+                  .blot.blot--two
+                    i.ico.ico-feature-forms-bars
+                  .feature__card__title Шаблоны отправлений для быстрой подготовки документов
+              .col.col--2-6
+                .features__card
+                  .blot.blot--one
+                    i.ico.ico-feature-form-print
+                  .feature__card__title Формирование документов для отправки через любые ТК
+              // next row - wrapped
+              .col.col--2-6
+                .features__card
+                  .blot.blot--three
+                    i.ico.ico-feature-map-track
+                  .feature__card__title Отслеживание отправлений
+              .col.col--2-6
+                .features__card
+                  .blot.blot--three
+                    i.ico.ico-feature-ico-export
+                  .feature__card__title Шаблоны отправлений для быстрой подготовки документов
+              .col.col--2-6
+                .features__card.features__card--request
+                  i.ico.ico-plus-big
+                  .featires__card__title Мы команда молодых профессионалов и у нас можно <a href="#">попросить фичу</a>
+                  
+        // API
+        .api.mt80
+          .container
+            .text-center
+              h2.h2-title Получите больше функций через API
+              .section-text Доверьте нам то, что не хотите делать сами. От рассчета стоимости доставки на вашем сайте до печати полного комплекта документов. Выбирайте и подключайте сами необходимые вам функции
+              
+            .row.row--stetch-child
+              // card
+              .col.col--2-6
+                .api__card
+                  .api__card__image
+                    img(src="images/apiCard_1.png")
+                    .api__card__tags
+                      .api__card__tag API
+                      .api__card__tag.api__card__tag--blue виджет
+                  .api__card__content
+                    .api__card__title Расчет стоимости <br> отправки
+                    .api__card__description Клиенты вашего интернет магазина смогут узнавать стоимость доставки во время оформления заказ с помощью настраиваемого виджета или непосредственно на сайте c подключенным API
+                    .api__card__price 2 Р/запрос
+                    a(href="#").btn.btn--ghost.btn--block.btn--h40 
+                      span Регистрация
+                      
+              // card
+              .col.col--2-6
+                .api__card
+                  .api__card__image
+                    img(src="images/apiCard_2.png")
+                    .api__card__tags
+                      .api__card__tag API
+                  .api__card__content
+                    .api__card__title Подготовка документов для транспортных компаний
+                    .api__card__description
+                      ul.list-line
+                        li проверку корректности вводимых адресов и индексов
+                        li формирование документов для отправки через любые ТК
 
-        include shared/footer.pug
+                    .api__card__price 8 Р/заказ
+                    a(href="#").btn.btn--ghost.btn--block.btn--h40 
+                      span Регистрация
+              
+              // card
+              .col.col--2-6
+                .api__card
+                  .api__card__image
+                    img(src="images/apiCard_3.png")
+                    .api__card__tags
+                      .api__card__tag API
+                  .api__card__content
+                    .api__card__title Полная автоматизация логистических процессов
+                    .api__card__description
+                      ul.list-line
+                        li проверку корректности вводимых адресов и индексов
+                        li забор отправлений
+                        li печать документов для отправки через любые ТК
+                        li физическая передача заказов в ТК
+                        li работа как по собственному, так и по единому договору с ТК
+
+
+                    .api__card__price 20 Р/заказ
+                    a(href="#").btn.btn--ghost.btn--block.btn--h40 
+                      span Регистрация
+            
+            .text-center.mt30
+              a(href="#").btn.btn--primary СМОТРЕТЬ ВСЕ ФУНКЦИИ
+            
+                      
+        // TESTIMONIALS
+        .testimonials.mt80
+          .container
+            .text-center
+              h2.h2-title Отзывы клиентов сервиса
+              .section-text Автоматизируйте свой отдел доставки, оптимизируйте расходы на логистику, вздохните спокойно и спите крепко. Всё остальное мы берем на себя.
+          
+          .owl-carousel#owlTestimonials
+            // card
+            .testimonials__nav-item
+              .testimonials__card
+                .testimonials__card__image
+                  img(src="images/testimonial.png")
+                .testimonials__card__content
+                  .testimonials__card__text Две вещи, которые меня интересуют в первую очередь на сайтах подобных сервисов — это география доставки (мы карту страны вобщем и в баннер можем сунуть), обычно такие сервисы работают только из Москвы и кто уже юзает этот сервис и отзывы людей.
+                  .testimonials__card__author Александра Крестовоздвижническая, <span>Madrobot.ru</span>
+            // card
+            .testimonials__nav-item
+              .testimonials__card
+                .testimonials__card__image
+                  img(src="images/testimonial.png")
+                .testimonials__card__content
+                  .testimonials__card__text Две вещи, которые меня интересуют в первую очередь на сайтах подобных сервисов — это география доставки (мы карту страны вобщем и в баннер можем сунуть), обычно такие сервисы работают только из Москвы и кто уже юзает этот сервис и отзывы людей.
+                  .testimonials__card__author Александра Крестовоздвижническая, <span>Madrobot.ru</span>
+            // card
+            .testimonials__nav-item
+              .testimonials__card
+                .testimonials__card__image
+                  img(src="images/testimonial.png")
+                .testimonials__card__content
+                  .testimonials__card__text Две вещи, которые меня интересуют в первую очередь на сайтах подобных сервисов — это география доставки (мы карту страны вобщем и в баннер можем сунуть), обычно такие сервисы работают только из Москвы и кто уже юзает этот сервис и отзывы людей.
+                  .testimonials__card__author Александра Крестовоздвижническая, <span>Madrobot.ru</span>
+                                    
+                                                                
+        // CLIENTS
+        .clients.mt80
+          .container
+            .text-center
+              h2.h2-title Кто уже подключен
+              .section-text Автоматизируйте свой отдел доставки, оптимизируйте расходы на логистику, вздохните спокойно и спите крепко. Всё остальное мы берем на себя.
+                
+            .row.row--aic.mt45
+              .col.col--1-4
+                img(src="images/clientLogo_1.png")
+              .col.col--1-4
+                img(src="images/clientLogo_2.png")
+              .col.col--1-4
+                img(src="images/clientLogo_3.png")
+              .col.col--1-4
+                img(src="images/clientLogo_4.png")
+                
+                                              
+      include shared/footer.pug

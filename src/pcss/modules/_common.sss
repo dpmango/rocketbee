@@ -15,6 +15,9 @@
     justify-content: space-between
     align-items: center
     height: 90px
+    max-width: 1440px
+    margin-left: auto
+    margin-right: auto
   &__el
     flex: 0 1 auto
   &__menu
@@ -27,6 +30,26 @@
       margin-right: 40px
       &:last-child
         margin-right: 0
+      a
+        position: relative
+        overflow: hidden
+        &:after
+          content: ''
+          position: absolute
+          height: 3px
+          left: 50%
+          right: 50%
+          transition: .3s all
+          opacity: 0
+          bottom: -3px
+          background-color: $colorOrageSecondary
+        &:hover
+          &:after
+            left: 0
+            right: 0
+            opacity: 1
+
+
   &__logo
     margin-right: 20px
   &__cta
@@ -108,4 +131,133 @@
 
 // FOOTER
 .footer
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  z-index: -2
   flex: 0
+  background: #555555
+  padding: 40px 0
+  color: color(white a(50%))
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid color(white a(10%))
+    padding-bottom: 20px
+  &__el
+    flex: 0 1 auto
+
+  &__copy
+    text-transform: uppercase
+    font-weight: 700
+    span
+      display: inline-block
+      margin-left: 5px
+      font-size: 12px
+      font-weight: 400
+      color: color(white a(30%))
+  &__menu
+    flex: 1
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    font-size: 14px
+    color: white
+    a
+      display: inline-block
+      margin-right: 30px
+
+  &__bottom
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 20px
+  &__company
+    font-size: 14px
+  &__socials
+    margin-left: auto
+    margin-right: auto
+    a
+      display: inline-block
+      margin-right: 8px
+  &__support
+    font-size: 14px
+    a
+      color: white
+
+
+
+
+
+
+
+// ELEMENTS
+
+
+.blot
+  display: inline-block
+  position: relative
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center
+  display: flex
+  margin-left: auto
+  margin-right: auto
+  justify-content: center
+  align-items: center
+  &--one
+    background-image: url('../images/el/blot-1.png')
+    size: 145px 131px
+    .ico
+      margin-left: 10px
+      margin-top: 5px
+  &--two
+    background-image: url('../images/el/blot-2.png')
+    size: 127px 131px
+    .ico
+      margin-bottom: 7px
+  &--three
+    background-image: url('../images/el/blot-3.png')
+    size: 117px 131px
+
+
+.list-line
+  li
+    display: block
+    margin-bottom: 10px
+    position: relative
+
+    padding-left: 20px
+    &::before
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 10px
+      left: 0
+      width: 10px
+      height: 1px
+      background: $fontColorA50
+
+
+// OWL
+.owl-next, .owl-prev
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  size: 50px
+  background: white svg-load('../../images/svg/owl-arrow.svg') no-repeat center
+  background-size: 10px 20px
+  border-radius: 50%
+  box-shadow: 0 20px 40px color(black a(10%))
+  font-size: 0
+
+.owl-next
+  right: 0
+  transform: rotate(180deg)
+
+.owl-prev
+  left: 0
