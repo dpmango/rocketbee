@@ -986,7 +986,7 @@ body, html {
     background: transparent;
     color: #222222;
     font-size: 16px;
-    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;/* -webkit-font-smoothing: antialiased *//* -moz-osx-font-smoothing: grayscale */
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;/* not supported by Noto sans ??? *//* -webkit-font-smoothing: antialiased *//* -moz-osx-font-smoothing: grayscale */
 }
 .container {
     margin-right: auto;
@@ -2441,6 +2441,7 @@ button {
 /* FOOTER */
 .footer {
     position: fixed;
+    right: 0;
     bottom: 0;
     left: 0;
     z-index: -2;
@@ -2448,11 +2449,14 @@ button {
         -ms-flex: 0;
             flex: 0 1 0%;
     padding: 40px 0;
-    width: 100%;
     background: #555555;
     color: #ffffff;
     color: rgba(255, 255, 255, 0.5);
     -webkit-box-flex: 0;
+}
+.footer .container {
+    position: relative;
+    z-index: -1;
 }
 .footer__top {
     display: -webkit-box;
@@ -2938,6 +2942,7 @@ button {
     position: relative;
     margin-top: 30px;
     margin-right: auto;
+    margin-bottom: 60px;
     margin-left: auto;
     max-width: 620px;
 }
@@ -2987,6 +2992,7 @@ button {
 }
 .clients img {
     max-width: 100%;
+    mix-blend-mode: multiply;
 }
 /* SOME INNER PAGES CONTENT */
 
