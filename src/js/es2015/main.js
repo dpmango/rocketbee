@@ -109,8 +109,7 @@ $(document).ready( function() {
     var footerContainerHeight = $('.footer .container').height();
     var paddingSize = 80;
 
-    $('.footer').css('height', footerContainerHeight + paddingSize);
-    $('.app__content').css('margin-bottom',  footerContainerHeight + paddingSize)
+    $('body').css('margin-bottom',  footerContainerHeight + paddingSize)
   };
 
   revealFooter();
