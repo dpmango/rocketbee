@@ -30,4 +30,4 @@ __Production__
 
 
 ### Recend push command
-gulp build && git add . && git commit -m "responsive pt2 - prefinal" && git push && git subtree --prefix dist push origin gh-pages
+gulp build && git add . && git commit -m "testimonials responsive hotfix - prefinal" && git push && git subtree --prefix dist push origin gh-pages

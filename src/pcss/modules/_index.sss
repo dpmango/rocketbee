@@ -578,6 +578,10 @@
 
 @media($tablet)
   .testimonials
+    .owl-dots
+      margin-top: -45px
+    &__nav-item
+      width: auto
     &__card
       padding-top: 30px
       &__image
@@ -590,27 +594,20 @@
         padding-top: 60px
 
 
-@media($tablet)
-  .testimonials
-    .owl-dots
-      margin-top: -45px
-    &__card
-      &__content
-        padding: 20px
-        padding-top: 55px
-
 @media($mobile)
   .testimonials
     &__nav-item
       margin-left: 20px
       margin-right: 20px
-      width: auto
     &__card
       &__text
         font-size: 12px
         line-height: 1.7
       &__author
         font-size: 12px
+      &__content
+        padding: 20px
+        padding-top: 55px
 
 // CLIENTS
 .clients
