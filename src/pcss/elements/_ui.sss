@@ -235,15 +235,69 @@
       cursor: pointer
 
 
-// NOT SURE WHAT IS THAT
+// UTILITIES
 
 .ui-group
   text-align: left
+  position: relative
   > label
     display: inline-block
     font-size: 12px
     line-height: 1.2
     padding-bottom: 6px
+  &__validation
+    display: inline-block
+    position: relative
+    margin-left: 10px
+    margin-top: -5px
+    background: white
+    padding: 10px
+    border-radius: 5px
+    box-shadow: 0 2px 6px color(black a(20%))
+    font-size: 12px
+    &::before
+      display: block
+      content: ' '
+      size: 12px
+      background: white
+      transform: rotate(45deg) translateY(-50%)
+      position: absolute
+      top: 50%
+      left: -6px
+
+.ui-input-collection
+  font-size: 0
+  .ui-input
+    display: inline-block
+    margin-left: -2px
+    input
+      border-radius: 0
+      position: relative
+    &::after
+      display: block
+      content: ' '
+      size: 10px
+      background: white svg-load('../../images/svg/input-collection-cross.svg') no-repeat center
+      padding: 7px 2px
+      position: absolute
+      z-index: 3
+      top: 55%
+      right: -5px
+      transform: translateY(-50%)
+    &:first-child
+      input
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+    &:last-child
+      input
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+      &::after
+        display: none
+
+
+
+// NOT SURE WHAT IS THAT
 
 .ui-caption
   font-size: 15px
@@ -257,11 +311,20 @@
   .ui-group
     flex: 1 1 50%
     display: inline-block
+    label
+      display: block
   .ico-arrow-right
     margin-left: 10px
     margin-right: 10px
   &--inline
     justify-content: flex-start
+    .ui-group
+      flex: 0 1 auto
+      margin-right: 7%
+      &:last-child
+        margin-right: 0
+    .ui-input-collection
+      display: inline-block
 
 
 .ui-number

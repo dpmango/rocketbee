@@ -84,7 +84,7 @@
           </div>
         </div>
         <!-- NEWS-->
-        <div class="news mt70">
+        <div class="news section-m-t">
           <div class="container">
             <div class="row">
               <div class="col col--auto">
@@ -113,7 +113,7 @@
           </div>
         </div>
         <!-- CALCULATOR-->
-        <div class="calculator mt50">
+        <div class="calculator section-m-t section-m-t--smaller">
           <div class="container">
             <div class="calculator__wrapper">
               <div class="calculator__head">
@@ -155,10 +155,19 @@
                       </div>
                       <div class="ui-group">
                         <label>габариты:</label>
-                        <div class="ui-input ui-input--short">
-                          <input type="text">
-                          <div class="ui-input__placeholder">см</div>
+                        <div class="ui-input-collection">
+                          <div class="ui-input ui-input--short">
+                            <input type="text" value="1500">
+                          </div>
+                          <div class="ui-input ui-input--short">
+                            <input type="text" value="1500">
+                          </div>
+                          <div class="ui-input ui-input--short">
+                            <input type="text" value="1500">
+                          </div>
                         </div>
+                        <div class="ui-input__placeholder">см</div>
+                        <div class="ui-group__validation"><i class="ico ico-warn"></i><span>негабаритный груз</span></div>
                       </div>
                     </div>
                     <!-- checkboxes-->
@@ -208,6 +217,11 @@
               <div class="calculator__results">
                 <div class="calculator__results__head">
                   <h3 class="h3-title">Вот, что нам удалось найти:</h3>
+                  <div class="calculator__results__filters"><span>сортировка по:</span>
+                    <div class="calculator__results__filter active" data-filter="price">цене</div>
+                    <div class="calculator__results__filter" data-filter="time">сроку</div>
+                    <div class="calculator__results__filter" data-filter="rate">рейтингу</div>
+                  </div>
                 </div>
                 <div class="calculator__results__row">
                   <!-- card-->
@@ -268,7 +282,7 @@
           </div>
         </div>
         <!-- FEATURES-->
-        <div class="features mt80">
+        <div class="features section-m-t">
           <div class="container">
             <div class="text-center">
               <h2 class="h2-title">Бесплатные функции</h2>
@@ -315,7 +329,7 @@
           </div>
         </div>
         <!-- API-->
-        <div class="api mt80">
+        <div class="api section-m-t">
           <div class="container">
             <div class="text-center">
               <h2 class="h2-title">Получите больше функций через API</h2>
@@ -386,7 +400,7 @@
           </div>
         </div>
         <!-- TESTIMONIALS-->
-        <div class="testimonials mt80">
+        <div class="testimonials section-m-t">
           <div class="container">
             <div class="text-center">
               <h2 class="h2-title">Отзывы клиентов сервиса</h2>

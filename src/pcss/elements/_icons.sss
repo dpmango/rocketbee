@@ -40,21 +40,26 @@
     size: 12px 16px
     transition: all .3s ease
 
+  &-warn
+    background-image: svg-load('../../images/svg/ico-warn.svg')
+    size: 20px 18px
+
+
 
   // block related
 
   &-hot
     &-calc
-      background-image: svg-load('../../images/svg/ico-hot-calc.svg')
+      background-image: svg-load('../../images/svg/ico-hot-calc.svg', fill="#000")
       background-size: 43px 66px
     &-forms
-      background-image: svg-load('../../images/svg/ico-hot-forms.svg')
+      background-image: svg-load('../../images/svg/ico-hot-forms.svg', fill="#000")
       background-size: 50px 70px
     &-search
-      background-image: svg-load('../../images/svg/ico-hot-search.svg')
+      background-image: svg-load('../../images/svg/ico-hot-search.svg', fill="#000")
       background-size: 61px 61px
     &-agregate
-      background-image: svg-load('../../images/svg/ico-hot-agregate.svg')
+      background-image: svg-load('../../images/svg/ico-hot-agregate.svg', fill="#000")
       background-size: 70px 60px
 
   &-feature
@@ -111,3 +116,4 @@
     size: 110px
     border-radius: 50%
     border: 2px dashed black
+    transition: all .3s ease

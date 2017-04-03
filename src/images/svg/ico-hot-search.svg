@@ -4,8 +4,8 @@
     <title>ico-hot-search</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ICN/features/search" transform="translate(-26.000000, -25.000000)" fill="#000000">
+    <g id="Symbols" stroke="none" stroke-width="1"  fill-rule="evenodd">
+        <g id="ICN/features/search" transform="translate(-26.000000, -25.000000)">
             <g id="ico-hot-search">
                 <g style="mix-blend-mode: multiply;" transform="translate(26.000000, 25.000000)">
                     <path d="M2,31 L2,14 L21.1321713,14 C21.2230692,13.3177698 21.3598232,12.6500363 21.5392327,12 L21.5392327,12 L0,12 L0,51 L44,51 L44,43 L62,43 L62,59 L22,59 L22,51 L20,51 L20,61 L64,61 L64,22 L50,22 L49,24 L62,24 L62,41 L44,41 L44,28.6908782 C43.3640348,29.0926165 42.6957771,29.447871 42,29.7518689 L42,49 L2,49 L2,33 L25,33 L25,31 L2,31 Z" id="Combined-Shape"></path>

@@ -80,6 +80,13 @@
     position: relative
     flex: 1 1 25%
     position: relative
+    &:hover
+      .ico
+        background-color: color($colorOrageSecondary a(99%))
+        border-color: white
+        transform: scale(.9)
+      .hot-links__card__title
+        color: $colorBlueHover
     &::after
       display: block
       content: ' '
@@ -97,6 +104,7 @@
       font-size: 14px
       font-weight: 700
       color: $colorBlue
+      transition: color .3s ease
     &__label
       display: inline-block
       background: $colorRed
@@ -109,6 +117,38 @@
       font-size: 10px
       font-weight: 700
       text-align: center
+
+@media($desktop)
+  .hot-links
+    &__wrapper
+      flex-wrap: wrap
+
+@media($tablet)
+  .hot-links
+    margin-top: 30px
+    &__wrapper
+      padding: 15px 0 5px 0
+    &__card
+      flex: 1 1 50%
+      margin-bottom: 20px
+      .ico
+        transform: scale(.8)
+      &:hover
+        .ico
+          transform: scale(.7)
+      &::after
+        display: none
+      &__title
+        margin-top: 5px
+      &__label
+        top: 93px
+
+@media($mobile)
+  .hot-links
+    &__card
+      &__title
+        font-size: 12px
+        font-weight: 400
 
 // NEWS
 .news
@@ -207,6 +247,41 @@
       display: flex
       justify-content: space-between
       align-items: center
+      margin-bottom: 20px
+      .h3-title
+        margin-bottom: 0
+
+    &__filters
+      display: inline-block
+      font-size: 14px
+      cursor: pointer
+    &__filter
+      display: inline-block
+      color: $colorBlue
+      position: relative
+      padding: 5px 10px
+      transition: color .3s ease
+      &:last-child
+        padding-right: 0
+      &:after
+        content: ''
+        position: absolute
+        height: 3px
+        left: 50%
+        right: 50%
+        transition: .3s all
+        opacity: 0
+        bottom: -3px
+        background-color: $colorOrageSecondary
+      &:hover
+        color: $colorBlueHover
+      &.active
+        color: $fontColor
+        &:after
+          left: 0px
+          right: 0px
+          opacity: 1
+
     &__row
       display: flex
       justify-content: space-between

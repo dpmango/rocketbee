@@ -42,7 +42,7 @@ html
                     .hot-links__card__title Агрегация служб <br> доставки
                     
         // NEWS
-        .news.mt70
+        .news.section-m-t
           .container
             .row
               .col.col--auto
@@ -74,7 +74,7 @@ html
                   span Все новости
         
         // CALCULATOR
-        .calculator.mt50
+        .calculator.section-m-t.section-m-t--smaller
           .container
             .calculator__wrapper
               .calculator__head
@@ -117,9 +117,17 @@ html
                           .ui-input__placeholder кг
                       .ui-group
                         label габариты:
-                        .ui-input.ui-input--short
-                          input(type="text")
-                          .ui-input__placeholder см
+                        .ui-input-collection
+                          .ui-input.ui-input--short
+                            input(type="text" value='1500')
+                          .ui-input.ui-input--short
+                            input(type="text" value='1500')
+                          .ui-input.ui-input--short
+                            input(type="text" value='1500')      
+                        .ui-input__placeholder см
+                        .ui-group__validation
+                          i.ico.ico-warn
+                          span негабаритный груз
                           
                     // checkboxes
                     .ui-group
@@ -178,6 +186,11 @@ html
               .calculator__results
                 .calculator__results__head
                   h3.h3-title Вот, что нам удалось найти:
+                  .calculator__results__filters
+                    span сортировка по:
+                    .calculator__results__filter(data-filter="price").active цене
+                    .calculator__results__filter(data-filter="time") сроку
+                    .calculator__results__filter(data-filter="rate") рейтингу
                 
                 .calculator__results__row
                   // card
@@ -254,7 +267,7 @@ html
                         span ПОДГОТОВИТЬ ДОКУМЕНТЫ
                 
         // FEATURES
-        .features.mt80
+        .features.section-m-t
           .container
             .text-center
               h2.h2-title Бесплатные функции
@@ -293,7 +306,7 @@ html
                   .featires__card__title Мы команда молодых профессионалов и у нас можно <a href="#">попросить фичу</a>
                   
         // API
-        .api.mt80
+        .api.section-m-t
           .container
             .text-center
               h2.h2-title Получите больше функций через API
@@ -360,7 +373,7 @@ html
                 span СМОТРЕТЬ ВСЕ ФУНКЦИИ
                                   
         // TESTIMONIALS
-        .testimonials.mt80
+        .testimonials.section-m-t
           .container
             .text-center
               h2.h2-title Отзывы клиентов сервиса
