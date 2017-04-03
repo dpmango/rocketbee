@@ -16,7 +16,6 @@ var colorFunction = require("postcss-color-function");
 var mqpacker      = require('css-mqpacker');
 var pixrem        = require('pixrem');
 var rgba_fallback = require('postcss-color-rgba-fallback');
-var opacity       = require('postcss-opacity');
 var pseudoel      = require('postcss-pseudoelements');
 var vmin          = require('postcss-vmin');
 var will_change   = require('postcss-will-change');
@@ -74,7 +73,6 @@ var processors = [
     pixrem(),
     will_change(),
     rgba_fallback(),
-    opacity(),
     pseudoel(),
     vmin(),
     flexbugs()
@@ -82,7 +80,7 @@ var processors = [
 ];
 
 gulp.task('postcss', function() {
-  return gulp.src('./src/pcss/style.sss')
+  return gulp.src('./src/pcss/*.sss')
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors, { parser: sugarss }) )
       .pipe(rename({ extname: '.css' }))
@@ -132,7 +130,7 @@ gulp.task('useref', function(){
 });
 
 gulp.task('cssnano', function () {
-  return gulp.src('./dist/css/styles.css')
+  return gulp.src('./dist/css/*.css')
     .pipe( postcss([cssnano({
       autoprefixer: false,
       reduceIdents: {
@@ -143,7 +141,7 @@ gulp.task('cssnano', function () {
       }
     })]) )
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('dist/css'));;
+    .pipe(gulp.dest('dist/css/min'));;
 });
 
 gulp.task('images', function(){

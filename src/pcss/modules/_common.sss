@@ -5,8 +5,9 @@
 .header
   position: fixed
   left: 0
-  width: 100%
+  right: 0
   height: 90px
+  min-width: 320px
   z-index: 9
   background: white
   box-shadow: 0px 2px 20px color($fontColor a(10%))
@@ -14,18 +15,23 @@
     display: flex
     justify-content: space-between
     align-items: center
+    width: 100%
+    min-width: 0
     height: 90px
     max-width: 1440px
     margin-left: auto
     margin-right: auto
-  &__el
-    flex: 0 1 auto
   &__menu
+    flex: 0 1 auto
+    max-width: 100%
+    min-width: 0
     font-size: 14px
     font-weight: 700
     text-transform: uppercase
-    margin-left: auto
-    margin-right: auto
+    ul
+      padding: 20px 0
+      white-space: nowrap
+      overflow: auto
     li
       margin-right: 40px
       &:last-child
@@ -53,7 +59,20 @@
   &__logo
     margin-right: 20px
   &__cta
+    flex: 0 0 auto
     margin-left: 20px
+    position: relative
+    &::after
+      display: block
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      z-index: 2
+      left: -53px
+      width: 50px
+      background: linear-gradient(to right, color(white a(0%)), color(white a(75%)) )
+
 
 
 @media($wide)
@@ -62,18 +81,38 @@
       li
         margin-right: 17px
 
-@media($desktop)
+@media(width <= 1100px)
+  .header
+    &__cta
+      .btn
+        span
+          padding: 13px 17px
+
+
+@media($tablet)
   .header
     &__menu
       display: none
     &__cta
       margin-left: auto
 
+
 @media($mobile)
   .header
     height: 60px
     &__wrapper
       height: 60px
+    &__cta
+      .btn
+        span
+          font-size: 11px
+          padding: 10px 17px
+
+@media($mobile-s)
+  .header
+    &__cta
+      display: none
+
 
 .h2-title
   font-size: 36px
@@ -112,21 +151,37 @@
     transform: translate3d(0, 0%, 0)
   &__wrapper
     min-height: 100vh
-  &__list
-    flex: 1
-    margin-top: 40px
+    display: -webkit-flex
+    display: -ms-flex
     display: flex
     flex-direction: column
-    justify-content: space-between
+    align-items: flex-start
+  &__list
+    margin-top: 40px
     li
+      display: block
       flex: 1 1 auto
       font-size: 18px
       font-weight: 700
-      margin-bottom: 20px
+      a
+        display: inline-block
+        padding: 10px 0
+        transition: color .3s ease
+        &:hover
+          color: $colorOrageSecondary
+  &__cta
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    margin-bottom: 50px
   .btn--ghost
     margin-top: 20px
     margin-bottom: 50px
 
+@media($mobile)
+  .navi-mobile
+    top: 60px
 
 
 // FOOTER
@@ -187,6 +242,11 @@
     a
       display: inline-block
       margin-right: 8px
+      .ico
+        transition: all .4s ease-in-out
+        &:hover
+          background-color: color(white a(50%))
+          border-style: solid
   &__support
     font-size: 14px
     a
@@ -261,6 +321,7 @@
 .owl-next
   right: 0
   transform: rotate(180deg)
+  margin-top: -25px
 
 .owl-prev
   left: 0

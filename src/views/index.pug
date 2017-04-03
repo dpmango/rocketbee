@@ -12,7 +12,7 @@ html
         // INFO::START
         .info.info--mega-pad
           .container
-            .row
+            .row.row--column-rev--tablet
               .col.col--4-6 
                 h1.info__title Отправка заказов? Легко!
                 .info__subtitle Доставляйте заказы вашим клиентам любыми удобными для них способами
@@ -89,7 +89,7 @@ html
                         .ui-select__drop
                           span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
                           span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
-                          span(data-select='анкт-Петербург_3') Санкт-Петербург_3
+                          span(data-select='Санкт-Петербург_3') Санкт-Петербург_3
                           span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
                         // selected value will be passed to this input 
                         input(type="hidden" name="" value="")
@@ -101,23 +101,157 @@ html
                         .ui-select__drop
                           span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
                           span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
-                          span(data-select='анкт-Петербург_3') Санкт-Петербург_3
+                          span(data-select='Санкт-Петербург_3') Санкт-Петербург_3
                           span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
                         // selected value will be passed to this input 
                         input(type="hidden" name="" value="")
-                      
+                          
               .calculator__inputs
                 .row
                   .col.col--4-6
+                    .ui-row.ui-row--inline
+                      .ui-group
+                        label вес:
+                        .ui-input.ui-input--short
+                          input(type="text")
+                          .ui-input__placeholder кг
+                      .ui-group
+                        label габариты:
+                        .ui-input.ui-input--short
+                          input(type="text")
+                          .ui-input__placeholder см
+                          
+                    // checkboxes
                     .ui-group
-                      label вес:
-                      .ui-input.ui-input--short
-                        input(type="text")
-                        .ui-input__placeholder кг
-                      
+                      label дополнительные опции:
+                      .row
+                        .col.col--3-6
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_1")
+                            label(for="checkbox_1") 
+                              span Возможность примерки
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_2" checked)
+                            label(for="checkbox_2") 
+                              span Наложенный платеж
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_3")
+                            label(for="checkbox_3") 
+                              span Дороже 15 тыс. рублей
+
+                        .col.col--3-6
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_4" checked)
+                            label(for="checkbox_4") 
+                              span Доставка до дверей
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_5" checked)
+                            label(for="checkbox_5") 
+                              span Оплата банковской картой
+
                   .col.col--2-6
+                    .ui-group
+                      label шаблоны отправлений:
+                    .calculator__inputs__templates
+                      a(href="#")
+                        i.ico.ico-template-snowboard
+                        span Крупный спорт-инвентарь
+                      a(href="#")
+                        i.ico.ico-template-shoe
+                        span Одежда и обувь
+                      a(href="#")
+                        i.ico.ico-template-smartphone
+                        span Электроника
+                      a(href="#").calculator__inputs__templates__new
+                        i.ico.ico-template-plus
+                        span Создать свой шаблон
+                      
+              // calc cta
+              .calculator__cta
+                a(href='#').btn.btn--primary.btn--h40 
+                  span Рассчитать
+                .calculator__cta__clear
+                  span или
+                  a(href="#") очистить
               
+              // calc results
               .calculator__results
+                .calculator__results__head
+                  h3.h3-title Вот, что нам удалось найти:
+                
+                .calculator__results__row
+                  // card
+                  .calculator__results__card
+                    .calculator__results__card__image
+                      img(src="images/resultsCard_ruspost.png")
+                    .calculator__results__card__title ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА
+                    
+                    .calculator__results__card__content
+                      .calculator__results__card__price
+                        .calculator__results__card__price__mainprice 150 Р
+                        .calculator__results__card__price__deliverable 2—5 дней
+                      .calculator__results__card__features
+                        span + Наложенный платеж
+                        span + Дороже 15 тыс. рублей
+                      .calculator__results__card__points
+                        i.ico.ico-location
+                        span 256 пунктов выдачи
+                      a(href='#').btn.btn--ghost.btn--block 
+                        span ПОДГОТОВИТЬ ДОКУМЕНТЫ
+                  // card
+                  .calculator__results__card
+                    .calculator__results__card__image
+                      img(src="images/resultsCard_ems.png")
+                    .calculator__results__card__title ДОСТАВКА МАЛОГАБАРИТНЫХ ГРУЗОВ
+                    
+                    .calculator__results__card__content
+                      .calculator__results__card__price
+                        .calculator__results__card__price__mainprice 250 Р
+                        .calculator__results__card__price__deliverable 1—2 дней
+                      .calculator__results__card__features
+                        span + Наложенный платеж
+                        span + Дороже 15 тыс. рублей
+                      .calculator__results__card__points
+                        i.ico.ico-location
+                        span 256 пунктов выдачи
+                      a(href='#').btn.btn--ghost.btn--block
+                        span ПОДГОТОВИТЬ ДОКУМЕНТЫ
+                  // card
+                  .calculator__results__card
+                    .calculator__results__card__image
+                      img(src="images/resultsCard_inpost.png")
+                    .calculator__results__card__title ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА
+                    
+                    .calculator__results__card__content
+                      .calculator__results__card__price
+                        .calculator__results__card__price__mainprice 220 Р
+                        .calculator__results__card__price__deliverable 3 дня
+                      .calculator__results__card__features
+                        span + Наложенный платеж
+                        span + Дороже 15 тыс. рублей
+                      .calculator__results__card__points
+                        i.ico.ico-location
+                        span 256 пунктов выдачи
+                      a(href='#').btn.btn--ghost.btn--block
+                        span ПОДГОТОВИТЬ ДОКУМЕНТЫ
+                  // card
+                  .calculator__results__card
+                    .calculator__results__card__image
+                      img(src="images/resultsCard_dpd.png")
+                    .calculator__results__card__title ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА
+                    
+                    .calculator__results__card__content
+                      .calculator__results__card__price
+                        .calculator__results__card__price__mainprice 230 Р
+                        .calculator__results__card__price__deliverable 5 дней
+                      .calculator__results__card__features
+                        span + Наложенный платеж
+                        span + Дороже 15 тыс. рублей
+                      .calculator__results__card__points
+                        i.ico.ico-location
+                        span 256 пунктов выдачи
+                      a(href='#' disabled).btn.btn--ghost.btn--block
+                        span ПОДГОТОВИТЬ ДОКУМЕНТЫ
                 
         // FEATURES
         .features.mt80
@@ -222,7 +356,8 @@ html
                       span Регистрация
             
             .text-center.mt30
-              a(href="#").btn.btn--primary СМОТРЕТЬ ВСЕ ФУНКЦИИ
+              a(href="#").btn.btn--primary 
+                span СМОТРЕТЬ ВСЕ ФУНКЦИИ
                                   
         // TESTIMONIALS
         .testimonials.mt80

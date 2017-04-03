@@ -26,6 +26,12 @@
       padding-right: 0
     margin-left: 0
     margin-right: 0
+  &--narrow
+    margin-left: -7px
+    margin-right: -7px
+    .col
+      padding-left: 7px
+      padding-right: 7px
   &--stetch-child
     > .col
       display: flex
@@ -52,6 +58,8 @@
       flex-wrap: wrap
     &--column--tablet
       flex-direction: column
+    &--column-rev--tablet
+      flex-direction: column-reverse
     &--aic--tablet
       align-items: center
     &--jcsb--tablet
@@ -90,6 +98,7 @@
   padding-left: 15px
   padding-right: 15px
   position: relative
+  min-width: 0
   &--1-6
     flex-basis: 16.6%
   &--2-6
