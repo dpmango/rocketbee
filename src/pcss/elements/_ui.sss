@@ -44,6 +44,7 @@
     display: inline-block
     margin-left: 5px
 
+
 // SELECT
 .ui-select
   position: relative
@@ -59,6 +60,11 @@
     border-color: $colorRed
     label
       color: $colorRed
+
+  &--autocompleate
+    height: 50px
+
+
   &::after
     display: block
     content: ' '
@@ -80,31 +86,46 @@
     &.selected
       color: $fontColor
 
-  &__drop
+  input
+    color: $fontColorA50
+    cursor: pointer
+    border: none
+    border-radius: 5px
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    font-size: 16px
+    padding: 15px
+    &:focus
+      outline: none
+
+  &__drop, .easy-autocomplete-container
     opacity: 0
     position: absolute
     z-index: 9
     max-height: 200px
     overflow-y: scroll
-    top: 45px
-    border-bottom-left-radius: 5px
-    border-bottom-right-radius: 5px
+    top: 52px
+    border-radius: 5px
+    border: 1px solid $borderColor
     left: 0
     width: 100%
     background: white
     box-shadow: 0px 10px 20px 0px color(black a(10%))
     pointer-events: none
     transition: all .3s ease
-    span
+    > span, .eac-item
       font-size: 14px
       display: block
-      padding: 7px 15px
+      padding: 8px 15px
       transition: all .4s ease
       &:hover
         background: color($borderColor a(35%))
 
   &.active
-    .ui-select__drop
+    .ui-select__drop, .easy-autocomplete-container
       pointer-events: all
       opacity: 1
       animation: bounce-in .3s ease-in-out
@@ -114,8 +135,8 @@
 
 // CHECKBOX
 .ui-checkbox
-  margin-top: 10px
-  margin-bottom: 20px
+  padding-top: 10px
+  padding-bottom: 10px
   input
     display: none
     width: 0.1px
@@ -245,6 +266,9 @@
     font-size: 12px
     line-height: 1.2
     padding-bottom: 6px
+    span
+      display: none
+
   &__validation
     display: inline-block
     position: relative
@@ -263,7 +287,7 @@
       transform: rotate(45deg) translateY(-50%)
       position: absolute
       top: 50%
-      left: -6px
+      left: -8px
 
 .ui-input-collection
   font-size: 0
@@ -344,3 +368,60 @@
     transform: translateY(-50%) rotate(180deg)
   .ico-inputNum-more
     right: 2px
+
+
+// styler UI
+.jq-selectbox ul
+  li
+    display: block
+
+// EASY AUTOCOMPLEATE
+.easy-autocomplete
+  width: 100% !important
+.easy-autocomplete-container
+  display: block !important
+  border: none !important
+  ul
+    padding: 0
+    margin: 0
+    border: 1px solid $borderColor
+    border-radius: 5px
+    li
+      display: block
+      span
+        color: $fontColor
+        span
+          color: color($fontColor a(57%))
+          display: inline-block
+          margin-left: 3px
+
+
+@media($mobile)
+  .ui-group
+    margin-top: 10px
+    > label
+      span
+        display: inline-block
+    &__validation
+      &::before
+        left: 50%
+        top: -5px
+        transform: translateX(-50%) rotate(45deg)
+
+  .ui-input
+    &__placeholder
+      display: none
+    &--short
+      input
+        max-width: 70px
+
+  .ui-row
+    &--collapse
+      flex-wrap: wrap
+      .ico-arrow-right
+        display: none
+      .ui-group
+        flex: 1 1 100%
+        max-width: 80%
+        margin-left: auto
+        margin-right: auto

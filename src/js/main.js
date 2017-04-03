@@ -80,6 +80,7 @@ $(document).ready(function () {
   // -- select
   $('.ui-select').on('click', function (e) {
     $(this).toggleClass('active');
+    triggerAutocompleateFocus($(this).find('input'));
   });
 
   $('.ui-select__drop span').on('click', function (e) {
@@ -100,37 +101,108 @@ $(document).ready(function () {
     }
   });
 
+  // dimox styler
+  $('.js-styler__select').styler({});
+
+  // AutoCompleate
+  var options = {
+    url: "json/cities.json",
+    getValue: "name",
+    list: {
+      match: {
+        enabled: true
+      },
+      maxNumberOfElements: 8
+    },
+    template: {
+      type: "custom",
+      method: function method(value, item) {
+        return "<span>" + value + ",<span>" + item.country + "</span></span>";
+      }
+    }
+  };
+
+  $(".js-cityFromCompleate").easyAutocomplete(options);
+  $(".js-cityToCompleate").easyAutocomplete(options);
+
+  function triggerAutocompleateFocus(target) {
+    var e = jQuery.Event("keyup", { keyCode: 65, which: 65 });
+    target.focus();
+    target.attr('value', '');
+    target.triggerHandler(e);
+    target.trigger('change');
+  }
+
   // FOOTER REVEAL
   _window.resized(100, function () {
     revealFooter();
   });
 
   function revealFooter() {
-    var footerContainerHeight = $('.footer .container').height();
-    var paddingSize = 80;
+    var footerContainerHeight = $('.footer').outerHeight();
 
-    $('body').css('margin-bottom', footerContainerHeight + paddingSize);
+    $('body').css('margin-bottom', footerContainerHeight);
   };
 
   revealFooter();
 
   // owl
+  $('#owlNews').owlCarousel({
+    loop: false,
+    nav: false,
+    responsiveRefreshRate: 100,
+    responsive: {
+      0: {
+        items: 1,
+        dots: true,
+        margin: 20
+      },
+      450: {
+        items: 2,
+        dots: true,
+        margin: 20
+      },
+      768: {
+        items: 3,
+        dots: false,
+        margin: 40
+      }
+    }
+  });
+
   $('#owlTestimonials').owlCarousel({
     loop: true,
-    autoWidth: true,
     center: true,
     nav: true,
+    responsiveRefreshRate: 100,
     margin: 0,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        dots: true,
+        autoWidth: false
       },
-      600: {
-        items: 1
+      768: {
+        autoWidth: true
       },
-      1000: {
-        items: 1
+      992: {
+        items: 1,
+        dots: false,
+        autoWidth: true
       }
+    }
+  });
+
+  // CUSTOM NAV
+  $('.owl-carousel__custom-nav .ico').on('click', function () {
+    var target = $(this).parent().data('nav');
+
+    var controlType = $(this).data('control');
+
+    if (controlType == 'prev') {
+      $('#' + target).find('.owl-prev').click();
+    } else if (controlType == 'next') {
+      $('#' + target).find('.owl-next').click();
     }
   });
 

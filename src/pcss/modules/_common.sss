@@ -138,15 +138,39 @@
   &--smaller
     margin-top: 50px
 
+.section-heading
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+  .h3-title
+    margin-bottom: 0
+  a
+    color: $colorBlue
+    font-size: 12px
+    transition: all .3s ease
+    &:hover
+      color: $colorBlueHover
+
 @media($tablet)
+  .h2-title
+    font-size: 28px
+
   .section-m-t
     margin-top: 40px
     &--smaller
       margin-top: 30px
 
 @media($mobile)
-  .section-m-t
-    margin-top: 30px
+  .h2-title
+    font-size: 18px
+
+  .h3-title
+    font-size: 18px
+
+  .section-text
+    font-size: 14px
+    line-height: 1.75
 
 // NAVI MOBILE
 .navi-mobile
@@ -165,7 +189,7 @@
     pointer-events: all
     transform: translate3d(0, 0%, 0)
   &__wrapper
-    min-height: 100vh
+    min-height: calc(100vh - 90px)
     display: -webkit-flex
     display: -ms-flex
     display: flex
@@ -192,11 +216,12 @@
     margin-bottom: 50px
   .btn--ghost
     margin-top: 20px
-    margin-bottom: 50px
 
 @media($mobile)
   .navi-mobile
     top: 60px
+    &__wrapper
+      min-height: calc(100vh - 60px)
 
 
 // FOOTER
@@ -216,6 +241,7 @@
   &__top
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     align-items: center
     border-bottom: 1px solid color(white a(10%))
     padding-bottom: 20px
@@ -232,7 +258,7 @@
       font-weight: 400
       color: color(white a(30%))
   &__menu
-    flex: 1
+    flex: 1 0 auto
     margin-left: auto
     margin-right: auto
     text-align: center
@@ -241,12 +267,14 @@
     a
       display: inline-block
       margin-right: 30px
+      transition: all .3s ease
+      &:hover
+        color: color(white a(50%))
 
   &__bottom
-    display: -webkit-flex
-    display: -ms-flex
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     align-items: center
     padding-top: 20px
   &__company
@@ -265,12 +293,76 @@
   &__support
     font-size: 14px
     a
+      display: inline-block
+      padding-left: 5px
       color: white
 
 
+@media($desktop)
+  .footer
+    padding: 30px 0
+    &__menu
+      a
+        margin-right: 15px
 
+@media(width <= 920px)
+  .footer
+    &__copy
+      order: 1
+    &__feature
+      order: 2
+    &__menu
+      order: 3
+      flex: 1 1 100%
+      text-align: left
+      margin-top: 20px
 
+@media($tablet)
+  .footer
+    .container
+      padding-left: 30px
+      padding-right: 30px
+    &__top
+      border-bottom: 0
+      padding-bottom: 10px
+    &__compnay
+      order: 1
+    &__socials
+      order: 3
+      flex: 1 1 100%
+      border-top: 1px solid color(white a(10%))
+      margin-top: 15px
+      padding-top: 15px
+      text-align: center
+    &__support
+      order: 2
 
+@media($mobile)
+  .footer
+    &__el
+      flex: 1 1 100%
+    &__company
+      order: 2
+      font-size: 12px
+      flex: 1 1 100%
+      margin-top: 10px
+    &__menu
+      order: 3
+      margin-top: 15px
+      margin-bottom: 10px
+      a
+        display: inline-block
+        padding: 5px 0
+        font-weight: 400
+    &__feature
+      order: 4
+    &__bottom
+      padding-top: 15px
+    &__socials
+      padding-top: 10px
+      margin-top: 15px
+    &__support
+      font-size: 12px
 
 
 // ELEMENTS
@@ -322,9 +414,20 @@
 
 
 // OWL
-.owl-next, .owl-prev
+.owl--no-nav
+  .owl-next, .owl-prev
+    opacity: 0
+    pointer-events: none
+
+.owl-carousel__custom-nav
+  position: relative
+
+
+.owl-next, .owl-prev, .ico-owl-prev, .ico-owl-next
   position: absolute
+  content: ' '
   top: 50%
+  z-index: 5
   transform: translateY(-50%)
   size: 50px
   background: white svg-load('../../images/svg/owl-arrow.svg') no-repeat center
@@ -332,6 +435,15 @@
   border-radius: 50%
   box-shadow: 0 20px 40px color(black a(10%))
   font-size: 0
+  transition: all .3s ease
+  &:hover
+    box-shadow: 0 20px 40px color(black a(20%))
+
+.ico-owl-prev, .ico-owl-next
+  background-size: 10px 20px !important
+  top: 130px
+  transform: none
+  cursor: pointer
 
 .owl-next
   right: 0
@@ -340,3 +452,39 @@
 
 .owl-prev
   left: 0
+
+.ico-owl-next
+  right: 100px
+  transform: rotate(180deg)
+
+.ico-owl-prev
+  left: 100px
+
+
+@media($desktop)
+  .ico-owl-next
+    right: 0px
+
+  .ico-owl-prev
+    left: 0
+
+@media($tablet)
+  .ico-owl-prev, .ico-owl-next
+    display: none !important
+
+
+.owl-dots
+  text-align: center
+  margin-top: -20px
+
+.owl-dot
+  display: inline-block
+  size: 10px
+  margin-right: 10px
+  background: #CCCCCC
+  border-radius: 50%
+  transition: all .3s ease
+  &:last-child
+    margin-right: 0
+  &.active, &:hover
+    background: linear-gradient(to right, $colorYellow, $colorOrange)

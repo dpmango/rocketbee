@@ -64,7 +64,7 @@
 
 // HOT LINKS
 .hot-links
-  margin-top: 60px
+  padding-top: 60px
   position: relative
   z-index: 2
   &__wrapper
@@ -125,7 +125,7 @@
 
 @media($tablet)
   .hot-links
-    margin-top: 30px
+    padding-top: 30px
     &__wrapper
       padding: 15px 0 5px 0
     &__card
@@ -155,15 +155,18 @@
   &__wrapper
     display: flex
     justify-content: space-between
+  .owl-stage-outer
+    padding-bottom: 30px
+    overflow: visible
   &__card
-    flex: 0 1 31.5%
+    display: block
     background: white
     border-radius: 5px
     overflow: hidden
     box-shadow: 0 10px 20px color(black a(5%))
     transition: box-shadow .3s ease
     &:hover
-      box-shadow: 0 20px 40px color(black a(20%))
+      box-shadow: 0 10px 30px color(black a(20%))
     &__image
       position: relative
       height: 175px
@@ -175,8 +178,10 @@
         transform: translate(-50%, -50%)
         height: 100%
         min-width: 101%
+        width: auto !important
     &__content
       padding: 10px 20px
+      min-height: 85px
 
     &__date
       font-size: 12px
@@ -186,6 +191,17 @@
       font-size: 14px
       line-height: 1.35
       margin-top: 10px
+
+@media($mobile)
+  .news
+    &__card
+      &__image
+        height: auto
+        img
+          position: static
+          transform: none
+          height: auto
+          max-width: 101%
 
 // CALC
 .calculator
@@ -218,6 +234,9 @@
         color: $colorBlue
         display: flex
         align-items: center
+        transition: color .3s ease
+        &:hover
+          color: $colorBlueHover
         .ico
           flex: 0 0 43px
           align-self: flex-start
@@ -225,6 +244,7 @@
           display: inline-block
       &__new
         span
+          display: inline
           border-bottom: 1px dashed $colorBlue
 
 
@@ -239,6 +259,9 @@
         margin-left: 5px
         color: $colorBlue
         border-bottom: 1px dashed $colorBlue
+        transition: color .3s ease
+        &:hover
+          color: $colorBlueHover
 
   &__results
     border-top: 1px solid $borderColor
@@ -260,7 +283,6 @@
       color: $colorBlue
       position: relative
       padding: 5px 10px
-      transition: color .3s ease
       &:last-child
         padding-right: 0
       &:after
@@ -284,10 +306,12 @@
 
     &__row
       display: flex
-      justify-content: space-between
-      flex-wrap: wrap
+      justify-content: flex-start
+      overflow-x: scroll
+      margin-right: -5%
     &__card
-      flex: 0 1 24%
+      flex: 0 0 208px
+      margin-right: 10px
       display: flex
       flex-direction: column
       border: 1px solid $borderColor
@@ -348,6 +372,38 @@
           vertical-align: middle
 
 
+@media($tablet)
+  .calculator
+    &__location
+      &__input
+        margin-top: 15px
+    &__inputs
+      padding: 25px 5% 5px 5%
+      .col--4-6
+        border-right: 0
+        margin-right: 0
+      &__templates
+        font-size: 12px
+        display: flex
+        justify-content: flex-start
+        overflow-x: scroll
+        width: auto
+        padding-bottom: 30px
+        a
+          flex: 0 0 auto
+          margin-top: 10px
+          margin-right: 10px
+
+          .ico
+            transform: scale(.8)
+            transform-origin: 0 50%
+            flex: 0 0 35px
+            align-self: flex-start
+    &__results
+      &__filters
+        display: none
+      &__card
+        flex: 0 0 210px
 
 
 
@@ -369,21 +425,52 @@
       border-radius: 15px
       padding: 25px
       color: #555555
+      transition: all .3s ease
+      &:hover
+        background: white
+        .ico
+          background-color: color($colorOrageSecondary a(99%))
+
       .ico
         margin-bottom: 15px
+        transition: all .3s ease
       a
         color: $colorBlue
+        transition: all .3s ease
+        &:hover
+          color: $colorBlueHover
+
+@media($desktop)
+  .features
+    margin-left: 0
+    margin-right: 0
+
+@media($mobile)
+  .features
+    &__card
+      margin-top: 15px
+      &__title
+        font-size: 11px
+      &--request
+        padding-left: 5px
+        padding-right: 5px
 
 
 // API
 .api
+  .row--stetch-child
+    overflow-x: scroll
   &__card
+    flex: 0 0 310px
+    margin-right: 25px
     display: flex
     flex-direction: column
     background: white
     border-radius: 5px
     overflow: hidden
     margin-top: 30px
+    &:last-child
+      margin-right: 0
     &__image
       position: relative
       overflow: hidden
@@ -427,6 +514,13 @@
       font-weight: 700
       margin-bottom: 25px
 
+@media($tablet)
+  .api
+    &__card
+      flex: 0 0 260px
+      margin-right: 10px
+      &__content
+        padding: 25px 20px 40px 20px
 
 // TESTIMONIALS
 .testimonials
@@ -442,7 +536,7 @@
     margin-right: auto
   &__card
     position: relative
-    max-width: 620px
+    max-width: 500px
     margin-left: auto
     margin-right: auto
     margin-top: 30px
@@ -482,8 +576,41 @@
         color: $colorBlue
 
 
+@media($tablet)
+  .testimonials
+    &__card
+      padding-top: 30px
+      &__image
+        size: 90px
+        left: 50%
+        top: -15px
+        transform: translateX(-50%)
+      &__content
+        padding: 30px
+        padding-top: 60px
 
 
+@media($tablet)
+  .testimonials
+    .owl-dots
+      margin-top: -45px
+    &__card
+      &__content
+        padding: 20px
+        padding-top: 55px
+
+@media($mobile)
+  .testimonials
+    &__nav-item
+      margin-left: 20px
+      margin-right: 20px
+      width: auto
+    &__card
+      &__text
+        font-size: 12px
+        line-height: 1.7
+      &__author
+        font-size: 12px
 
 // CLIENTS
 .clients
@@ -491,3 +618,8 @@
   img
     max-width: 100%
     mix-blend-mode: multiply
+
+@media($tablet)
+  .clients
+    img
+      margin-bottom: 15px

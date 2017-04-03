@@ -33,6 +33,8 @@
       padding-left: 7px
       padding-right: 7px
   &--stetch-child
+    margin-left: 0
+    margin-right: -15px
     > .col
       display: flex
 
@@ -140,10 +142,12 @@
       flex-basis: auto
     &--grow--tablet
       flex-grow: 1
+    &--3-6--tablet
+      flex-basis: 50%
 
   @media($mobile)
     &--full--mobile
-      flex-basismobile 100%
+      flex-basis: 100%
     &--auto--tablet
       flex-basis: auto
     &--grow--mobile
@@ -178,7 +182,22 @@
   @media($desktop)
     display: block !important
 
+.hidden--tablet
+  display: block !important
+  @media($tablet)
+    display: none !important
+
+.visible--tablet
+  display: none !important
+  @media($tablet)
+    display: block !important
+
 .visible--mobile
   display: none !important
   @media($mobile)
     display: block !important
+
+.hidden--mobile
+  display: block !important
+  @media($mobile)
+    display: none !important

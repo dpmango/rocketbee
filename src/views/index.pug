@@ -46,8 +46,11 @@ html
           .container
             .row
               .col.col--auto
-                h3.h3-title Новости сервиса
-            .news__wrapper
+                .section-heading
+                  h3.h3-title Новости сервиса
+                  a(href='#').visible--tablet Все новости
+                
+            .owl-carousel#owlNews
               a(href="#").news__card
                 .news__card__image
                   img(src="images/newsCard_1.png")
@@ -66,57 +69,80 @@ html
                 .news__card__content
                   .news__card__date 15 января
                   .news__card__title Неполадки устранены, работаем дальше
-                    
-            
-            .row.row--jcc.mt35
+                      
+              
+            .row.row--jcc.hidden--tablet
               .col.col--auto.text-center
                 a(href='#').btn.btn--ghost.btn--ghost--gray
                   span Все новости
         
         // CALCULATOR
         .calculator.section-m-t.section-m-t--smaller
-          .container
+          .container.container--0-mobile
             .calculator__wrapper
               .calculator__head
                 h2.h2-title Мы учли все нюансы доставки
                 .section-text EMS не берет грузы длиннее 150 см, коробка с роликами не влезет в ячейку постомата, Hermes не даст примерить кеды перед оплатой — мы знаем все нюансы служб доставки и подскажем их вам.
                 .calculator__location-input
-                  .ui-row
+                  .ui-row.ui-row--collapse
                     .ui-group
                       label откуда:
-                      .ui-select
-                        label Санкт-Петербург
-                        .ui-select__drop
+                      //- select.js-styler__select(data-search='true')
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                        option() Санкт-питербург
+                      .ui-select.ui-select--autocompleate
+                        // label Санкт-Петербург
+                        input(type="text" placeholder='введите город...').js-cityFromCompleate
+                        // .ui-select__drop
                           span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
                           span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
                           span(data-select='Санкт-Петербург_3') Санкт-Петербург_3
                           span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
                         // selected value will be passed to this input 
-                        input(type="hidden" name="" value="")
+                        // input(type="hidden" name="" value="")
                     i.ico.ico-arrow-right.mt45
                     .ui-group
                       label откуда:
-                      .ui-select
-                        label Санкт-Петербург
-                        .ui-select__drop
-                          span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
-                          span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
-                          span(data-select='Санкт-Петербург_3') Санкт-Петербург_3
-                          span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
-                        // selected value will be passed to this input 
-                        input(type="hidden" name="" value="")
+                      .ui-select.ui-select--autocompleate
+                        input(type="text" placeholder='введите город...').js-cityToCompleate
+                        //- label Санкт-Петербург
+                        //- .ui-select__drop
+                        //-   span(data-select='Санкт-Петербург_1') Санкт-Петербург_1
+                        //-   span(data-select='Санкт-Петербург_2') Санкт-Петербург_2
+                        //-   span(data-select='Санкт-Петербург_3') Санкт-Петербург_3
+                        //-   span(data-select='Санкт-Петербург_4') Санкт-Петербург_4
+                        //- // selected value will be passed to this input 
+                        //- input(type="hidden" name="" value="")
                           
               .calculator__inputs
-                .row
+                .row.row--column--tablet
                   .col.col--4-6
                     .ui-row.ui-row--inline
                       .ui-group
-                        label вес:
+                        label вес<span>, кг</span>:
                         .ui-input.ui-input--short
                           input(type="text")
                           .ui-input__placeholder кг
                       .ui-group
-                        label габариты:
+                        label габариты<span>, см</span>:
                         .ui-input-collection
                           .ui-input.ui-input--short
                             input(type="text" value='1500')
@@ -132,7 +158,7 @@ html
                     // checkboxes
                     .ui-group
                       label дополнительные опции:
-                      .row
+                      .row.row--column--mobile
                         .col.col--3-6
                           .ui-checkbox
                             input(type="checkbox" name="checkbox" id="checkbox_1")
@@ -274,36 +300,36 @@ html
               .section-text Всем интернет-магазинам мы предоставляем возможность автоматизировать отправку заказов. В личном кабинете доступны:
             
             .row.row--wrap
-              .col.col--2-6
+              .col.col--2-6.col--3-6--tablet
                 .features__card
                   .blot.blot--one
                     i.ico.ico-feature-calc-btns
-                  .feature__card__title Расчет стоимости отправки
-              .col.col--2-6
+                  .features__card__title Расчет стоимости отправки
+              .col.col--2-6.col--3-6--tablet
                 .features__card
                   .blot.blot--two
                     i.ico.ico-feature-forms-bars
-                  .feature__card__title Шаблоны отправлений для быстрой подготовки документов
-              .col.col--2-6
+                  .features__card__title Шаблоны отправлений для быстрой подготовки документов
+              .col.col--2-6.col--3-6--tablet
                 .features__card
                   .blot.blot--one
                     i.ico.ico-feature-form-print
-                  .feature__card__title Формирование документов для отправки через любые ТК
+                  .features__card__title Формирование документов для отправки через любые ТК
               // next row - wrapped
-              .col.col--2-6
+              .col.col--2-6.col--3-6--tablet
                 .features__card
                   .blot.blot--three
                     i.ico.ico-feature-map-track
-                  .feature__card__title Отслеживание отправлений
-              .col.col--2-6
+                  .features__card__title Отслеживание отправлений
+              .col.col--2-6.col--3-6--tablet
                 .features__card
                   .blot.blot--three
                     i.ico.ico-feature-ico-export
-                  .feature__card__title Шаблоны отправлений для быстрой подготовки документов
-              .col.col--2-6
+                  .features__card__title Шаблоны отправлений для быстрой подготовки документов
+              .col.col--2-6.col--3-6--tablet
                 .features__card.features__card--request
                   i.ico.ico-plus-big
-                  .featires__card__title Мы команда молодых профессионалов и у нас можно <a href="#">попросить фичу</a>
+                  .features__card__title Мы команда молодых профессионалов и у нас можно <a href="#">попросить фичу</a>
                   
         // API
         .api.section-m-t
@@ -314,61 +340,55 @@ html
               
             .row.row--stetch-child
               // card
-              .col.col--2-6
-                .api__card
-                  .api__card__image
-                    img(src="images/apiCard_1.png")
-                    .api__card__tags
-                      .api__card__tag API
-                      .api__card__tag.api__card__tag--blue виджет
-                  .api__card__content
-                    .api__card__title Расчет стоимости <br> отправки
-                    .api__card__description Клиенты вашего интернет магазина смогут узнавать стоимость доставки во время оформления заказ с помощью настраиваемого виджета или непосредственно на сайте c подключенным API
-                    .api__card__price 2 Р/запрос
-                    a(href="#").btn.btn--ghost.btn--block.btn--h40 
-                      span Регистрация
+              .api__card
+                .api__card__image
+                  img(src="images/apiCard_1.png")
+                  .api__card__tags
+                    .api__card__tag API
+                    .api__card__tag.api__card__tag--blue виджет
+                .api__card__content
+                  .api__card__title Расчет стоимости <br> отправки
+                  .api__card__description Клиенты вашего интернет магазина смогут узнавать стоимость доставки во время оформления заказ с помощью настраиваемого виджета или непосредственно на сайте c подключенным API
+                  .api__card__price 2 Р/запрос
+                  a(href="#").btn.btn--ghost.btn--block.btn--h40 
+                    span Регистрация
                       
               // card
-              .col.col--2-6
-                .api__card
-                  .api__card__image
-                    img(src="images/apiCard_2.png")
-                    .api__card__tags
-                      .api__card__tag API
-                  .api__card__content
-                    .api__card__title Подготовка документов для транспортных компаний
-                    .api__card__description
-                      ul.list-line
-                        li проверку корректности вводимых адресов и индексов
-                        li формирование документов для отправки через любые ТК
-
-                    .api__card__price 8 Р/заказ
-                    a(href="#").btn.btn--ghost.btn--block.btn--h40 
-                      span Регистрация
+              .api__card
+                .api__card__image
+                  img(src="images/apiCard_2.png")
+                  .api__card__tags
+                    .api__card__tag API
+                .api__card__content
+                  .api__card__title Подготовка документов для транспортных компаний
+                  .api__card__description
+                    ul.list-line
+                      li проверку корректности вводимых адресов и индексов
+                      li формирование документов для отправки через любые ТК
+                  .api__card__price 8 Р/заказ
+                  a(href="#").btn.btn--ghost.btn--block.btn--h40 
+                    span Регистрация
               
               // card
-              .col.col--2-6
-                .api__card
-                  .api__card__image
-                    img(src="images/apiCard_3.png")
-                    .api__card__tags
-                      .api__card__tag API
-                  .api__card__content
-                    .api__card__title Полная автоматизация логистических процессов
-                    .api__card__description
-                      ul.list-line
-                        li проверку корректности вводимых адресов и индексов
-                        li забор отправлений
-                        li печать документов для отправки через любые ТК
-                        li физическая передача заказов в ТК
-                        li работа как по собственному, так и по единому договору с ТК
-
-
-                    .api__card__price 20 Р/заказ
-                    a(href="#").btn.btn--ghost.btn--block.btn--h40 
-                      span Регистрация
+              .api__card
+                .api__card__image
+                  img(src="images/apiCard_3.png")
+                  .api__card__tags
+                    .api__card__tag API
+                .api__card__content
+                  .api__card__title Полная автоматизация логистических процессов
+                  .api__card__description
+                    ul.list-line
+                      li проверку корректности вводимых адресов и индексов
+                      li забор отправлений
+                      li печать документов для отправки через любые ТК
+                      li физическая передача заказов в ТК
+                      li работа как по собственному, так и по единому договору с ТК
+                  .api__card__price 20 Р/заказ
+                  a(href="#").btn.btn--ghost.btn--block.btn--h40 
+                    span Регистрация
             
-            .text-center.mt30
+            .text-center.mt30.mt20--tablet
               a(href="#").btn.btn--primary 
                 span СМОТРЕТЬ ВСЕ ФУНКЦИИ
                                   
@@ -378,8 +398,12 @@ html
             .text-center
               h2.h2-title Отзывы клиентов сервиса
               .section-text Автоматизируйте свой отдел доставки, оптимизируйте расходы на логистику, вздохните спокойно и спите крепко. Всё остальное мы берем на себя.
-          
-          .owl-carousel#owlTestimonials
+            
+            .owl-carousel__custom-nav(data-nav="owlTestimonials")
+              i.ico.ico-owl-prev(data-control="prev")
+              i.ico.ico-owl-next(data-control="next")
+              
+          .owl-carousel.owl--no-nav#owlTestimonials
             // card
             .testimonials__nav-item
               .testimonials__card
@@ -406,20 +430,20 @@ html
                   .testimonials__card__author Александра Крестовоздвижническая, <span>Madrobot.ru</span>
                                                                                         
         // CLIENTS
-        .clients.mt20
+        .clients.mt20.mt40--tablet
           .container
             .text-center
               h2.h2-title Кто уже подключен
               .section-text Автоматизируйте свой отдел доставки, оптимизируйте расходы на логистику, вздохните спокойно и спите крепко. Всё остальное мы берем на себя.
                 
-            .row.row--aic.mt45
-              .col.col--1-4
+            .row.row--aic.row--wrap--tablet.mt45.mt20--tablet
+              .col.col--1-4.col--3-6--tablet
                 img(src="images/clientLogo_1.png")
-              .col.col--1-4
+              .col.col--1-4.col--3-6--tablet
                 img(src="images/clientLogo_2.png")
-              .col.col--1-4
+              .col.col--1-4.col--3-6--tablet
                 img(src="images/clientLogo_3.png")
-              .col.col--1-4
+              .col.col--1-4.col--3-6--tablet
                 img(src="images/clientLogo_4.png")
                 
                                               
