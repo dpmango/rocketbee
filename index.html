@@ -15,15 +15,17 @@
         <div class="container container--fluid">
           <div class="row">
             <div class="col col--auto">
-              <div class="header__wrapper"><a class="header__el header__logo" href="#"><i class="ico ico-logo"></i></a>
-                <ul class="header__el header__menu">
-                  <li><a href="#">Службы доставки</a></li>
-                  <li><a href="#">Услуги</a></li>
-                  <li><a href="#">Преимущества</a></li>
-                  <li><a href="#">О сервисе</a></li>
-                  <li><a href="#">API</a></li>
-                </ul>
-                <div class="header__el header__cta"><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a></div>
+              <div class="header__wrapper"><a class="header__logo" href="#"><i class="ico ico-logo"></i></a>
+                <div class="header__menu">
+                  <ul>
+                    <li><a href="#">Службы доставки</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Преимущества</a></li>
+                    <li><a href="#">О сервисе</a></li>
+                    <li><a href="#">API</a></li>
+                  </ul>
+                </div>
+                <div class="header__cta"><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a></div>
                 <div class="hamburger hamburger--spin visible--desktop js-toggleMobileMenu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div>
               </div>
             </div>
@@ -40,7 +42,8 @@
               <li><a href="#">Преимущества</a></li>
               <li><a href="#">О сервисе</a></li>
               <li><a href="#">API</a></li>
-            </ul><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a>
+            </ul>
+            <div class="navi-mobile__cta"><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a></div>
           </div>
         </div>
       </div>
@@ -48,7 +51,7 @@
         <!-- INFO::START-->
         <div class="info info--mega-pad">
           <div class="container">
-            <div class="row">
+            <div class="row row--column-rev--tablet">
               <div class="col col--4-6"> 
                 <h1 class="info__title">Отправка заказов? Легко!</h1>
                 <div class="info__subtitle">Доставляйте заказы вашим клиентам любыми удобными для них способами</div>
@@ -117,7 +120,7 @@
                       <label>откуда:</label>
                       <div class="ui-select">
                         <label>Санкт-Петербург</label>
-                        <div class="ui-select__drop"><span data-select="Санкт-Петербург_1">Санкт-Петербург_1</span><span data-select="Санкт-Петербург_2">Санкт-Петербург_2</span><span data-select="анкт-Петербург_3">Санкт-Петербург_3</span><span data-select="Санкт-Петербург_4">Санкт-Петербург_4</span></div>
+                        <div class="ui-select__drop"><span data-select="Санкт-Петербург_1">Санкт-Петербург_1</span><span data-select="Санкт-Петербург_2">Санкт-Петербург_2</span><span data-select="Санкт-Петербург_3">Санкт-Петербург_3</span><span data-select="Санкт-Петербург_4">Санкт-Петербург_4</span></div>
                         <!-- selected value will be passed to this input -->
                         <input type="hidden" name="" value="">
                       </div>
@@ -126,7 +129,7 @@
                       <label>откуда:</label>
                       <div class="ui-select">
                         <label>Санкт-Петербург</label>
-                        <div class="ui-select__drop"><span data-select="Санкт-Петербург_1">Санкт-Петербург_1</span><span data-select="Санкт-Петербург_2">Санкт-Петербург_2</span><span data-select="анкт-Петербург_3">Санкт-Петербург_3</span><span data-select="Санкт-Петербург_4">Санкт-Петербург_4</span></div>
+                        <div class="ui-select__drop"><span data-select="Санкт-Петербург_1">Санкт-Петербург_1</span><span data-select="Санкт-Петербург_2">Санкт-Петербург_2</span><span data-select="Санкт-Петербург_3">Санкт-Петербург_3</span><span data-select="Санкт-Петербург_4">Санкт-Петербург_4</span></div>
                         <!-- selected value will be passed to this input -->
                         <input type="hidden" name="" value="">
                       </div>
@@ -137,18 +140,125 @@
               <div class="calculator__inputs">
                 <div class="row">
                   <div class="col col--4-6">
+                    <div class="ui-row ui-row--inline">
+                      <div class="ui-group">
+                        <label>вес:</label>
+                        <div class="ui-input ui-input--short">
+                          <input type="text">
+                          <div class="ui-input__placeholder">кг</div>
+                        </div>
+                      </div>
+                      <div class="ui-group">
+                        <label>габариты:</label>
+                        <div class="ui-input ui-input--short">
+                          <input type="text">
+                          <div class="ui-input__placeholder">см</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- checkboxes-->
                     <div class="ui-group">
-                      <label>вес:</label>
-                      <div class="ui-input ui-input--short">
-                        <input type="text">
-                        <div class="ui-input__placeholder">кг</div>
+                      <label>дополнительные опции:</label>
+                      <div class="row">
+                        <div class="col col--3-6">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_1">
+                            <label for="checkbox_1"> <span>Возможность примерки</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_2" checked>
+                            <label for="checkbox_2"> <span>Наложенный платеж</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_3">
+                            <label for="checkbox_3"> <span>Дороже 15 тыс. рублей</span></label>
+                          </div>
+                        </div>
+                        <div class="col col--3-6">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_4" checked>
+                            <label for="checkbox_4"> <span>Доставка до дверей</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_5" checked>
+                            <label for="checkbox_5"> <span>Оплата банковской картой</span></label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col col--2-6"></div>
+                  <div class="col col--2-6">
+                    <div class="ui-group">
+                      <label>шаблоны отправлений:</label>
+                    </div>
+                    <div class="calculator__inputs__templates"><a href="#"><i class="ico ico-template-snowboard"></i><span>Крупный спорт-инвентарь</span></a><a href="#"><i class="ico ico-template-shoe"></i><span>Одежда и обувь</span></a><a href="#"><i class="ico ico-template-smartphone"></i><span>Электроника</span></a><a class="calculator__inputs__templates__new" href="#"><i class="ico ico-template-plus"></i><span>Создать свой шаблон</span></a></div>
+                  </div>
                 </div>
               </div>
-              <div class="calculator__results"></div>
+              <!-- calc cta-->
+              <div class="calculator__cta"><a class="btn btn--primary btn--h40" href="#"> <span>Рассчитать</span></a>
+                <div class="calculator__cta__clear"><span>или</span><a href="#">очистить</a></div>
+              </div>
+              <!-- calc results-->
+              <div class="calculator__results">
+                <div class="calculator__results__head">
+                  <h3 class="h3-title">Вот, что нам удалось найти:</h3>
+                </div>
+                <div class="calculator__results__row">
+                  <!-- card-->
+                  <div class="calculator__results__card">
+                    <div class="calculator__results__card__image"><img src="images/resultsCard_ruspost.png"></div>
+                    <div class="calculator__results__card__title">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</div>
+                    <div class="calculator__results__card__content">
+                      <div class="calculator__results__card__price">
+                        <div class="calculator__results__card__price__mainprice">150 Р</div>
+                        <div class="calculator__results__card__price__deliverable">2—5 дней</div>
+                      </div>
+                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
+                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#"> <span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
+                    </div>
+                  </div>
+                  <!-- card-->
+                  <div class="calculator__results__card">
+                    <div class="calculator__results__card__image"><img src="images/resultsCard_ems.png"></div>
+                    <div class="calculator__results__card__title">ДОСТАВКА МАЛОГАБАРИТНЫХ ГРУЗОВ</div>
+                    <div class="calculator__results__card__content">
+                      <div class="calculator__results__card__price">
+                        <div class="calculator__results__card__price__mainprice">250 Р</div>
+                        <div class="calculator__results__card__price__deliverable">1—2 дней</div>
+                      </div>
+                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
+                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#"><span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
+                    </div>
+                  </div>
+                  <!-- card-->
+                  <div class="calculator__results__card">
+                    <div class="calculator__results__card__image"><img src="images/resultsCard_inpost.png"></div>
+                    <div class="calculator__results__card__title">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</div>
+                    <div class="calculator__results__card__content">
+                      <div class="calculator__results__card__price">
+                        <div class="calculator__results__card__price__mainprice">220 Р</div>
+                        <div class="calculator__results__card__price__deliverable">3 дня</div>
+                      </div>
+                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
+                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#"><span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
+                    </div>
+                  </div>
+                  <!-- card-->
+                  <div class="calculator__results__card">
+                    <div class="calculator__results__card__image"><img src="images/resultsCard_dpd.png"></div>
+                    <div class="calculator__results__card__title">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</div>
+                    <div class="calculator__results__card__content">
+                      <div class="calculator__results__card__price">
+                        <div class="calculator__results__card__price__mainprice">230 Р</div>
+                        <div class="calculator__results__card__price__deliverable">5 дней</div>
+                      </div>
+                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
+                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#" disabled><span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -267,7 +377,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-center mt30"><a class="btn btn--primary" href="#">СМОТРЕТЬ ВСЕ ФУНКЦИИ</a></div>
+            <div class="text-center mt30"><a class="btn btn--primary" href="#"> <span>СМОТРЕТЬ ВСЕ ФУНКЦИИ</span></a></div>
           </div>
         </div>
         <!-- TESTIMONIALS-->
@@ -346,6 +456,8 @@
           </div>
         </div>
       </div>
+      <!-- SECONDARY STYLES-->
+      <link rel="stylesheet" href="css/secondary.css">
       <!-- SCRIPTS-->
       <script src="js/scripts.min.js"></script>
     </div>
