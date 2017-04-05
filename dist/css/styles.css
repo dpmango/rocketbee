@@ -1133,9 +1133,9 @@ body, html {
     padding-left: 7px;
 }
 .row--stetch-child {
-    margin-right: -15px;
-    margin-left: -15px;
-    padding-left: 15px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-left: 20px;
 }
 .row--stetch-child > .col {
     display: -webkit-box;
@@ -3600,10 +3600,10 @@ button {
     display: flex;
     -webkit-justify-content: flex-start;
             justify-content: flex-start;
-    overflow-x: scroll;
-    margin-right: -5%;
-    margin-left: -5%;
-    padding-left: 5%;
+    overflow-x: hidden;
+    margin-right: -5.5%;
+    margin-left: -5.5%;
+    padding-left: 5.5%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
 }
@@ -3706,6 +3706,11 @@ button {
     margin-left: 10px;
     vertical-align: middle;
 }
+@media(max-width: 992px) {
+    .calculator__results__row {
+        overflow-x: scroll;
+    }
+}
 @media(max-width: 768px) {
     .calculator {}
     .calculator__location {}
@@ -3727,10 +3732,10 @@ button {
         -webkit-justify-content: flex-start;
                 justify-content: flex-start;
         overflow-x: scroll;
-        margin-right: -5%;
-        margin-left: -5%;
+        margin-right: -5.5%;
+        margin-left: -5.5%;
         padding-bottom: 15px;
-        padding-left: 5%;
+        padding-left: 5.5%;
         width: auto;
         font-size: 12px;
         -webkit-box-pack: start;
@@ -3871,7 +3876,7 @@ button {
 }
 /* API */
 .api .row--stetch-child {
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 .api__card {
     display: -webkit-box;
@@ -3957,6 +3962,11 @@ button {
     padding-top: 20px;
     color: #555555;
     font-weight: 700;
+}
+@media(max-width: 992px) {
+    .api .row--stetch-child {
+        overflow-x: scroll;
+    }
 }
 @media(max-width: 768px) {
     .api {}

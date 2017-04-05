@@ -315,10 +315,10 @@
     &__row
       display: flex
       justify-content: flex-start
-      overflow-x: scroll
-      margin-right: -5%
-      margin-left: -5%
-      padding-left: 5%
+      overflow-x: hidden
+      margin-right: -5.5%
+      margin-left: -5.5%
+      padding-left: 5.5%
     &__card
       flex: 0 0 208px
       margin-right: 10px
@@ -381,6 +381,9 @@
           margin-left: 10px
           vertical-align: middle
 
+@media($desktop)
+  .calculator__results__row
+    overflow-x: scroll
 
 @media($tablet)
   .calculator
@@ -393,9 +396,9 @@
         border-right: 0
         margin-right: 0
       &__templates
-        margin-left: -5%
-        margin-right: -5%
-        padding-left: 5%
+        margin-left: -5.5%
+        margin-right: -5.5%
+        padding-left: 5.5%
         font-size: 12px
         display: flex
         justify-content: flex-start
@@ -500,7 +503,7 @@
 // API
 .api
   .row--stetch-child
-    overflow-x: scroll
+    overflow-x: hidden
   &__card
     flex: 0 0 310px
     margin-right: 25px
@@ -554,6 +557,11 @@
       color: #555555
       font-weight: 700
       margin-bottom: 25px
+
+@media($desktop)
+  .api
+    .row--stetch-child
+      overflow-x: scroll
 
 @media($tablet)
   .api
