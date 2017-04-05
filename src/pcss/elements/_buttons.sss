@@ -9,13 +9,13 @@ button
   display: inline-block
   font-weight: 700
   position: relative
-  transition: all .4s ease-in-out
+  transition: all $transitionSpeed ease-in-out
   span
     display: inline-block
     position: relative
     z-index: 2
     text-align: center
-    transition: all .4s ease-in-out
+    transition: all $transitionSpeedFaster ease-in-out
 
   &:focus, &:active
     outline: none
@@ -23,6 +23,7 @@ button
   &--primary
     background: linear-gradient(to right, $colorYellow, $colorOrange)
     padding: 18px 35px
+    font-size: 12px
     text-transform: uppercase
     &.btn--h40
       padding: 13px 35px
@@ -33,7 +34,7 @@ button
       background: linear-gradient(to right, #FEE707, #FEC203)
       opacity: 0
       border-radius: 3px
-      transition: opacity .3s ease
+      transition: opacity $transitionSpeed ease
     &:hover::after
       opacity: 1
 
@@ -46,6 +47,7 @@ button
       background: linear-gradient(to right, $colorYellow, $colorOrange)
       border-radius: 3px
       z-index: 1
+      transition: opacity $transitionSpeed ease, background $transitionSpeed ease
     span
       padding: 18px 35px
       text-transform: uppercase
@@ -61,10 +63,16 @@ button
       span
         background: #F6F6F6
     &--dark
+      color: white
       &::after
         background: color(white a(50%))
       span
         background: #555
+      &:hover
+        span
+          background: #555
+        &::after
+          background: color(white a(80%))
 
 
   &--block
@@ -74,6 +82,14 @@ button
       padding-left: 10px
       padding-right: 10px
 
+@media($mobile)
+  .btn
+    &--primary
+      padding-left: 30px
+      padding-right: 30px
+      &.btn--h40
+        padding-left: 25px
+        padding-right: 25px
 
 // disabled state -- refactor ??
 
@@ -92,6 +108,7 @@ button
         span
           background: #F6F6F6
       &.btn--dark
-        color: color(white a(50%))
+        color: color(white a(25%))
         span
+          color: color(white a(25%))
           background: #555

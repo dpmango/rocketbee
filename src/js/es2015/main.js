@@ -155,16 +155,15 @@ $(document).ready( function() {
     loop: false,
     nav: false,
     responsiveRefreshRate: 100,
+    margin: 20,
     responsive: {
       0:{
         items: 1,
-        dots: true,
-        margin: 20
+        dots: true
       },
       450:{
         items: 2,
-        dots: true,
-        margin: 20
+        dots: true
       },
       768:{
         items: 3,

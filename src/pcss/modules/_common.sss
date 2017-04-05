@@ -45,7 +45,7 @@
           height: 3px
           left: 50%
           right: 50%
-          transition: .3s all
+          transition: $transitionSpeed all
           opacity: 0
           bottom: -3px
           background-color: $colorOrageSecondary
@@ -148,7 +148,7 @@
   a
     color: $colorBlue
     font-size: 12px
-    transition: all .3s ease
+    transition: all $transitionSpeed ease
     &:hover
       color: $colorBlueHover
 
@@ -172,6 +172,13 @@
     font-size: 14px
     line-height: 1.75
 
+  .section-heading
+    margin-bottom: 10px
+
+@media($mobile-s)
+  .section-heading
+    margin-bottom: 5px
+
 // NAVI MOBILE
 .navi-mobile
   background: white
@@ -183,7 +190,7 @@
   transform: translate3d(0, -100%, 0)
   pointer-events: none
   opacity: 0
-  transition: all .4s ease-in
+  transition: transform .25s ease-in
   &.is-active
     opacity: 1
     pointer-events: all
@@ -205,7 +212,7 @@
       a
         display: inline-block
         padding: 10px 0
-        transition: color .3s ease
+        transition: color $transitionSpeed ease
         &:hover
           color: $colorOrageSecondary
   &__cta
@@ -267,7 +274,7 @@
     a
       display: inline-block
       margin-right: 30px
-      transition: all .3s ease
+      transition: all $transitionSpeed ease
       &:hover
         color: color(white a(50%))
 
@@ -286,7 +293,7 @@
       display: inline-block
       margin-right: 8px
       .ico
-        transition: all .4s ease-in-out
+        transition: all $transitionSpeedFaster ease-in-out
         &:hover
           background-color: color(white a(50%))
           border-style: solid
@@ -435,7 +442,7 @@
   border-radius: 50%
   box-shadow: 0 20px 40px color(black a(10%))
   font-size: 0
-  transition: all .3s ease
+  transition: all $transitionSpeed ease
   &:hover
     box-shadow: 0 20px 40px color(black a(20%))
 
@@ -483,7 +490,7 @@
   margin-right: 10px
   background: #CCCCCC
   border-radius: 50%
-  transition: all .3s ease
+  transition: all $transitionSpeed ease
   &:last-child
     margin-right: 0
   &.active, &:hover
