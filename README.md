@@ -30,4 +30,4 @@ __Production__
 
 
 ### Recend push command
-gulp build && git add . && git commit -m "some front pages" && git push && git subtree --prefix dist push origin gh-pages
+gulp build && git add . && git commit -m "fixed logo path" && git push && git subtree --prefix dist push origin gh-pages
