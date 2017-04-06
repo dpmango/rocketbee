@@ -1,0 +1,42 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.no-header-float
+      
+      include shared/header.pug
+      
+      .app__content
+      
+        .text-center(style='display: flex; align-items:center; justify-content: center; height: 70vh;')
+          a(href='#feedbackForm').btn.btn--primary.popup-with-zoom-anim
+            span Обратная связь
+      
+        #feedbackForm.zoom-anim-dialog.mfp-hide
+          .modal
+            .text-center
+              h3.h3-title Обратная связь
+            
+            form(action='')
+              .row.row--column--tablet
+                .col.col--3-6
+                  .ui-group
+                    label Имя
+                    .ui-input
+                      input(type='text' placeholder="Ваше имя")
+                .col.col--3-6
+                  .ui-group
+                    label email
+                    .ui-input
+                      input(type='email' placeholder='Ваш email')
+              .ui-group
+                label Сообщение:
+                .ui-input
+                  textarea(value='Какой то текст.....' rows="5")
+              a(href='#').btn.btn--primary 
+                span Отправить
+              
+                  
+                                              
+      include shared/footer.pug

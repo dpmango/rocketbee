@@ -59,7 +59,7 @@ body, html
     &--0-mobile
       padding-left: 0
       padding-right: 0
-      
+
 .app
   position: relative
   display: flex
@@ -76,6 +76,11 @@ body, html
   &.lock
     overflow-y: hidden
     max-height: 100vh
+  &.no-header-float
+    .header
+      position: static
+    .app__content
+      margin-top: 0
 
 @media($tablet)
   .app

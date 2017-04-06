@@ -28,6 +28,22 @@
       top: -840px
       left: -220px
       z-index: 1
+  &__image-circle
+    display: flex
+    justify-content: center
+    align-items: center
+    size: 260px
+    border-radius: 50%
+    border: 2px dashed black
+    padding: 10px
+    &__wrapper
+      overflow: hidden
+      border-radius: 50%
+      position: relative
+      img
+        max-width: 100%
+
+
 
 @media($desktop)
   .info
@@ -160,6 +176,9 @@
 
 // NEWS
 .news
+  &--multiple
+    .news__card
+      margin-bottom: 40px
   &__wrapper
     display: flex
     justify-content: space-between

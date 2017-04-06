@@ -1,1 +1,196 @@
 // SOME INNER PAGES CONTENT
+
+.cta-line
+  &__wrapper
+    display: flex
+    align-items: center
+    .btn
+      margin-left: 35px
+
+
+// LINE FEATURE
+.line-features
+  .white-shadow
+    margin-bottom: 20px
+
+.line-feature
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 0
+  &--reverse
+    flex-direction: row-reverse
+
+  &__image
+    flex: 0 1 240px
+    img
+      max-width: 240px
+  &__content
+    margin-left: 5%
+    margin-right: 5%
+    font-size: 16px
+
+
+//TABS
+.tab
+  &__title
+    text-align: center
+    padding: 14px 20px
+    font-size: 20px
+    line-height: 2
+    font-weight: 700
+    cursor: pointer
+    background: #fafafa
+    &.active
+      background: white
+
+.row--ul
+  margin-bottom: 45px
+  &:last-child
+    margin-bottom: 0
+  .ico
+    flex: 0 0 auto
+  span
+    margin-left: 10px
+
+.label
+  display: inline-block
+  vertical-align: middle
+  text-transform: uppercase
+  background: transparent
+  font-size: 10px
+  line-height: 1.1
+  font-weight: 700
+  padding: 3px 7px
+  color: white
+  margin-left: 7px
+  &--red
+    background: $colorRed
+
+// CONSTRUCTOR CLASSES
+.white-shadow
+  background: white
+  border-radius: 5px
+  box-shadow: 0 20px 40px color(black a(10%))
+  overflow: hidden
+
+  hr
+    margin-top: 40px
+    display: block
+    background: color(black a(20%))
+    height: 1px
+    border: none
+    box-shadow: none
+
+.p50-wrapper
+  padding: 50px 5%
+
+  hr
+    margin-left: -5%
+    margin-right: -5%
+
+
+
+.p80-wrapper
+  padding: 60px 8% 80px 8%
+
+  hr
+    margin-left: -10%
+    margin-right: -10%
+
+.muted-text-row
+  color: #555555
+  line-height: 1.425
+  &__title
+    font-size: 12px
+    margin-bottom: 10px
+  &__caption
+    font-size: 14px
+    margin-top: 10px
+
+.huge-text
+  font-size: 36px
+  font-weight: 700
+  line-height: 1
+  vertical-align: middle
+
+.bold
+  font-weight: 700
+
+.italic
+  font-style: italic
+
+
+.fz20
+  font-size: 20px
+
+.lh18
+  line-height: 1.8
+
+.lh2
+  line-height: 2
+
+.img-fluid
+  max-width: 100%
+
+
+.yellow-bg
+  background: #FFDF5E
+  padding: 40px
+
+.row__content
+  margin-left: 35px
+
+
+
+// POSt
+.post
+  &__hero
+    position: relative
+    color: white
+    height: 400px
+    overflow: hidden
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 100%
+      transform: translate(-50%, -50%)
+      z-index: 1
+    &::after
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      bottom: 0
+      display: block
+      content: ' '
+      z-index: 2
+      background: linear-gradient(to bottom, color(black a(0%)), color(black a(80%)) )
+    &__info
+      position: absolute
+      z-index: 3
+      bottom: 0
+      padding-bottom: 40px
+  &__title
+    font-size: 36px
+    font-weight: 700
+    line-height: 1.1
+    letter-spacing: -.6px
+    margin-top: 10px
+    margin-bottom: 10px
+  &__crumb
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 1.6
+    font-weight: 700
+  &__date
+    font-size: 12px
+    color: color(white a(50%))
+
+  &__content
+    padding: 40px 8% 80px 8%
+    p
+      line-height: 1.8

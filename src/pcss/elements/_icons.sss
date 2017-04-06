@@ -110,6 +110,27 @@
       background-size: 16px
 
 
+  &-price-blot
+    background-image: url('../images/el/ico-price-blot.png')
+    size: 60px
+    // this is bad! - refactor png
+    mix-blend-mode: multiply
+
+  &-plus-blot
+    background-image: url('../images/el/ico-plus-blot.png')
+    size: 68px 65px
+  &-minus-blot
+    background-image: url('../images/el/ico-minus-blot.png')
+    size: 68px 65px
+  &-checkmark-blot
+    background-image: url('../images/el/ico-checkmark-blot.png')
+    size: 68px 65px
+
+  &-rocket
+    size: 100px
+    background-image: svg-load('../../images/svg/ico-rocket.svg')
+
+
 // MODIFIRES and CONTEXT SPECIFIC
 .hot-links__card
   .ico
@@ -117,3 +138,12 @@
     border-radius: 50%
     border: 2px dashed black
     transition: all $transitionSpeed ease
+
+// CSS ICONS
+.ico
+  &-long-dash
+    background: $fontColor
+    height: 2px
+    width: 50px
+    margin-left: 5px
+    margin-right: 10px

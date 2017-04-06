@@ -1,6 +1,7 @@
 // DECLARE VARIABLES
 var gulp          = require('gulp');
 var rename        = require('gulp-rename');
+var changed       = require('gulp-changed');
 var sourcemaps    = require('gulp-sourcemaps');
 var pug           = require('gulp-pug');
 var postcss       = require('gulp-postcss');
@@ -42,7 +43,7 @@ gulp.task('default', function (callback) {
 gulp.task('watch', function(){
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug']);
-  gulp.watch('./src/*.html', browserSync.reload);
+  gulp.watch('./src/*.html');
   gulp.watch('./src/js/es2015/*.js', ['babel']);
   gulp.watch('./src/js/**/*.js', browserSync.reload);
 })
@@ -93,9 +94,9 @@ gulp.task('postcss', function() {
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('./src/views/*.pug')
-      .pipe(pug({
+      .pipe(cache(pug({
         pretty: true
-      }))
+      })))
       .pipe( gulp.dest('./src/') )
       .pipe(browserSync.reload({
         stream: true

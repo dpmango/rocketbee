@@ -1,505 +1,222 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
-    <!--build:css css/styles.css-->
-    <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="components/owl.carousel/dist/assets/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <!--endbuild-->
-    <meta name="description" keywords="">
+    <style>
+    *{padding: 0;  margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
+    body{
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 16px;
+      color: white;
+      min-height: 100vh;
+      height: auto;
+      background-color: #181B1E;
+      overflow-x: hidden;
+    }
+    .container{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      min-height: 400px;
+      height: 100vh;
+    }
+    a{color: inherit; text-decoration: none;}
+    h1{
+      margin: 5vh 3vw 0 3vw;
+      padding-bottom: 1vh;
+      color: white;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .ico{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: ' ';
+      font-style: normal;
+    }
+    .logo{
+      background: white;
+      padding: 15px 30px 15px 50px;
+      border-bottom-left-radius: 100px;
+    }
+    .ico-logo{
+      background-image: url(../images/logo.png);
+      width: 215px;
+      height: 50px;
+    }
+    .links{
+       background-color: white;
+       border-radius: 10px;
+       margin: 5vh 2.5vw;
+       padding: 5vh 3vw;
+       width: 45vw;
+       flex: 1 1 40%
+       float: left;
+       color: rgba(0,0,0,.7);
+      }
+    .flex{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .flexCenter{
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    .content{
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+    }
+    .flexEnd{
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;;
+    }
+    ul{list-style: decimal-leading-zero;;}
+    ul li{
+      margin-left: 3vw;
+      color: #838B90;
+    }
+    ul li a{
+      display: block;
+      padding: 1.3vh 0vw 1.3vh 1vw;
+      width: 100%;
+      color: #181B1E;
+      border-left: 4px solid transparent;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+    ul li a span{
+      opacity: .5;
+      margin-left: .5em;
+      float: right;
+    }
+    ul li a:hover{
+      border-left: 4px solid #FDA202;
+      /*background: rgba(0,0,0,.1);*/
+      color: #FDA202;
+      border-bottom: 1px solid rgba(0,0,0,.4);
+    }
+    h2{
+      margin-bottom: 3vh;
+    }
+    .footer{
+      margin: 5vh 3vw 3vh 3vw;
+      border-top: 1px dotted rgba(255,255,255,.25);
+      padding-top: 2vh;
+      font-size: 0.825em;
+      color: #838B90;
+    }
+    .footer a{
+      color: white;
+    }
+    .flexWrap{
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+    }
+    @media(max-width: 700px){
+      h1{
+        font-size: 1.75em;
+      }
+      .container{
+        display: block;
+      }
+      .links{
+        width: 94vw;
+      }
+      ul li {
+        margin-left: 10vw;
+      }
+    }
+    </style>
   </head>
-  <body>
-    <div class="app">
-      <!-- HEADER::START-->
-      <header class="header">
-        <div class="container container--fluid">
-          <div class="row">
-            <div class="col col--auto">
-              <div class="header__wrapper"><a class="header__logo" href="#"><i class="ico ico-logo"></i></a>
-                <div class="header__menu">
-                  <ul>
-                    <li><a href="#">Службы доставки</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Преимущества</a></li>
-                    <li><a href="#">О сервисе</a></li>
-                    <li><a href="#">API</a></li>
-                  </ul>
-                </div>
-                <div class="header__cta"><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a></div>
-                <div class="hamburger hamburger--spin visible--desktop js-toggleMobileMenu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- MOBILE NAVI-->
-      <div class="navi-mobile">
-        <div class="container">
-          <div class="navi-mobile__wrapper">
-            <ul class="navi-mobile__list">
-              <li><a href="#">Службы доставки</a></li>
-              <li><a href="#">Услуги</a></li>
-              <li><a href="#">Преимущества</a></li>
-              <li><a href="#">О сервисе</a></li>
-              <li><a href="#">API</a></li>
-            </ul>
-            <div class="navi-mobile__cta"><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a></div>
-          </div>
+<body>
+  <div class="container">
+    <div class="fix">
+      <div class="flex flexCenter">
+        <h1>Rocket Bee - html/css Layout</h1>
+        <div class="logo">
+          <i class="ico ico-logo"></i>
         </div>
       </div>
-      <div class="app__content">
-        <!-- INFO::START-->
-        <div class="info info--mega-pad">
-          <div class="container">
-            <div class="row row--column-rev--tablet">
-              <div class="col col--4-6"> 
-                <h1 class="info__title">Отправка заказов? Легко!</h1>
-                <div class="info__subtitle">Доставляйте заказы вашим клиентам любыми удобными для них способами</div>
-                <div class="section-text info__short">Мы помогаем организовать работу с курьерскими службами, пунктами выдачи заказов, постоматами и транспортными компаниями. Мы максимально упростим весь цикл обработки заказа от расчета стоимости до отслеживания вручения клиенту.</div>
-              </div>
-              <div class="col col--2-6">
-                <div class="info__picture info__picture--absolute"><i class="ico ico-info-hero-abstract-1"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- HOT LINKS:: START-->
-        <div class="hot-links">
-          <div class="container">
-            <div class="row">
-              <div class="col col--auto">
-                <div class="hot-links__wrapper"><a class="hot-links__card" href="#"><i class="ico ico-hot-calc"></i>
-                    <div class="hot-links__card__title">Расчет стоимости <br> отправки</div></a><a class="hot-links__card" href="#"><i class="ico ico-hot-forms"></i>
-                    <div class="hot-links__card__title">Заполнение бланков <br> и документов</div></a><a class="hot-links__card" href="#"><i class="ico ico-hot-search"></i>
-                    <div class="hot-links__card__title">Отслеживание <br> отправлений</div></a><a class="hot-links__card" href="#"><i class="ico ico-hot-agregate"></i>
-                    <div class="hot-links__card__label">СКОРО</div>
-                    <div class="hot-links__card__title">Агрегация служб <br> доставки</div></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- NEWS-->
-        <div class="news section-m-t">
-          <div class="container">
-            <div class="row">
-              <div class="col col--auto">
-                <div class="section-heading">
-                  <h3 class="h3-title">Новости сервиса</h3><a class="visible--tablet" href="#">Все новости</a>
-                </div>
-              </div>
-            </div>
-            <div class="owl-carousel" id="owlNews"><a class="news__card" href="#">
-                <div class="news__card__image"><img src="images/newsCard_1.png"></div>
-                <div class="news__card__content">
-                  <div class="news__card__date">10 февраля</div>
-                  <div class="news__card__title">Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL</div>
-                </div></a><a class="news__card" href="#">
-                <div class="news__card__image"><img src="images/newsCard_2.png"></div>
-                <div class="news__card__content">
-                  <div class="news__card__date">28 января</div>
-                  <div class="news__card__title">Миграция на RocketAPI v 2.0  </div>
-                </div></a><a class="news__card" href="#">
-                <div class="news__card__image"><img src="images/newsCard_3.png"></div>
-                <div class="news__card__content">
-                  <div class="news__card__date">15 января</div>
-                  <div class="news__card__title">Неполадки устранены, работаем дальше</div>
-                </div></a></div>
-            <div class="row row--jcc hidden--tablet">
-              <div class="col col--auto text-center"><a class="btn btn--ghost btn--ghost--gray" href="#"><span>Все новости</span></a></div>
-            </div>
-          </div>
-        </div>
-        <!-- CALCULATOR-->
-        <div class="calculator section-m-t section-m-t--smaller">
-          <div class="container container--0-mobile">
-            <div class="calculator__wrapper">
-              <div class="calculator__head">
-                <h2 class="h2-title">Мы учли все нюансы доставки</h2>
-                <div class="section-text">EMS не берет грузы длиннее 150 см, коробка с роликами не влезет в ячейку постомата, Hermes не даст примерить кеды перед оплатой — мы знаем все нюансы служб доставки и подскажем их вам.</div>
-                <div class="calculator__location-input">
-                  <div class="ui-row ui-row--collapse">
-                    <div class="ui-group">
-                      <label>откуда:</label>
-                      <select class="js-styler__select" data-search="true">
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                        <option>Санкт-питербург</option>
-                      </select>
-                    </div><i class="ico ico-arrow-right mt45"></i>
-                    <div class="ui-group">
-                      <label>откуда:</label>
-                      <div class="ui-select ui-select--autocompleate">
-                        <input class="js-cityToCompleate" type="text" placeholder="введите город...">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="calculator__inputs">
-                <div class="row row--column--tablet">
-                  <div class="col col--4-6">
-                    <div class="ui-row ui-row--inline">
-                      <div class="ui-group">
-                        <label>вес<span>, кг</span>:</label>
-                        <div class="ui-input ui-input--short">
-                          <input type="text">
-                          <div class="ui-input__placeholder">кг</div>
-                        </div>
-                      </div>
-                      <div class="ui-group">
-                        <label>габариты<span>, см</span>:</label>
-                        <div class="ui-input-collection">
-                          <div class="ui-input ui-input--short">
-                            <input type="text" value="1500">
-                          </div>
-                          <div class="ui-input ui-input--short">
-                            <input type="text" value="1500">
-                          </div>
-                          <div class="ui-input ui-input--short">
-                            <input type="text" value="1500">
-                          </div>
-                        </div>
-                        <div class="ui-input__placeholder">см</div>
-                        <div class="ui-group__validation"><i class="ico ico-warn"></i><span>негабаритный груз</span></div>
-                      </div>
-                    </div>
-                    <!-- checkboxes-->
-                    <div class="ui-group">
-                      <label>дополнительные опции:</label>
-                      <div class="row row--column--mobile">
-                        <div class="col col--3-6">
-                          <div class="ui-checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox_1">
-                            <label for="checkbox_1"> <span>Возможность примерки</span></label>
-                          </div>
-                          <div class="ui-checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox_2" checked>
-                            <label for="checkbox_2"> <span>Наложенный платеж</span></label>
-                          </div>
-                          <div class="ui-checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox_3">
-                            <label for="checkbox_3"> <span>Дороже 15 тыс. рублей</span></label>
-                          </div>
-                        </div>
-                        <div class="col col--3-6">
-                          <div class="ui-checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox_4" checked>
-                            <label for="checkbox_4"> <span>Доставка до дверей</span></label>
-                          </div>
-                          <div class="ui-checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox_5" checked>
-                            <label for="checkbox_5"> <span>Оплата банковской картой</span></label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col col--2-6">
-                    <div class="ui-group border-top--tablet">
-                      <label>шаблоны отправлений:</label>
-                    </div>
-                    <div class="calculator__inputs__templates"><a href="#"><i class="ico ico-template-snowboard"></i><span>Крупный спорт-инвентарь</span></a><a href="#"><i class="ico ico-template-shoe"></i><span>Одежда и обувь</span></a><a href="#"><i class="ico ico-template-smartphone"></i><span>Электроника</span></a><a class="calculator__inputs__templates__new" href="#"><i class="ico ico-template-plus"></i><span>Создать свой шаблон</span></a></div>
-                  </div>
-                </div>
-              </div>
-              <!-- calc cta-->
-              <div class="calculator__cta"><a class="btn btn--primary btn--h40" href="#"> <span>Рассчитать</span></a>
-                <div class="calculator__cta__clear"><span>или</span><a href="#">очистить</a></div>
-              </div>
-              <!-- calc results-->
-              <div class="calculator__results">
-                <div class="calculator__results__head">
-                  <h3 class="h3-title">Вот, что нам удалось найти:</h3>
-                  <div class="calculator__results__filters"><span>сортировка по:</span>
-                    <div class="calculator__results__filter active" data-filter="price">цене</div>
-                    <div class="calculator__results__filter" data-filter="time">сроку</div>
-                    <div class="calculator__results__filter" data-filter="rate">рейтингу</div>
-                  </div>
-                </div>
-                <div class="calculator__results__row">
-                  <!-- card-->
-                  <div class="calculator__results__card">
-                    <div class="calculator__results__card__image"><img src="images/resultsCard_ruspost.png"></div>
-                    <div class="calculator__results__card__title">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</div>
-                    <div class="calculator__results__card__content">
-                      <div class="calculator__results__card__price">
-                        <div class="calculator__results__card__mainprice">150 Р</div>
-                        <div class="calculator__results__card__deliverable">2—5 дней</div>
-                      </div>
-                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
-                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#"> <span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
-                    </div>
-                  </div>
-                  <!-- card-->
-                  <div class="calculator__results__card">
-                    <div class="calculator__results__card__image"><img src="images/resultsCard_ems.png"></div>
-                    <div class="calculator__results__card__title">ДОСТАВКА МАЛОГАБАРИТНЫХ ГРУЗОВ</div>
-                    <div class="calculator__results__card__content">
-                      <div class="calculator__results__card__price">
-                        <div class="calculator__results__card__mainprice">250 Р</div>
-                        <div class="calculator__results__card__deliverable">1—2 дней</div>
-                      </div>
-                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
-                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#"><span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
-                    </div>
-                  </div>
-                  <!-- card-->
-                  <div class="calculator__results__card">
-                    <div class="calculator__results__card__image"><img src="images/resultsCard_inpost.png"></div>
-                    <div class="calculator__results__card__title">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</div>
-                    <div class="calculator__results__card__content">
-                      <div class="calculator__results__card__price">
-                        <div class="calculator__results__card__mainprice">220 Р</div>
-                        <div class="calculator__results__card__deliverable">3 дня</div>
-                      </div>
-                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
-                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#"><span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
-                    </div>
-                  </div>
-                  <!-- card-->
-                  <div class="calculator__results__card">
-                    <div class="calculator__results__card__image"><img src="images/resultsCard_dpd.png"></div>
-                    <div class="calculator__results__card__title">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</div>
-                    <div class="calculator__results__card__content">
-                      <div class="calculator__results__card__price">
-                        <div class="calculator__results__card__mainprice">230 Р</div>
-                        <div class="calculator__results__card__deliverable">5 дней</div>
-                      </div>
-                      <div class="calculator__results__card__features"><span>+ Наложенный платеж</span><span>+ Дороже 15 тыс. рублей</span></div>
-                      <div class="calculator__results__card__points"><i class="ico ico-location"></i><span>256 пунктов выдачи</span></div><a class="btn btn--ghost btn--block" href="#" disabled><span>ПОДГОТОВИТЬ ДОКУМЕНТЫ</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- FEATURES-->
-        <div class="features section-m-t">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="h2-title">Бесплатные функции</h2>
-              <div class="section-text">Всем интернет-магазинам мы предоставляем возможность автоматизировать отправку заказов. В личном кабинете доступны:</div>
-            </div>
-            <div class="row row--wrap">
-              <div class="col col--2-6 col--3-6--tablet">
-                <div class="features__card">
-                  <div class="blot blot--one"><i class="ico ico-feature-calc-btns"></i></div>
-                  <div class="features__card__title">Расчет стоимости отправки</div>
-                </div>
-              </div>
-              <div class="col col--2-6 col--3-6--tablet">
-                <div class="features__card">
-                  <div class="blot blot--two"><i class="ico ico-feature-forms-bars"></i></div>
-                  <div class="features__card__title">Шаблоны отправлений для быстрой подготовки документов</div>
-                </div>
-              </div>
-              <div class="col col--2-6 col--3-6--tablet">
-                <div class="features__card">
-                  <div class="blot blot--one"><i class="ico ico-feature-form-print"></i></div>
-                  <div class="features__card__title">Формирование документов для отправки через любые ТК</div>
-                </div>
-              </div>
-              <!-- next row - wrapped-->
-              <div class="col col--2-6 col--3-6--tablet">
-                <div class="features__card">
-                  <div class="blot blot--three"><i class="ico ico-feature-map-track"></i></div>
-                  <div class="features__card__title">Отслеживание отправлений</div>
-                </div>
-              </div>
-              <div class="col col--2-6 col--3-6--tablet">
-                <div class="features__card">
-                  <div class="blot blot--three"><i class="ico ico-feature-ico-export"></i></div>
-                  <div class="features__card__title">Шаблоны отправлений для быстрой подготовки документов</div>
-                </div>
-              </div>
-              <div class="col col--2-6 col--3-6--tablet">
-                <div class="features__card features__card--request"><i class="ico ico-plus-big"></i>
-                  <div class="features__card__title">Мы команда молодых профессионалов и у нас можно <a href="#">попросить фичу</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- API-->
-        <div class="api section-m-t">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="h2-title">Получите больше функций через API</h2>
-              <div class="section-text">Доверьте нам то, что не хотите делать сами. От рассчета стоимости доставки на вашем сайте до печати полного комплекта документов. Выбирайте и подключайте сами необходимые вам функции</div>
-            </div>
-            <div class="row row--stetch-child">
-              <!-- card-->
-              <div class="api__card">
-                <div class="api__card__image"><img src="images/apiCard_1.png">
-                  <div class="api__card__tags">
-                    <div class="api__card__tag">API</div>
-                    <div class="api__card__tag api__card__tag--blue">виджет</div>
-                  </div>
-                </div>
-                <div class="api__card__content">
-                  <div class="api__card__title">Расчет стоимости <br> отправки</div>
-                  <div class="api__card__description">Клиенты вашего интернет магазина смогут узнавать стоимость доставки во время оформления заказ с помощью настраиваемого виджета или непосредственно на сайте c подключенным API</div>
-                  <div class="api__card__price">2 Р/запрос</div><a class="btn btn--ghost btn--block btn--h40" href="#"> <span>Регистрация</span></a>
-                </div>
-              </div>
-              <!-- card-->
-              <div class="api__card">
-                <div class="api__card__image"><img src="images/apiCard_2.png">
-                  <div class="api__card__tags">
-                    <div class="api__card__tag">API</div>
-                  </div>
-                </div>
-                <div class="api__card__content">
-                  <div class="api__card__title">Подготовка документов для транспортных компаний</div>
-                  <div class="api__card__description">
-                    <ul class="list-line">
-                      <li>проверку корректности вводимых адресов и индексов</li>
-                      <li>формирование документов для отправки через любые ТК</li>
-                    </ul>
-                  </div>
-                  <div class="api__card__price">8 Р/заказ</div><a class="btn btn--ghost btn--block btn--h40" href="#"> <span>Регистрация</span></a>
-                </div>
-              </div>
-              <!-- card-->
-              <div class="api__card">
-                <div class="api__card__image"><img src="images/apiCard_3.png">
-                  <div class="api__card__tags">
-                    <div class="api__card__tag">API</div>
-                  </div>
-                </div>
-                <div class="api__card__content">
-                  <div class="api__card__title">Полная автоматизация логистических процессов</div>
-                  <div class="api__card__description">
-                    <ul class="list-line">
-                      <li>проверку корректности вводимых адресов и индексов</li>
-                      <li>забор отправлений</li>
-                      <li>печать документов для отправки через любые ТК</li>
-                      <li>физическая передача заказов в ТК</li>
-                      <li>работа как по собственному, так и по единому договору с ТК</li>
-                    </ul>
-                  </div>
-                  <div class="api__card__price">20 Р/заказ</div><a class="btn btn--ghost btn--block btn--h40" href="#"> <span>Регистрация</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="text-center mt30 mt20--tablet"><a class="btn btn--primary" href="#"> <span>СМОТРЕТЬ ВСЕ ФУНКЦИИ</span></a></div>
-          </div>
-        </div>
-        <!-- TESTIMONIALS-->
-        <div class="testimonials section-m-t">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="h2-title">Отзывы клиентов сервиса</h2>
-              <div class="section-text">Автоматизируйте свой отдел доставки, оптимизируйте расходы на логистику, вздохните спокойно и спите крепко. Всё остальное мы берем на себя.</div>
-            </div>
-            <div class="owl-carousel__custom-nav" data-nav="owlTestimonials"><i class="ico ico-owl-prev" data-control="prev"></i><i class="ico ico-owl-next" data-control="next"></i></div>
-          </div>
-          <div class="owl-carousel owl--no-nav" id="owlTestimonials">
-            <!-- card-->
-            <div class="testimonials__nav-item">
-              <div class="testimonials__card">
-                <div class="testimonials__card__image"><img src="images/testimonial.png"></div>
-                <div class="testimonials__card__content">
-                  <div class="testimonials__card__text">Две вещи, которые меня интересуют в первую очередь на сайтах подобных сервисов — это география доставки (мы карту страны вобщем и в баннер можем сунуть), обычно такие сервисы работают только из Москвы и кто уже юзает этот сервис и отзывы людей.</div>
-                  <div class="testimonials__card__author">Александра Крестовоздвижническая, <span>Madrobot.ru</span></div>
-                </div>
-              </div>
-            </div>
-            <!-- card-->
-            <div class="testimonials__nav-item">
-              <div class="testimonials__card">
-                <div class="testimonials__card__image"><img src="images/testimonial.png"></div>
-                <div class="testimonials__card__content">
-                  <div class="testimonials__card__text">Две вещи, которые меня интересуют в первую очередь на сайтах подобных сервисов — это география доставки (мы карту страны вобщем и в баннер можем сунуть), обычно такие сервисы работают только из Москвы и кто уже юзает этот сервис и отзывы людей.</div>
-                  <div class="testimonials__card__author">Александра Крестовоздвижническая, <span>Madrobot.ru</span></div>
-                </div>
-              </div>
-            </div>
-            <!-- card-->
-            <div class="testimonials__nav-item">
-              <div class="testimonials__card">
-                <div class="testimonials__card__image"><img src="images/testimonial.png"></div>
-                <div class="testimonials__card__content">
-                  <div class="testimonials__card__text">Две вещи, которые меня интересуют в первую очередь на сайтах подобных сервисов — это география доставки (мы карту страны вобщем и в баннер можем сунуть), обычно такие сервисы работают только из Москвы и кто уже юзает этот сервис и отзывы людей.</div>
-                  <div class="testimonials__card__author">Александра Крестовоздвижническая, <span>Madrobot.ru</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- CLIENTS-->
-        <div class="clients mt20 mt40--tablet">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="h2-title">Кто уже подключен</h2>
-              <div class="section-text">Автоматизируйте свой отдел доставки, оптимизируйте расходы на логистику, вздохните спокойно и спите крепко. Всё остальное мы берем на себя.</div>
-            </div>
-            <div class="row row--aic row--wrap--tablet mt45 mt20--tablet">
-              <div class="col col--1-4 col--3-6--tablet"><img src="images/clientLogo_1.png"></div>
-              <div class="col col--1-4 col--3-6--tablet"><img src="images/clientLogo_2.png"></div>
-              <div class="col col--1-4 col--3-6--tablet"><img src="images/clientLogo_3.png"></div>
-              <div class="col col--1-4 col--3-6--tablet"><img src="images/clientLogo_4.png"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- FOOTER::START-->
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col col--auto">
-              <div class="footer__top">
-                <div class="footer__el footer__copy">2017, ROCKETBEE<span>(v 1.0 954 билд)</span></div>
-                <div class="footer__company visible--mobile">ООО «Ракетопчела», ИНН 0000000000</div>
-                <div class="footer__el footer__menu"> <a href="#">О сервисе</a><a href="#">Тарифы</a><a href="#">Оферта</a><a href="#">Блог</a><a href="#">Частые вопросы</a></div>
-                <div class="footer__el footer__feature"><a class="btn btn--ghost btn--h40 btn--ghost--dark" href="#"><span>Предложить фичу</span></a></div>
-              </div>
-              <div class="footer__bottom">
-                <div class="footer__company hidden--mobile">ООО «Ракетопчела», ИНН 0000000000</div>
-                <div class="footer__socials"><a href="#"><i class="ico ico-footer-social ico-footer-social--youtube"></i></a><a href="#"><i class="ico ico-footer-social ico-footer-social--vk"></i></a><a href="#"><i class="ico ico-footer-social ico-footer-social--git"></i></a></div>
-                <div class="footer__support"><span>Тех. поддержка:<a href="mailto:support@rocketbee.ru">support@rocketbee.ru</a></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- SECONDARY STYLES-->
-      <!--build:css css/secondary.css-->
-      <link rel="stylesheet" href="css/secondary.css" type="text/css">
-      <!--endbuild-->
-      <!-- SCRIPTS-->
-      <!--build:js js/scripts.min.js-->
-      <script src="components/jquery/dist/jquery.min.js"></script>
-      <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-      <script src="components/owl.carousel/dist/owl.carousel.min.js"></script>
-      <script src="js/libs/jquery.maskedinput.min.js"></script>
-      <script src="js/libs/jquery.formstyler.js"></script>
-      <script src="components/EasyAutocomplete/dist/jquery.easy-autocomplete.min.js"></script>
-      <script src="js/main.js"></script>
-      <!--endbuild-->
     </div>
-  </body>
+    <div class="content">
+      <div class="flex flexWrap">
+        <div class="links">
+          <h2>Front</h2>
+          <ul class="">
+            <li><a href="mainpage.html" target="_blank">Homepage <span>(Главная)</span></a></li>
+            <li><a href="about.html" target="_blank">About <span>(О нас)</span></a></li>
+            <li><a href="ruspost.html" target="_blank">Russian Post <span>(Почта России)</span></a></li>
+            <li><a href="service.html" target="_blank">Service <span>(Услуга)</span></a></li>
+            <li><a href="post-list.html" target="_blank">Posts list <span>(Список постов)</span></a></li>
+            <li><a href="post.html" target="_blank">Posts <span>(Пост)</span></a></li>
+          </ul>
+        </div>
+        <div class="links">
+          <h2>Backoffice</h2>
+          <ul class="">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flexWrap">
+        <div class="links">
+          <h2>Helpers</h2>
+          <ul class="">
+            <li><a href="modal.html" target="_blank">Modal <span>(Модальные окна)</span></a></li>
+          </ul>
+        </div>
+
+        <div class="links">
+          <h2>Admin</h2>
+          <ul class="">
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="fix">
+      <div class="flex flexEnd">
+      <div class="footer">
+        Brought to you by <a href="http://f-end.ru/">@Sergey Khmelevskoy</a>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</body>
 </html>

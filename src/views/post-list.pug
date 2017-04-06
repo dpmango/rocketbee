@@ -1,0 +1,64 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.no-header-float
+      
+      include shared/header.pug
+      
+      .app__content
+      
+        .post.section-m-t
+          .container
+            .row
+              .col.col--auto
+                .white-shadow
+                  .post__hero
+                    img(src='images/blogPost.png')
+                    .post__hero__info.p80-wrapper
+                      .post__crumb новости
+                      .post__title Заголовок новости второго уровня, потому что первый очень большой
+                      .post__date 10 февраля
+                    
+                  .post__content
+                    .row
+                      .col.col--4-6.col--full--tablet
+                        p.italic Политическое учение Фомы Аквинского означает авторитаризм. Согласно концепции М.Маклюэна, тоталитарный тип политической культуры предсказуем. Правовое государство последовательно.
+                        p Политическое учение Фомы Аквинского означает авторитаризм. Согласно концепции М.Маклюэна, тоталитарный тип политической культуры предсказуем. Правовое государство последовательно. Согласно теории Э.Тоффлера («Шок будущего»), социализм категорически отражает классический элемент политического процесса.
+                        h3.h3-title Заголовок третьего уровня
+                        p Политическое учение Фомы Аквинского означает авторитаризм. Согласно концепции М.Маклюэна, тоталитарный тип политической культуры предсказуем. Правовое государство последовательно. Согласно теории Э.Тоффлера («Шок будущего»), социализм категорически отражает классический элемент политического процесса.
+                        
+                    
+        // NEWS
+        .news.section-m-t
+          .container
+            .row
+              .col.col--auto
+                .section-heading
+                  h3.h3-title Ранее в нашем блоге
+                
+            .owl-carousel#owlNews
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_1.png")
+                .news__card__content
+                  .news__card__date 10 февраля
+                  .news__card__title Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_2.png")
+                .news__card__content
+                  .news__card__date 28 января
+                  .news__card__title Миграция на RocketAPI v 2.0  
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_3.png")
+                .news__card__content
+                  .news__card__date 15 января
+                  .news__card__title Неполадки устранены, работаем дальше
+                      
+            
+        
+                                              
+      include shared/footer.pug
