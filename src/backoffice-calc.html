@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rocket Bee</title>
+    <!--build:css css/styles.css-->
+    <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="components/owl.carousel/dist/assets/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--endbuild-->
+    <meta name="description" keywords="">
+  </head>
+  <body>
+    <div class="app non-responsive">
+      <!-- HEADER::START-->
+      <header class="header">
+        <div class="container container--fluid">
+          <div class="row">
+            <div class="col col--auto">
+              <div class="header__wrapper"><a class="header__logo" href="#"><i class="ico ico-logo"></i></a>
+                <div class="header__menu">
+                  <ul>
+                    <li><a href="#">Службы доставки</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Преимущества</a></li>
+                    <li><a href="#">О сервисе</a></li>
+                    <li><a href="#">API</a></li>
+                  </ul>
+                </div>
+                <div class="header__cta">
+                  <div class="header__user">
+                    <div class="header__user__trigger">
+                      <div class="header__user__name">Иннокентий <br> Крестовоздвижнический</div>
+                    </div>
+                    <div class="header__user__dropdown"><a href="#">Мой профиль</a><a href="#">Помощь</a>
+                      <hr><a href="#">Выйти</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- MOBILE NAVI-->
+      <div class="navi-mobile">
+        <div class="container">
+          <div class="navi-mobile__wrapper">
+            <ul class="navi-mobile__list">
+              <li><a href="#">Службы доставки</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Преимущества</a></li>
+              <li><a href="#">О сервисе</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+            <div class="navi-mobile__cta"><a class="btn btn--ghost" href="#"> <span>ВХОД / РЕГИСТРАЦИЯ</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="app__content">
+        <!-- BACKOFFICE HEAD-->
+        <div class="backoffice section-m-t--smaller">
+          <div class="container">
+            <div class="row">
+              <div class="col col--auto">
+                <div class="backoffice__head">
+                  <div class="backoffice__head__navi"><a href="backoffice-shops.html">Магазины</a><a class="active" href="backoffice-calc.html">Калькулятор</a><a href="backoffice-settings.html">Настройки</a></div>
+                  <div class="backoffice__head__details">
+                    <div class="backoffice__head__price"><span>баланс:</span><span>1280 ₽</span></div><a class="btn btn--primary" href="#"> <span>ПОПОЛНИТЬ</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CALCULATOR-->
+        <div class="calculator section-m-t section-m-t--small">
+          <div class="container container--0-mobile">
+            <div class="calculator__wrapper">
+              <div class="row row--column--tablet">
+                <div class="col col--4-6">
+                  <div class="calculator__head">
+                    <h3 class="h3-title">Калькулятор доставки</h3>
+                    <div class="calculator__location-input">
+                      <div class="ui-row ui-row--collapse">
+                        <div class="ui-group">
+                          <label>откуда:</label>
+                          <select class="js-styler__select" data-search="true">
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                            <option>Санкт-питербург</option>
+                          </select>
+                        </div><i class="ico ico-arrow-right mt45"></i>
+                        <div class="ui-group">
+                          <label>откуда:</label>
+                          <div class="ui-select ui-select--autocompleate">
+                            <input class="js-cityToCompleate" type="text" placeholder="введите город...">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator__inputs">
+                    <div class="ui-row ui-row--inline">
+                      <div class="ui-group">
+                        <label>вес<span>, кг</span>:</label>
+                        <div class="ui-input ui-input--short">
+                          <input type="text">
+                          <div class="ui-input__placeholder">кг</div>
+                        </div>
+                      </div>
+                      <div class="ui-group">
+                        <label>габариты<span>, см</span>:</label>
+                        <div class="ui-input-collection">
+                          <div class="ui-input ui-input--short">
+                            <input type="text" value="1500">
+                          </div>
+                          <div class="ui-input ui-input--short">
+                            <input type="text" value="1500">
+                          </div>
+                          <div class="ui-input ui-input--short">
+                            <input type="text" value="1500">
+                          </div>
+                        </div>
+                        <div class="ui-input__placeholder">см</div>
+                        <div class="ui-group__validation"><i class="ico ico-warn"></i><span>негабаритный груз</span></div>
+                      </div>
+                    </div>
+                    <!-- checkboxes-->
+                    <div class="ui-group">
+                      <label>дополнительные опции:</label>
+                      <div class="row row--column--mobile">
+                        <div class="col col--3-6">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_1">
+                            <label for="checkbox_1"> <span>Возможность примерки</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_2" checked>
+                            <label for="checkbox_2"> <span>Наложенный платеж</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_3">
+                            <label for="checkbox_3"> <span>Дороже 15 тыс. рублей</span></label>
+                          </div>
+                        </div>
+                        <div class="col col--3-6">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_4" checked>
+                            <label for="checkbox_4"> <span>Доставка до дверей</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox_5" checked>
+                            <label for="checkbox_5"> <span>Оплата банковской картой</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- calc cta-->
+                  <div class="calculator__cta"><a class="btn btn--primary btn--h40" href="#"> <span>Рассчитать</span></a>
+                    <div class="calculator__cta__clear"><span>или</span><a href="#">очистить</a></div>
+                  </div>
+                </div>
+                <div class="col col--2-6">
+                  <div class="ui-group border-top--tablet">
+                    <label>шаблоны отправлений:</label>
+                  </div>
+                  <div class="calculator__inputs__templates"><a href="#"><i class="ico ico-template-snowboard"></i><span>Крупный спорт-инвентарь</span></a><a href="#"><i class="ico ico-template-shoe"></i><span>Одежда и обувь</span></a><a href="#"><i class="ico ico-template-smartphone"></i><span>Электроника</span></a><a class="calculator__inputs__templates__new" href="#"><i class="ico ico-template-plus"></i><span>Создать свой шаблон</span></a></div>
+                </div>
+              </div>
+            </div>
+            <!-- calc results-->
+            <div class="calculator__results">
+              <div class="calculator__results__head">
+                <h3 class="h3-title">Вот, что нам удалось найти:</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER::START-->
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col col--auto">
+              <div class="footer__top">
+                <div class="footer__el footer__copy">2017, ROCKETBEE<span>(v 1.0 954 билд)</span></div>
+                <div class="footer__company visible--mobile">ООО «Ракетопчела», ИНН 0000000000</div>
+                <div class="footer__el footer__menu"> <a href="#">О сервисе</a><a href="#">Тарифы</a><a href="#">Оферта</a><a href="#">Блог</a><a href="#">Частые вопросы</a></div>
+                <div class="footer__el footer__feature"><a class="btn btn--ghost btn--h40 btn--ghost--dark" href="#"><span>Предложить фичу</span></a></div>
+              </div>
+              <div class="footer__bottom">
+                <div class="footer__company hidden--mobile">ООО «Ракетопчела», ИНН 0000000000</div>
+                <div class="footer__socials"><a href="#"><i class="ico ico-footer-social ico-footer-social--youtube"></i></a><a href="#"><i class="ico ico-footer-social ico-footer-social--vk"></i></a><a href="#"><i class="ico ico-footer-social ico-footer-social--git"></i></a></div>
+                <div class="footer__support"><span>Тех. поддержка:<a href="mailto:support@rocketbee.ru">support@rocketbee.ru</a></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECONDARY STYLES-->
+      <!--build:css css/secondary.css-->
+      <link rel="stylesheet" href="css/secondary.css" type="text/css">
+      <!--endbuild-->
+      <!-- SCRIPTS-->
+      <!--build:js js/scripts.min.js-->
+      <script src="components/jquery/dist/jquery.min.js"></script>
+      <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+      <script src="components/owl.carousel/dist/owl.carousel.min.js"></script>
+      <script src="js/libs/jquery.maskedinput.min.js"></script>
+      <script src="js/libs/jquery.formstyler.js"></script>
+      <script src="components/EasyAutocomplete/dist/jquery.easy-autocomplete.min.js"></script>
+      <script src="js/main.js"></script>
+      <!--endbuild-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html').active Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .row
+              .col.col--auto.text-center
+                h3.h3-title.h3-title--no-m Мои магазины
+            
+            .row
+              .col.col--auto
+                // shop
+                .backoffice__shop
+                  .row.row--no-col.row--jcsb
+                    .backoffice__shop__left
+                      .backoffice__shop__name Интернет-скейтшоп Сквот
+                      a(href='#').backoffice__shop__link www.skvot.ru
+                    .backoffice__shop__right
+                      a(href='#').backoffice__shop__link редактировать
+                      a(href='#').backoffice__shop__link.backoffice__shop__link--red  
+                        i.ico.ico-delete
+                        span удалить
+                  .backoffice__shop__separator
+                  .row.row--no-col.row--jcsb.row--aic
+                    .backoffice__shop__left
+                      a(href='#').backoffice__shop__link Транспортные компании магазина
+                        span 7
+                      a(href='#').backoffice__shop__link Заказы
+                        span 256
+                    .backoffice__shop__right
+                      .backoffice__shop__apikey
+                        .backoffice__shop__apikey__hidden
+                          .backoffice__shop__apikey__key
+                            span Shop:
+                            span 3C59DC048E8850243BE8
+                          .backoffice__shop__apikey__key
+                            span Key:
+                            span FwDSMXepVrDxvN4g9mA5
+                        .backoffice__shop__apikey__trigger 
+                          span API ключ
+                        
+                // shop
+                .backoffice__shop
+                  .row.row--no-col.row--jcsb
+                    .backoffice__shop__left
+                      .backoffice__shop__name Интернет-магазин Dakine
+                      a(href='#').backoffice__shop__link www.dakine.ru
+                    .backoffice__shop__right
+                      a(href='#').backoffice__shop__link редактировать
+                      a(href='#').backoffice__shop__link.backoffice__shop__link--red  
+                        i.ico.ico-delete
+                        span удалить
+                  .backoffice__shop__separator
+                  .row.row--no-col.row--jcsb.row--aic
+                    .backoffice__shop__left
+                      a(href='#').backoffice__shop__link Транспортные компании магазина
+                        span 7
+                      a(href='#').backoffice__shop__link Заказы
+                        span 256
+                    .backoffice__shop__right
+                      .backoffice__shop__apikey
+                        .backoffice__shop__apikey__hidden
+                          .backoffice__shop__apikey__key
+                            span Shop:
+                            span 3C59DC048E8850243BE8
+                          .backoffice__shop__apikey__key
+                            span Key:
+                            span FwDSMXepVrDxvN4g9mA5
+                        .backoffice__shop__apikey__trigger 
+                          span API ключ
+                
+                a(href='#').backoffice__new-shop
+                  i.ico.ico-plus-btn
+                  span Добавить новый магазин
+
+                                              
+      include shared/footer.pug

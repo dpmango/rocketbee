@@ -1,0 +1,100 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html') Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html').active Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .row
+              .col.col--auto.text-center
+                h3.h3-title Мои настройки
+            
+            .row
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings
+                    .row
+                      .col.col--5-6
+                        form(action='')
+                          .row.row--narrow
+                            .col.col--3-6
+                              .ui-group
+                                label Фамилия
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                            
+                          .row.row--narrow
+                            .col.col--3-6            
+                              .ui-group
+                                label Телефон
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+
+                          .row.row--narrow
+                            .col.col--3-6            
+                              .ui-group
+                                label E-mail:
+                                .ui-input
+                                  input(type='email' placeholder="Ваш email")
+                            .col.col--3-6
+                              .muted-text-row.fz14.mt30 Будет использоваться для входа в личный кабинет и восстановления пароля
+                              
+                          .row.row--narrow
+                            .col.col--3-6            
+                              .ui-group
+                                label Новый пароль:
+                                .ui-input
+                                  input(type='password' placeholder='Введите пароль')
+                            .col.col--3-6
+                              .muted-text-row.fz14.mt30 Оставьте поле пустым, если не собираетесь менять пароль
+                    
+                    .row
+                      .col.col--auto
+                          hr
+                            
+                          .row.row--no-col.row--aic.mt20
+                            a(href='#').btn.btn--primary 
+                              span Сохранить
+                            span.fz14.ml10 или <a href='#' class="c-blue c-blue--dash">отменить</a>
+                        
+                    
+
+                                              
+      include shared/footer.pug

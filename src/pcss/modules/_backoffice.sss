@@ -1,0 +1,148 @@
+
+// BACKOFFICE
+.backoffice
+  &__head
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__navi
+      font-size: 20px
+      font-weight: 700
+      a
+        display: inline-block
+        position: relative
+        margin-right: 25px
+        &:last-child
+          margin-right: 0
+        &:after
+          content: ''
+          position: absolute
+          height: 3px
+          left: 50%
+          right: 50%
+          transition: $transitionSpeed all
+          opacity: 0
+          bottom: -7px
+          background-color: $colorOrange
+        &:hover, &.active
+          &:after
+            left: 0
+            right: 0
+            opacity: 1
+    &__details
+      margin-left: auto
+    &__price
+      margin-right: 20px
+      display: inline-block
+      span
+        display: inline-block
+        &:first-child
+          color: $fontColorA50
+          font-size: 14px
+          margin-right: 10px
+          letter-spacing: -.25px
+        &:last-child
+          font-size: 18px
+          letter-spacing: -.4px
+
+  &__shop
+    margin-top: 10px
+    background: white
+    border-radius: 5px
+    padding: 30px 40px
+
+    &__separator
+      background: $borderColor
+      height: 1px
+      margin-top: 20px
+      margin-bottom: 15px
+    &__name
+      font-size: 18px
+      font-weight: 700
+      margin-bottom: 10px
+    &__link
+      font-size: 14px
+      color: $colorBlue
+      transition: all $transitionSpeed ease
+      margin-right: 30px
+      span
+        display: inline-block
+        margin-left: 7px
+        color: $fontColor
+      &:hover
+        color: $colorBlueHover
+      &--red
+        margin-right: 0
+        span
+          color: $colorDelete
+          transition: all $transitionSpeed ease
+          &:hover
+            color: color($colorDelete a(75%))
+
+    &__apikey
+      display: flex
+      align-items: center
+      padding: 10px 15px
+      min-width: 330px
+      border-radius: 5px
+      padding-right: 0
+      &.active
+        background: #FCF9F2
+        padding-right: 20px
+        .backoffice__shop__apikey__hidden
+          opacity: 1
+          pointer-events: all
+      &__trigger
+        font-size: 14px
+        color: $colorBlue
+        margin-left: auto
+        cursor: pointer
+        transition: all $transitionSpeed ease
+        &:hover
+          color: $colorBlueHover
+        span
+          border-bottom: 1px dashed $colorBlue
+      &__hidden
+        flex: 0 0 auto
+        opacity: 0
+        pointer-events: none
+        transition: all $transitionSpeed ease
+      &__key
+        font-size: 12px
+        display: flex
+        line-height: 1.4
+        margin-bottom: 3px
+        &:last-child
+          margin-bottom: 0
+        span
+          display: inline-block
+          &:first-child
+            color: $fontColorA50
+            min-width: 40px
+
+  &__new-shop
+    display: block
+    margin-top: 10px
+    border-radius: 5px
+    border: 2px dashed #979797
+    padding: 20px
+    text-align: center
+    color: $colorBlue
+    transition: all $transitionSpeed ease
+    &:hover
+      background: color(#979797 a(15%))
+      color: $colorBlueHover
+    span
+      display: inline-block
+      margin-left: 10px
+      vertical-align: middle
+
+  &__settings
+    padding: 50px 50px 20px 50px
+
+    hr
+      margin-top: 10px
+      margin-left: -50px
+      margin-right: -50px

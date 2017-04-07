@@ -1,0 +1,141 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html') Магазины
+                    a(href='backoffice-calc.html').active Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // CALCULATOR
+        .calculator.section-m-t.section-m-t--small
+          .container.container--0-mobile
+            .calculator__wrapper
+              .row.row--column--tablet
+                .col.col--4-6
+                  .calculator__head
+                    h3.h3-title Калькулятор доставки
+                    .calculator__location-input
+                      .ui-row.ui-row--collapse
+                        .ui-group
+                          label откуда:
+                          select.js-styler__select(data-search='true')
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+                            option() Санкт-питербург
+
+                        i.ico.ico-arrow-right.mt45
+                        .ui-group
+                          label откуда:
+                          .ui-select.ui-select--autocompleate
+                            input(type="text" placeholder='введите город...').js-cityToCompleate
+
+                  .calculator__inputs
+                
+                    .ui-row.ui-row--inline
+                      .ui-group
+                        label вес<span>, кг</span>:
+                        .ui-input.ui-input--short
+                          input(type="text")
+                          .ui-input__placeholder кг
+                      .ui-group
+                        label габариты<span>, см</span>:
+                        .ui-input-collection
+                          .ui-input.ui-input--short
+                            input(type="text" value='1500')
+                          .ui-input.ui-input--short
+                            input(type="text" value='1500')
+                          .ui-input.ui-input--short
+                            input(type="text" value='1500')      
+                        .ui-input__placeholder см
+                        .ui-group__validation
+                          i.ico.ico-warn
+                          span негабаритный груз
+                          
+                    // checkboxes
+                    .ui-group
+                      label дополнительные опции:
+                      .row.row--column--mobile
+                        .col.col--3-6
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_1")
+                            label(for="checkbox_1") 
+                              span Возможность примерки
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_2" checked)
+                            label(for="checkbox_2") 
+                              span Наложенный платеж
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_3")
+                            label(for="checkbox_3") 
+                              span Дороже 15 тыс. рублей
+
+                        .col.col--3-6
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_4" checked)
+                            label(for="checkbox_4") 
+                              span Доставка до дверей
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id="checkbox_5" checked)
+                            label(for="checkbox_5") 
+                              span Оплата банковской картой
+
+                  // calc cta
+                  .calculator__cta
+                    a(href='#').btn.btn--primary.btn--h40 
+                      span Рассчитать
+                    .calculator__cta__clear
+                      span или
+                      a(href="#") очистить
+                  
+                .col.col--2-6
+                  .ui-group.border-top--tablet
+                    label шаблоны отправлений:
+                  .calculator__inputs__templates
+                    a(href="#")
+                      i.ico.ico-template-snowboard
+                      span Крупный спорт-инвентарь
+                    a(href="#")
+                      i.ico.ico-template-shoe
+                      span Одежда и обувь
+                    a(href="#")
+                      i.ico.ico-template-smartphone
+                      span Электроника
+                    a(href="#").calculator__inputs__templates__new
+                      i.ico.ico-template-plus
+                      span Создать свой шаблон
+                            
+            // calc results
+            .calculator__results
+              .calculator__results__head
+                h3.h3-title Вот, что нам удалось найти:
+
+
+                                              
+      include shared/footer.pug

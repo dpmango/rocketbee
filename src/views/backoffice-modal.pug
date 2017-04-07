@@ -1,0 +1,152 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.no-header-float
+      
+      include shared/header.pug
+      
+      .app__content
+      
+        .text-center(style='display: flex; align-items:center; justify-content: center; height: 70vh;')
+          .row.row--column
+            .col.col--auto
+              a(href='#backofficeLogin').btn.btn--primary.popup-with-zoom-anim
+                span Вход
+            .col.col--auto.mt20
+              a(href='#backofficeRegister').btn.btn--primary.popup-with-zoom-anim
+                span Регистрация
+            .col.col--auto.mt20
+              a(href='#backofficeAbstract').btn.btn--primary.popup-with-zoom-anim
+                span Абстрактное сообщение
+            .col.col--auto.mt20
+              a(href='#backofficeRecover').btn.btn--primary.popup-with-zoom-anim
+                span Восстановить пароль
+            .col.col--auto.mt20
+              a(href='#backofficeReset').btn.btn--primary.popup-with-zoom-anim
+                span Сменить пароль   
+        
+        // LOGIN
+        #backofficeLogin.modal.modal--narrow.zoom-anim-dialog.mfp-hide
+          .modal__wrapper
+            .text-center
+              h3.h3-title Личный кабиент
+              .modal__header-action
+                | <a class="active" href="#">Вход </a><span> или </span><a href="#backofficeRegister" class="popup-with-zoom-anim">регистрация</a>
+            form(action='')
+              .ui-group
+                label Email
+                .ui-input
+                  input(type='email' placeholder="Ваш email")
+              .ui-group
+                label Пароль
+                .ui-input
+                  input(type='password' placeholder='Введите пароль')
+              .row.row--no-col.row--aic.row--jcsb.mt30
+                a(href='#').btn.btn--primary 
+                  span Войти
+                a(href='#').modal__link Восстановить пароль
+        
+        // ABSTRACT
+        #backofficeAbstract.modal.modal--narrow.zoom-anim-dialog.mfp-hide
+          .modal__wrapper
+            .text-center
+              h3.h3-title Абстрактное сообщение
+              .modal__description Операция не может быть выполнено, потому что это тестовое диалоговое окно.
+              a(href='#').btn.btn--primary.btn--block.mt20
+                span Ясно, понятно
+                                
+        // RECOVER
+        #backofficeRecover.modal.modal--narrow.zoom-anim-dialog.mfp-hide
+          .modal__wrapper
+            .text-center
+              h3.h3-title Восстановление пароля
+              .modal__description Введите e-mail, указанный при регистрации. Мы отправим вам ссылку для смены пароля.
+              form(action='')
+                .ui-group
+                  label Email
+                  .ui-input
+                    input(type='email' placeholder="Ваш email")
+                      
+                button(type='submit').btn.btn--primary.btn--block.mt20
+                  span Отправить ссылку
+                  
+        // CHANGE
+        #backofficeReset.modal.modal--narrow.zoom-anim-dialog.mfp-hide
+          .modal__wrapper
+            .text-center
+              h3.h3-title Смена пароля
+              .modal__description Мы почти закончили, осталось только придумать новый пароль.
+              form(action='')
+                .ui-group
+                  label Email
+                  .ui-input
+                    input(type='email' placeholder="Ваш email")
+                      
+                button(type='submit').btn.btn--primary.btn--block.mt20
+                  span Сменить пароль
+                  
+        // REGISTER
+        #backofficeRegister.modal.modal--wide.zoom-anim-dialog.mfp-hide
+          .modal__wrapper
+            .text-center
+              h3.h3-title Личный кабиент
+              .modal__header-action
+                | <a href="#backofficeLogin" class='popup-with-zoom-anim'>Вход </a><span> или </span><a class="active" href="#">регистрация</a>
+            form(action='')
+              .row.row--narrow
+                .col.col--3-6
+                  .ui-group
+                    label Фамилия
+                    .ui-input
+                      input(type='text' placeholder='Ваша фамилия')
+                .col.col--3-6
+                  .row.row--narrow
+                    .col.col--3-6
+                      .ui-group
+                        label Имя:
+                        .ui-input
+                          input(type='text' placeholder='Ваше имя')
+                    .col.col--3-6
+                      .ui-group
+                        label Отчество:
+                        .ui-input
+                          input(type='text' placeholder='Ваше отчество')
+                
+              .row.row--narrow
+                .col.col--3-6            
+                  .ui-group
+                    label Телефон
+                    .ui-input
+                      input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+
+              .row.row--narrow
+                .col.col--3-6            
+                  .ui-group
+                    label E-mail:
+                    .ui-input
+                      input(type='email' placeholder="Ваш email")
+                .col.col--3-6
+                  .muted-text-row.fz14.mt30 Будет использоваться для входа в личный кабинет и восстановления пароля
+                  
+              .row.row--narrow
+                .col.col--3-6            
+                  .ui-group
+                    label Пароль:
+                    .ui-input
+                      input(type='password' placeholder='Введите пароль')
+                
+              .ui-checkbox
+                input(type="checkbox" name="checkbox" id="checkbox_1")
+                label(for="checkbox_1") 
+                  span Принимаю условия <a href='#' class="c-blue">договора оферты</a>
+              
+              hr
+                
+              .row.row--no-col.row--aic.mt30
+                a(href='#').btn.btn--primary 
+                  span Зарегистрироваться
+                span.fz14.ml7p Не заполнены поля <a href='#' class="c-blue c-blue--dash">«Телефон»</a> и <a href='#' class='c-blue c-blue--dash'>«E-mail»</a>
+                                                                                         
+      include shared/footer.pug

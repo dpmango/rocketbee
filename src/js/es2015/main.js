@@ -98,7 +98,6 @@ $(document).ready( function() {
     if (!_value.is(e.target) && _value.has(e.target).length === 0) {
         _value.removeClass('active');
     }
-
   });
 
   // dimox styler
@@ -251,9 +250,37 @@ $(document).ready( function() {
 	// });
 
   // Masked input
-  $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
-  $("input[name='phone']").mask("9 (999) 999-9999");
-  $("#tin").mask("99-9999999");
-  $("#ssn").mask("999-99-9999");
+
+
+  // MASK
+  // $(".js-phoneMask").mask("0 (000) 000-0000");
+
+
+  ///////////////
+  // BACKOFFICE
+  //////////////
+
+  // TRIGGER USER DROPDOWN
+  $('.header__user__trigger').on('click', function(){
+    $(this).parent().toggleClass('is-active');
+  });
+  $(document).click(function (e) {
+    var _value = $('.header__user');
+    if (!_value.is(e.target) && _value.has(e.target).length === 0) {
+        _value.removeClass('is-active');
+    }
+  });
+
+  // TRIGGER API KEY
+  $('.backoffice__shop__apikey__trigger').on('click', function(){
+    $(this).closest('.backoffice__shop__apikey').toggleClass('active');
+
+    if ( $(this).find('span').text() == 'API ключ' ){
+      $(this).find('span').text('скрыть')
+    } else{
+      $(this).find('span').text('API ключ')
+    }
+
+  });
 
 });

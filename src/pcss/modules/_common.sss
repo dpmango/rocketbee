@@ -72,6 +72,75 @@
       left: -53px
       width: 50px
       background: linear-gradient(to right, color(white a(0%)), color(white a(75%)) )
+  &__user
+    position: relative
+    &.is-active
+      .header__user__trigger
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+        &::before
+          transform: rotate(180deg)
+      .header__user__dropdown
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+        pointer-events: all
+    &__trigger
+      display: flex
+      align-items: center
+      height: 50px
+      border-radius: 5px
+      border: 1px solid $borderColor
+      position: relative
+      padding: 5px 15px
+      cursor: pointer
+      &::before
+        display: block
+        content: ' '
+        position: absolute
+        top: 5px
+        bottom: 5px
+        width: 40px
+        left: 0
+        background: svg-load('../../images/svg/dropdown.svg') no-repeat center
+        transition: all $transitionSpeed ease
+    &__name
+      display: inline-block
+      margin-left: 25px
+      padding-left: 10px
+      padding-top: 5px
+      padding-bottom: 5px
+      font-size: 12px
+      line-height: 1
+      border-left: 1px solid $borderColor
+
+    &__dropdown
+      opacity: 0
+      pointer-events: none
+      transform: translate3d(0,50px,0)
+      position: absolute
+      top: 49px
+      right: 0
+      left: 0
+      z-index: 5
+      padding: 10px 0
+      background: white
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+
+      box-shadow: 0 10px 20px color(black a(21%))
+      border: 1px solid $borderColor
+      transition: all $transitionSpeed ease-out
+      a
+        font-size: 14px
+        display: block
+        padding: 7px 15px
+        transition: all $transitionSpeed ease
+        &:hover
+          background: color($borderColor a(50%))
+      hr
+        border: 0
+        background: $borderColor
+        height: 1px
 
 
 
@@ -127,6 +196,8 @@
   letter-spacing: -.45px
   margin-top: 0
   margin-bottom: 20px
+  &--no-m
+    margin: 0
 
 .section-text
   font-size: 16px
