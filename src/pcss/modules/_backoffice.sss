@@ -145,6 +145,9 @@
       margin-top: 10px
       margin-left: -50px
       margin-right: -50px
+    p
+      margin-top: 1em
+      margin-bottom: 1em
 
   &__settings__yellow-bg
     background: #FCF9F2
@@ -153,6 +156,27 @@
     padding: 30px 50px 50px 50px
     border-bottom: 1px solid $borderColor
 
+  &__single-row
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    font-size: 12px
+    margin-top: 16px
+    span
+      &:first-child
+        color: $fontColorA50
+
+  &__show-xml
+    display: inline-block
+    color: $colorBlue
+    font-size: 14px
+    padding: 20px 50px
+    a
+      border-bottom: 1px dashed $colorBlue
+      transition: all $transitionSpeed ease
+      &:hover
+        color: $colorBlueHover
 
   &__orders-filter
     display: -webkit-flex

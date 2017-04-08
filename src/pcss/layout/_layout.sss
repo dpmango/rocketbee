@@ -22,7 +22,6 @@ body, html
   font-size: 16px
   max-width: 100%
   min-width: 320px
-  overflow-x: hidden
   margin: 0
   // not supported by Noto sans ???
   // -webkit-font-smoothing: antialiased
@@ -65,6 +64,7 @@ body, html
   display: flex
   flex-direction: column
   min-height: 100vh
+  overflow-x: hidden
   &__content
     flex-grow: 1
     // heading pad
@@ -84,6 +84,8 @@ body, html
   &.non-responsive
     min-width: 1000px
     overflow: auto
+    .header, .footer
+      min-width: 1000px
 
 
 @media($tablet)

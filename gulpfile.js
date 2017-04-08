@@ -56,6 +56,7 @@ gulp.task('build', function (callback) {
     'postcss',
     ['useref', 'images', 'json'],
     'cssnano',
+    'mqpicker',
     callback
   )
 })
@@ -148,6 +149,16 @@ gulp.task('cssnano', function () {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('dist/css/min'));;
 });
+
+// disable media queries for some backoffice pages
+gulp.task('mqpicker', function () {
+  return gulp.src('./dist/css/*.css')
+    .pipe( postcss([mqpacker()]) )
+    .pipe(rename({ extname: '.mq.css' }))
+    .pipe(gulp.dest('dist/css/mq'));;
+});
+
+
 
 gulp.task('images', function(){
   return gulp.src('./src/images/**/*.+(png|jpg|gif|svg)')

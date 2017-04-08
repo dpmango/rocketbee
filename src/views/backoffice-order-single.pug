@@ -1,0 +1,130 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html').active Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .text-center
+              .c-muted.fz14 Интернет-скейтшоп Сквот  —  Список заказов
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='backoffice-order-list.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к заказам
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Заказ № 00000000
+              .col.col--1-4
+
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings
+                    .row
+                      .col.col.col--3-6
+                        .bold Клиент
+                        p.fz14 Крестовоздвижнический Иннокентий Иннокентьевич
+                        p.fz14 +7 000 000-00-00
+                        p.fz14 someemail@gmail.com
+                        
+                        .bold.mt20 Доставка
+                        p.fz14 199600, Щелково, ул. Курсанта Корзуна, д. 6к2А, кв. 150
+                        
+                      .col.col--3-6
+                        .bold Информация о заказе
+                        .row
+                          .col.col--3-6
+                            .backoffice__single-row
+                              span Способ доставки
+                              span Почта России
+                            .backoffice__single-row
+                              span Номер заказ
+                              span 00000000
+                            .backoffice__single-row
+                              span Вес
+                              span 800 г
+                            .backoffice__single-row
+                              span Стоимость заказа
+                              span 6940,00 ₽
+                          .col.col--3-6
+                            .backoffice__single-row
+                              span Дата заказа
+                              span 02.02.17 10:16
+                            .backoffice__single-row
+                              span Дата загрузки
+                              span 03.02.17 10:33
+                            .backoffice__single-row
+                              span Заказ обработан за
+                              span 24 ч 28 мин.
+                            .backoffice__single-row
+                              span Стоимость доставки
+                              span 400,00 ₽
+
+                        .c-50p.fz12.mt20 Комментарий:
+                        p.fz12.italic Аксиология готично начинает неизменный гений. Беспристрастный анализ любого творческого акта показывает, что художественная элита продолжает онтологический статус искусства.
+                    
+                    // table
+                    .bold.mt20 Список позиций
+                    
+                    
+                  // XML CODE
+                  .backoffice__settings__yellow-bg.mt20
+                    .xml-code
+                      code
+                        xmp
+                          //- <?xml version=«1.0» encoding=«UTF-8» ?>
+                          //- <OrdersList>
+                          //-   <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
+                          //-     <UserInfo>
+                          //-       <family>Громович</family>
+                          //-       <name>Алексей</name>
+                          //-       <patronymic>Алексеевич</patronymic>
+                          //-       <phone>79252458485</phone>
+                          //-       <email>grmvch@gmail.com</email>
+                          //-     </UserInfo>
+                          //-     <Delivery>
+                          //-       <transport_companies>4</transport_companies>
+                          //-       <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
+                          //-       <delivery_points_id>900305</delivery_points_id>
+                          //-       <price_delivery>400</price_delivery>
+                          //-     </Delivery>
+                          //-     <Commentary></Commentary>
+                          //-     <Items>
+                          //-       <Item article_product=«00122000» title=«Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN» count=«1» price=«6940»/>
+                          //-     </Items>
+                          //-   </SendOrder>
+                          //- </OrdersList>
+                  .backoffice__show-xml
+                    a(href='#') Показать XML-код заказа
+                        
+
+
+                  
+                  
+      include shared/footer.pug
