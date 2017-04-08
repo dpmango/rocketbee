@@ -20,12 +20,6 @@
     height: 50px;
     background-image: url(../images/logo.png);
 }
-@media(max-width: 568px) {
-    .ico-logo {
-        width: 150px;
-        height: 37px;
-    }
-}
 .ico-info-hero-abstract-1 {
     width: 1200px;
     height: 1200px;
@@ -296,12 +290,6 @@
 }
 .modal--wide {
     max-width: 820px;
-}
-@media(max-width: 880px) {
-    .modal--wide {
-        margin-right: 25px;
-        margin-left: 25px;
-    }
 }
 .modal--narrow {
     max-width: 480px;
@@ -1065,4 +1053,16 @@ button.mfp-close:active {
 /*     box-shadow: none */
 /*     color: #888 */
 
-/*# sourceMappingURL=secondary.css.map */
+@media(max-width: 568px) {
+    .ico-logo {
+        width: 150px;
+        height: 37px;
+    }
+}
+
+@media(max-width: 880px) {
+    .modal--wide {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+}
