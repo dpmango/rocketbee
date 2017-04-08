@@ -139,6 +139,52 @@
     background-image: svg-load('../../images/svg/ico-plus-btn.svg')
     size: 24px
 
+  &-prev
+    background-image: url('../images/el/ico-prev.png')
+    size: 15px 8px
+
+  &-print
+    background-image: svg-load('../../images/svg/ico-print.svg')
+    size: 26px
+    opacity: .2
+    transition: opacity $transitionSpeed ease
+    &:hover
+      opacity: 1
+    &--acent
+      opacity: 1
+  &-track
+    background-image: svg-load('../../images/svg/ico-track.svg')
+    size: 26px
+    opacity: .2
+    transition: opacity $transitionSpeed ease
+    &:hover
+      opacity: 1
+  &-more
+    background-image: svg-load('../../images/svg/ico-more.svg')
+    width: 18px
+    height: 4px
+    opacity: .2
+    transition: opacity $transitionSpeed ease
+    &:hover
+      opacity: 1
+
+
+.ico-owl-prev, .ico-owl-next
+  size: 50px
+  background: white svg-load('../../images/svg/owl-arrow.svg') no-repeat center
+  background-size: 10px 20px
+  border-radius: 50%
+  box-shadow: 0 20px 40px color(black a(10%))
+  cursor: pointer
+  transition: all $transitionSpeed ease
+  &:hover
+    box-shadow: 0 20px 40px color(black a(20%))
+
+.ico-owl-next
+  transform: rotate(180deg)
+  box-shadow: 0 -20px 40px color(black a(10%))
+  &:hover
+    box-shadow: 0 -20px 40px color(black a(20%))
 
 // MODIFIRES and CONTEXT SPECIFIC
 .hot-links__card
@@ -156,3 +202,13 @@
     width: 50px
     margin-left: 5px
     margin-right: 10px
+  &-counter
+    background: white
+    font-size: 10px
+    line-height: 1
+    text-align: center
+    border-radius: 50%
+    min-height: 24px
+    min-width: 24px
+    padding: 7px 5px
+    margin-left: 10px

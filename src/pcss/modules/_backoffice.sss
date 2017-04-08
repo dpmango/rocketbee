@@ -141,8 +141,172 @@
 
   &__settings
     padding: 50px 50px 20px 50px
-
     hr
       margin-top: 10px
       margin-left: -50px
       margin-right: -50px
+
+  &__settings__yellow-bg
+    background: #FCF9F2
+    margin-left: -50px
+    margin-right: -50px
+    padding: 30px 50px 50px 50px
+    border-bottom: 1px solid $borderColor
+
+
+  &__orders-filter
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+    padding: 15px 30px 25px 30px
+    .ui-group
+      margin-right: 10px
+    .ui-input
+      margin-bottom: 0
+    .ui-input input, .jq-selectbox__select
+      padding-top: 10px
+      padding-bottom: 10px
+    .jq-selectbox__select
+      height: 40px
+    .fw-20
+      flex: 0 0 20%
+    .fw-grow
+      flex: 1 1 auto
+    .btn
+      margin-top: 21px
+
+  &__categories-filter
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    font-size: 18px
+
+    &__group
+      flex: 1
+      display: flex
+      &:last-child
+        justify-content: flex-end
+        margin-left: auto
+    &__item
+      color: $colorBlue
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      &.active
+        color: $fontColor
+        .ico-counter
+          background: #D8D8D8
+      &.archive
+        color: $fontColorA50
+
+
+
+  &__sticky
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 9
+    background: white
+    &--stop
+      position: absolute
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      padding: 10px 0
+      font-size: 14px
+    &__selected
+      flex: 0 1 20%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-right: 30px
+      border-right: 1px solid $borderColor
+      span
+        &:first-child
+          color: $fontColorA50
+    &__print
+      flex: 0 1 29%
+      display: flex
+      justify-content: center
+      align-items: center
+      border-right: 1px solid $borderColor
+      color: $colorBlue
+      .ico
+        margin-right: 10px
+    &__filter
+      flex: 0 1 55%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-left: 30px
+      .jq-selectbox__select
+        flex: 1 1 240px
+        height: 40px
+        padding-top: 10px
+        padding-bottom: 10px
+        margin-left: 10px
+        margin-right: 10px
+      .btn
+
+
+// TABLE
+.table
+  font-size: 14px
+  margin-top: 15px
+  margin-bottom: 15px
+  &__row
+    display: flex
+    width: 100%
+    align-items: center
+    padding: 15px 20px
+    font-size: 12px
+    &:hover
+      background: #FCF9F2
+      transition: all $transitionSpeed ease
+      cursor: pointer
+    &--head
+      font-size: 14px
+      color: color($fontColor a(60%))
+      border-bottom: 1px solid $borderColor
+      &:hover
+        cursor: auto
+        background: white
+  &__col
+    flex: 0 0 auto
+    padding-left: 10px
+    padding-right: 10px
+    &--grow
+      flex-grow: 0
+    &:nth-child(1)
+      flex-basis: 30px
+      padding-right: 0
+      padding-left: 0
+    &:nth-child(2)
+      flex-basis: 115px
+      padding-left: 6px
+      padding-right: 0
+    &:nth-child(3)
+      flex-basis: 60px
+      padding-left: 0
+    &:nth-child(4)
+      flex-basis: 190px
+    &:nth-child(5)
+      flex-basis: 220px
+    &:nth-child(6)
+      flex-basis: 120px
+    &:nth-child(7)
+      flex-basis: 80px
+    &:nth-child(8)
+      flex-basis: 90px
+      padding-left: 0
+    &:nth-child(8)
+      flex-basis: 110px
+    .ico
+      margin-left: 5px
+      margin-right: 5px
+  &__logo
+    img
+      max-width: 100%

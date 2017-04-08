@@ -1,0 +1,238 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html').active Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .text-center
+              .c-muted.fz14 Интернет-скейтшоп Сквот  —  Список заказов
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='backoffice-shops.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к магазинам
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Новый заказ
+              .col.col--1-4
+
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings
+                    .row
+                      .col.col--5-6
+                        form(action='')
+                          .row.row--medium.row--aic
+                            .col.col--3-6
+                              .ui-group
+                                label Транспортная компания:
+                                select.js-styler__select(data-search='true')
+                                  option() Почта Роисси
+                                  option() Почта Роисси
+                                  option() Почта Роисси
+
+                            .col.col--3-6
+                              .ui-checkbox.mt20.ml10
+                                input(type="checkbox" name="checkbox" id="checkbox_1")
+                                label(for="checkbox_1") 
+                                  span Подготовить документы к печати
+
+                          .bold.mt30 Данные получателя
+                          .row.row--narrow.mt20
+                            .col.col--3-6
+                              .ui-group
+                                label Фамилия
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                            
+                          .row.row--medium
+                            .col.col--3-6            
+                              .ui-group
+                                label Телефон для оповещений (не обязательно):
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+
+                          .row.row--narrow
+                            .col.col--3-6            
+                              .ui-group
+                                label Страна:
+                                select.js-styler__select(data-search='true')
+                                  option() Россия
+                                  option() США
+                                  option() Африка
+                                
+                            .col.col--2-6            
+                              .ui-group
+                                label Город:
+                                .ui-input
+                                  input(type='text' placeholder="Ваш город")
+                        
+                          .row.row--narrow
+                            .col.col--4-6            
+                              .ui-group
+                                label Адрес:
+                                .ui-input
+                                  input(type='text' placeholder="Ваш адресс")
+                            .col.col--4-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Квартира, офис:
+                                    .ui-input
+                                      input(type='text' placeholder="Ваш адресс")
+                                .col.col--3-6
+                                  .ui-group
+                                    label Индекс:
+                                    .ui-input
+                                      input(type='text' placeholder="Ваш адресс")        
+                          
+                          // next section
+                          .bold.mt30 Финансы
+                          .row.row--narrow.mt20
+                            .col.col--3-6
+                              .ui-checkbox
+                                input(type="checkbox" name="checkbox" id="finance_1")
+                                label(for="finance_1") 
+                                  span Страховая сумма (ценность)
+                            .col.col--3-6
+                              .ui-checkbox
+                                input(type="checkbox" name="checkbox" id="finance_2")
+                                label(for="finance_2") 
+                                  span Наложенный платеж
+
+                          .row.row--narrow.mt20
+                            .col.col--3-6
+                              .ui-input.ui-input--short
+                                input(type="text")
+                                .ui-input__placeholder ₽
+                            .col.col--3-6
+                              .ui-input.ui-input--short
+                                input(type="text")
+                                .ui-input__placeholder ₽     
+
+                          .row.row--no-col.mt20
+                            .bold.mt10 Данные отправителя
+                            .ui-checkbox.ml30
+                              input(type="checkbox" name="checkbox" id="checkbox_n_3")
+                              label(for="checkbox_n_3") 
+                                span Использовать данные из настроек транспортной компании
+                    
+                    .backoffice__settings__yellow-bg.mt20
+                      .row
+                        .col.col--5-6
+                          .row.row--no-col
+                            .ui-radio
+                              input(type="radio" name="radio" id="radio_1" checked)
+                              label(for="radio_1") 
+                                span Физическое лицо
+                            .ui-radio.ml30
+                              input(type="radio" name="radio" id="radio_2")
+                              label(for="radio_2") 
+                                span Юридическое лицо
+                            
+                          .row.row--narrow.mt20
+                            .col.col--3-6
+                              .ui-group
+                                label Фамилия
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                            
+                          .row.row--medium
+                            .col.col--3-6            
+                              .ui-group
+                                label Телефон для оповещений (не обязательно):
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+
+                          .row.row--narrow
+                            .col.col--4-6            
+                              .ui-group
+                                label Адрес:
+                                .ui-input
+                                  input(type='text' placeholder="Ваш адресс")
+                            .col.col--4-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Квартира, офис:
+                                    .ui-input
+                                      input(type='text' placeholder="Квартира")
+                                .col.col--3-6
+                                  .ui-group
+                                    label Индекс:
+                                    .ui-input
+                                      input(type='text' placeholder="Офис")        
+                          
+                          .bold.mt30 Паспортные данные отправителя
+                            .row.mt20
+                              .col.col--2-4
+                            .ui-group
+                              label Серия, номер:
+                              .ui-input.ui-input--short
+                                input(type='text' data-mask='0000')
+                              .ui-input.ui-input--short
+                                input(type='text' data-mask='000000')
+                          
+
+                    .row
+                      .col.col--auto
+                          .row.row--no-col.row--aic.mt20
+                            a(href='#').btn.btn--primary 
+                              span Создать заказ
+                            span.fz14.ml10 или <a href='#' class="c-blue c-blue--dash">отменить</a>
+                        
+                    
+
+                                              
+      include shared/footer.pug

@@ -503,7 +503,7 @@
   position: relative
 
 
-.owl-next, .owl-prev, .ico-owl-prev, .ico-owl-next
+.owl-next, .owl-prev, .owl-carousel__custom-nav .ico-owl-prev, .owl-carousel__custom-nav .ico-owl-next
   position: absolute
   content: ' '
   top: 50%
@@ -519,11 +519,12 @@
   &:hover
     box-shadow: 0 20px 40px color(black a(20%))
 
-.ico-owl-prev, .ico-owl-next
-  background-size: 10px 20px !important
-  top: 130px
-  transform: none
-  cursor: pointer
+.owl-carousel__custom-nav
+  .ico-owl-prev, .ico-owl-next
+    background-size: 10px 20px !important
+    top: 130px
+    transform: none
+    cursor: pointer
 
 .owl-next
   right: 0
@@ -533,24 +534,29 @@
 .owl-prev
   left: 0
 
-.ico-owl-next
-  right: 100px
-  transform: rotate(180deg)
-
-.ico-owl-prev
-  left: 100px
+.owl-carousel__custom-nav
+  .ico-owl-next
+    right: 100px
+    transform: rotate(180deg)
+    box-shadow: 0 -20px 40px color(black a(10%))
+    &:hover
+      box-shadow: 0 -20px 40px color(black a(20%))
+  .ico-owl-prev
+    left: 100px
 
 
 @media($desktop)
-  .ico-owl-next
-    right: 0px
+  .owl-carousel__custom-nav
+    .ico-owl-next
+      right: 0px
 
-  .ico-owl-prev
-    left: 0
+    .ico-owl-prev
+      left: 0
 
 @media($tablet)
-  .ico-owl-prev, .ico-owl-next
-    display: none !important
+  .owl-carousel__custom-nav
+    .ico-owl-prev, .ico-owl-next
+      display: none !important
 
 
 .owl-dots
@@ -595,7 +601,7 @@
           opacity: 0
           bottom: -3px
           background-color: $colorOrageSecondary
-        &:hover
+        &:hover:not(.pagination__separate)
           &:after
             left: 0
             right: 0
@@ -611,3 +617,6 @@
       &:last-child
         a
           margin-right: 0
+  &__separate
+    margin-left: 10px
+    margin-right: 10px

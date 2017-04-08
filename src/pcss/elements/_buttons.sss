@@ -85,13 +85,29 @@ button
       background: black
       color: white
 
-
+  &--gray
+    padding: 15px 35px
+    font-size: 12px
+    text-transform: uppercase
+    border-radius: 5px
+    border: 2px solid color(#555555 a(60%))
+    &:hover
+      background: color(#555555 a(60%))
+      color: white
+    &.btn--h40
+      padding: 13px 35px
+    &.btn--p15
+      padding-left: 15px
+      padding-right: 15px
+      
   &--block
     width: 100%
     span
       display: block
       padding-left: 10px
       padding-right: 10px
+
+
 
 @media($mobile)
   .btn

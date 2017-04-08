@@ -1,0 +1,132 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html').active Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .row.row--aic
+              .col.col--1-4
+                a(href='backoffice-shops.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к магазинам
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Добавление нового магазина
+              .col.col--1-4
+            
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings
+                    .row
+                      .col.col--5-6
+                        form(action='')
+                          .bold Данные отправителя
+                          .row.row--medium.mt20
+                            .col.col--4-6
+                              .ui-group
+                                label Название магазина:
+                                .ui-input
+                                  input(type='text' placeholder='Магазин')
+                            .col.col--2-6
+                              .ui-group
+                                label Адрес сайта:
+                                .ui-input
+                                  input(type='text' placeholder='www.site.ru')
+                          
+                          .row.row--narrow
+                            .col.col--3-6
+                              .ui-group
+                                label Город отгрузки:
+                                .ui-input
+                                  input(type='text' placeholder='Ростов-на-Дону')
+                          
+                          .bold.mt20 Контакты
+                          .row.row--narrow.mt20
+                            .col.col--3-6
+                              .ui-group
+                                label Фамилия
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                            
+                          .row.row--medium
+                            .col.col--3-6            
+                              .ui-group
+                                label Контактный телефон:
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+                            .col.col--3-6            
+                              .ui-group
+                                label Телефон для оповещений (не обязательно):
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+
+                          .row.row--medium
+                            .col.col--3-6            
+                              .ui-group
+                                label E-mail:
+                                .ui-input
+                                  input(type='email' placeholder="Ваш email")
+                            .col.col--3-6            
+                              .ui-group
+                                label E-mail для логов (не обязательно):
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш email")
+                        
+                          .row.row--narrow
+                            .col.col--3-6            
+                              .ui-group
+                                label Skype (не обязательно):
+                                .ui-input
+                                  input(type='text' placeholder="Ваш skype")
+                    .row
+                      .col.col--auto
+                          hr
+                            
+                          .row.row--no-col.row--aic.mt20
+                            a(href='#').btn.btn--primary 
+                              span Добавить
+                            span.fz14.ml10 или <a href='#' class="c-blue c-blue--dash">отменить</a>
+                        
+                    
+
+                                              
+      include shared/footer.pug

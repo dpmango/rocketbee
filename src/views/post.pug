@@ -19,94 +19,46 @@ html
                     .post__hero__info.p80-wrapper
                       .post__crumb новости
                       .post__title Заголовок новости второго уровня, потому что первый очень большой
+                      .post__date 10 февраля
+                    
+                  .post__content
+                    .row
+                      .col.col--4-6.col--full--tablet
+                        p.italic Политическое учение Фомы Аквинского означает авторитаризм. Согласно концепции М.Маклюэна, тоталитарный тип политической культуры предсказуем. Правовое государство последовательно.
+                        p Политическое учение Фомы Аквинского означает авторитаризм. Согласно концепции М.Маклюэна, тоталитарный тип политической культуры предсказуем. Правовое государство последовательно. Согласно теории Э.Тоффлера («Шок будущего»), социализм категорически отражает классический элемент политического процесса.
+                        h3.h3-title Заголовок третьего уровня
+                        p Политическое учение Фомы Аквинского означает авторитаризм. Согласно концепции М.Маклюэна, тоталитарный тип политической культуры предсказуем. Правовое государство последовательно. Согласно теории Э.Тоффлера («Шок будущего»), социализм категорически отражает классический элемент политического процесса.
+                        
                     
         // NEWS
-        .news.news--multiple.section-m-t--small
-          .container
-            .row.row--wrap
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_1.png")
-                  .news__card__content
-                    .news__card__date 10 февраля
-                    .news__card__title Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_2.png")
-                  .news__card__content
-                    .news__card__date 28 января
-                    .news__card__title Миграция на RocketAPI v 2.0  
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_3.png")
-                  .news__card__content
-                    .news__card__date 15 января
-                    .news__card__title Неполадки устранены, работаем дальше
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_1.png")
-                  .news__card__content
-                    .news__card__date 10 февраля
-                    .news__card__title Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_2.png")
-                  .news__card__content
-                    .news__card__date 28 января
-                    .news__card__title Миграция на RocketAPI v 2.0  
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_3.png")
-                  .news__card__content
-                    .news__card__date 15 января
-                    .news__card__title Неполадки устранены, работаем дальше
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_1.png")
-                  .news__card__content
-                    .news__card__date 10 февраля
-                    .news__card__title Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_2.png")
-                  .news__card__content
-                    .news__card__date 28 января
-                    .news__card__title Миграция на RocketAPI v 2.0  
-              .col.col--2-6
-                a(href="#").news__card
-                  .news__card__image
-                    img(src="images/newsCard_3.png")
-                  .news__card__content
-                    .news__card__date 15 января
-                    .news__card__title Неполадки устранены, работаем дальше
-                                            
-            
-        // PAGINATION
-        .pagination
+        .news.section-m-t
           .container
             .row
               .col.col--auto
-                .text-center
-                  ul.pagination__list
-                    li.active
-                      a(href='#') 1
-                    li
-                      a(href='#') 2
-                    li
-                      a(href='#') 3
-                    li
-                      a(href='#') 4
-                    li
-                      a(href='#') 5
-                    li
-                      a(href='#') 6
-                                          
+                .section-heading
+                  h3.h3-title Ранее в нашем блоге
+                
+            .owl-carousel#owlNews
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_1.png")
+                .news__card__content
+                  .news__card__date 10 февраля
+                  .news__card__title Мы подключили Деловые Линии, ЖелДорЭкспедицию и DHL
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_2.png")
+                .news__card__content
+                  .news__card__date 28 января
+                  .news__card__title Миграция на RocketAPI v 2.0  
+              a(href="#").news__card
+                .news__card__image
+                  img(src="images/newsCard_3.png")
+                .news__card__content
+                  .news__card__date 15 января
+                  .news__card__title Неполадки устранены, работаем дальше
+                      
+            
+        
+                                              
       include shared/footer.pug

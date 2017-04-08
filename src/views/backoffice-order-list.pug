@@ -1,0 +1,278 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html').active Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .text-center
+              .c-muted.fz14 Интернет-скейтшоп Сквот
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='backoffice-shops.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к магазинам
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Список заказов
+              .col.col--1-4
+            
+            
+            // FILTERS
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__orders-filter
+                    .ui-group.fw-20
+                      label диапазон дат:
+                      .ui-input
+                        input(type='text' placeholder='01.01.17  —  04.02.17')
+                    .ui-group.fw-20
+                      label Транспортная компания:
+                      select.js-styler__select(data-search='true')
+                        option() Почта Роисси
+                        option() Почта Роисси
+                        option() Почта Роисси
+                    .ui-group.fw-grow
+                      label ФИО или номер заказ
+                      .ui-input
+                        input(type='text')
+                    a(href='#').btn.btn--primary.btn--h40 Показать 
+            
+            .row.mt20
+              .col.col--auto
+                .backoffice__categories-filter
+                  .backoffice__categories-filter__group
+                    a(href='#').backoffice__categories-filter__item.active
+                      span Входящие
+                      i.ico.ico-counter 
+                        span +50
+                    a(href='#').backoffice__categories-filter__item
+                      span Отправленные
+                      i.ico.ico-counter 
+                        span +8
+                    a(href='#').backoffice__categories-filter__item
+                      span Доставленные
+                      i.ico.ico-counter 
+                        span +8  
+                        
+                  .backoffice__categories-filter__group
+                    a(href='#').backoffice__categories-filter__item.archive
+                      span Архив
+                      i.ico.ico-counter 
+                        span 800
+                        
+                        
+            // TABLE
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .table
+                    .table__row.table__row--head
+                      .table__col 
+                        .ui-checkbox
+                          input(type="checkbox" name="checkbox" id="check_all")
+                          label(for="check_all") 
+                            span
+                      .table__col время, номер
+                      .table__col.text-center ТК
+                      .table__col.table__col--grow город
+                      .table__col.table__col--grow ФИО
+                      .table__col телефон
+                      .table__col сумма, ₽
+                      .table__col 
+                    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                      // data row
+                      .table__row(data-id=val)
+                        .table__col
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id='table_'+ val +'')
+                            label(for='table_'+ val +'') 
+                              span
+                        .table__col 02.02.17 12:35 <br> 00000000
+                        .table__col.table__logo
+                          img(src='images/resultsCard_ems.png')
+                        .table__col.table__col--grow Петропавловск-Камчатский
+                        .table__col.table__col--grow.fz14 Крестовоздвижнический <br> Иннокентий Иннокентьевич
+                        .table__col +7 000 000-00-00
+                        .table__col 10000,00
+                        .table__col 
+                          a(href='#backofficePrint').popup-with-zoom-anim
+                            i.ico.ico-print
+                          a(href='#backofficeTrack').popup-with-zoom-anim
+                            i.ico.ico-track
+                          a(href='#')
+                            i.ico.ico-more
+                    
+                        
+        // PAGINATION
+        .pagination.mt30
+          .container
+            .row.row--aic
+              .col.col--1-6
+                i.ico.ico-owl-prev
+              .col.col--4-6
+                .text-center
+                  ul.pagination__list
+                    li.active
+                      a(href='#') 1
+                    li.pagination__separate
+                      span ...
+                    li
+                      a(href='#') 51
+                    li
+                      a(href='#') 52
+                    li
+                      a(href='#') 53
+                    li
+                      a(href='#') 54
+                    li
+                      a(href='#') 55
+                    li.pagination__separate
+                      span ...
+                    li
+                      a(href='#') 100
+              .col.col--1-6.text-right
+                i.ico.ico-owl-next
+        
+        .mt30
+          .container
+            .row
+              .col.col--auto.text-center
+                span Сумма выбранных заказов: 2 646 920,00 руб. («459 заказов») за период: c 05.01.2017 по 05.02.2017
+        // STICKY
+        .backoffice__sticky
+          .container
+            .row
+              .col.col--auto
+                .backoffice__sticky__wrapper
+                  .backoffice__sticky__selected
+                    span Выбрано
+                    span 4 заказа
+                  a(href='#').backoffice__sticky__print
+                    i.ico.ico-print.ico-print--acent
+                    span Напечатать документы
+                  .backoffice__sticky__filter
+                    span изменить статус
+                    select.js-styler__select
+                      option() Входящие
+                      option() Исходящие
+                      option() Корзина
+                    a(href='#').btn.btn--ghost.btn--h40 
+                      span Применить
+        
+        // MODALS
+        #backofficePrint.modal.modal--narrow.zoom-anim-dialog.mfp-hide
+          .modal__wrapper
+            .text-center
+              h3.h3-title Печать документов
+              .modal__description Мы подготовим документы к печати для 4 выбранных заказов. Операция может занять пару минут, когда закончим документ для печати откроется в новом окне
+              form(action='')
+                .ui-group
+                  label Список документов:
+                  .ui-checkbox
+                    input(type="checkbox" name="checkbox" id="docs_1")
+                    label(for="docs_1") 
+                      span Адресный ярлык
+                  .ui-checkbox
+                    input(type="checkbox" name="checkbox" id="docs_2")
+                    label(for="docs_2") 
+                      span Акты приемки-передачи
+                  .ui-checkbox
+                    input(type="checkbox" name="checkbox" id="docs_3")
+                    label(for="docs_3") 
+                      span Сопроводительные бланки
+                      
+                button(type='submit').btn.btn--primary.btn--block.mt20
+                  span Подготовить документы
+        
+        #backofficeTrack.modal.modal--narrow.zoom-anim-dialog.mfp-hide
+          .modal__wrapper.modal__wrapper--smaller
+            h3.h3-title.text-center Отслеживание отправления
+            
+            .modal__tracking-scope
+              .modal__tracking
+                .modal__tracking__left
+                  span Номер заказа:
+                .modal__tracking__right
+                  span 00000000
+              .modal__tracking
+                .modal__tracking__left
+                  span Получатель:
+                .modal__tracking__right
+                  span Крестовоздвижнический <br> Иннокентий Иннокентьевич
+        
+              .modal__tracking
+                .modal__tracking__left
+                  span Трек. номер:
+                .modal__tracking__right
+                  span RU0000000000000  
+                  img(src='images/resultsCard_ems.png')
+                    
+            hr.hr--full
+            
+            .modal__tracking-list
+              .modal__tracking.modal__tracking--stand-out
+                .modal__tracking__left
+                  span 18.03.2016   08:11
+                .modal__tracking__right
+                  span АСЦ Цех посылок
+                  
+              .modal__tracking
+                .modal__tracking__left
+                  span 17.03.2016   08:11
+                .modal__tracking__right
+                  span Распределительный центр
+                  
+              .modal__tracking
+                .modal__tracking__left
+                  span 15.03.2016   08:11
+                .modal__tracking__right
+                  span Таможня Пулково
+
+              .modal__tracking
+                .modal__tracking__left
+                  span 14.03.2016   08:11
+                .modal__tracking__right
+                  span Таможня Беларусь
+                  
+              .modal__tracking
+                .modal__tracking__left
+                  span 13.03.2016   08:11
+                .modal__tracking__right
+                  span Главпочтамт Минск
+                  
+              .modal__tracking
+                .modal__tracking__left
+                  span 12.03.2016   08:11
+                .modal__tracking__right
+                  span Начато слежение
+                
+                
+                        
+      include shared/footer.pug
