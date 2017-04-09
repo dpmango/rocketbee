@@ -15,6 +15,11 @@
       padding: 30px 15% 60px 15%
       &--smaller
         padding: 30px 10% 40px 10%
+  &--developer
+    max-width: 980px
+    .modal__wrapper
+      min-width: 980px
+
   &__wrapper
     background: white
     padding: 30px 10% 60px 10%
@@ -24,6 +29,8 @@
     overflow: hidden
     border-radius: 5px
     box-shadow: 0 20px 40px color(black a(20%))
+    &--no-pad
+      padding: 0
 
   &__description
     font-size: 14px
@@ -90,6 +97,19 @@
         max-width: 50px
         margin-left: 10px
 
+  &__developer
+    display: flex
+    &__content
+      flex: 0 0 64%
+      padding: 40px 40px 40px 40px
+    &__bottom
+      border-top: 1px solid $borderColor
+      padding: 20px 40px 30px 20px
+    &__sidebar
+      flex: 0 0 36%
+      font-size: 0
+      .ui-group
+        margin-right: 20px
 
 button.mfp-close
   size: 50px

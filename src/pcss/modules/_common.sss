@@ -36,6 +36,12 @@
       margin-right: 40px
       &:last-child
         margin-right: 0
+      &.active
+        a
+          &:after
+            left: 0
+            right: 0
+            opacity: 1
       a
         position: relative
         overflow: hidden
@@ -141,6 +147,14 @@
         border: 0
         background: $borderColor
         height: 1px
+
+  &--developer
+    height: 60px
+    .header__wrapper
+      height: 60px
+    .ico-logo
+      size: 172px 40px
+
 
 
 

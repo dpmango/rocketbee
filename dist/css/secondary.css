@@ -283,6 +283,17 @@
 .ico-counter--gray {
     background: #D8D8D8;
 }
+.ico-status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+.ico-status--gray {
+    background: #CCCCCC;
+}
+.ico-status--green {
+    background: #7ED321;
+}
 /* Styles for dialog window */
 .modal {
     overflow: visible;
@@ -320,6 +331,12 @@
 .modal--narrow .modal__wrapper--smaller {
     padding: 30px 10% 40px 10%;
 }
+.modal--developer {
+    max-width: 980px;
+}
+.modal--developer .modal__wrapper {
+    min-width: 980px;
+}
 .modal__wrapper {
     position: relative;
     overflow: hidden;
@@ -330,6 +347,9 @@
     -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     text-align: left;
+}
+.modal__wrapper--no-pad {
+    padding: 0;
 }
 .modal__description {
     margin-top: -15px;
@@ -412,6 +432,33 @@
 .modal__tracking__right img {
     margin-left: 10px;
     max-width: 50px;
+}
+.modal__developer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.modal__developer__content {
+    -webkit-flex: 0 0 64%;
+        -ms-flex: 0 0 64%;
+            flex: 0 0 64%;
+    padding: 40px 40px 40px 40px;
+    -webkit-box-flex: 0;
+}
+.modal__developer__bottom {
+    padding: 20px 40px 30px 20px;
+    border-top: 1px solid #CCCCCC;
+}
+.modal__developer__sidebar {
+    -webkit-flex: 0 0 36%;
+        -ms-flex: 0 0 36%;
+            flex: 0 0 36%;
+    font-size: 0;
+    -webkit-box-flex: 0;
+}
+.modal__developer__sidebar .ui-group {
+    margin-right: 20px;
 }
 button.mfp-close {
     top: -25px;

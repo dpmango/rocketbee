@@ -1,0 +1,214 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.developer
+      
+      include shared/header-dev.pug
+      
+      .app__content
+        
+        // DEV HEAD
+        .section-m-t--small
+          .container.container--wide
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='#').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к транспортным компаниям
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Пункты выдачи Hermes DPD
+              .col.col--1-6.text-right
+                a(href='#').btn.btn--gray.btn--h40.btn--p15
+                  span ДОБАВИТЬ ПУНКТ ВЫДАЧИ
+                a(href='#').btn.btn--gray.btn--h40.btn--p15
+                  span ПОКАЗАТЬ ПОЛЯ
+        
+        // DEV TABLE
+        .section-m-t--small
+          .container.container--wide.container--no-pad
+            .row
+              .col.col--auto
+                .table-dev
+                  .table-dev__row.table-dev__row--head
+                    .table-dev__col.point
+                      .t-vertical 
+                        span Публикация
+                    .table-dev__col.checkbox
+                      .t-vertical 
+                        span На сайте
+                    .table-dev__col.id ID
+                    .table-dev__col.name Название
+                    .table-dev__col.region Регион
+                    .table-dev__col.city Населенный пункт
+                    .table-dev__col.adress Адрес
+                    .table-dev__col.point
+                      .t-vertical
+                        span Время <br> работы
+                    .table-dev__col.point
+                      .t-vertical
+                        span Описание <br> маршрута
+                    .table-dev__col.point
+                      .t-vertical
+                        span Оплата <br> картой
+                    .table-dev__col.point
+                      .t-vertical
+                        span Частичный <br> выкуп
+                    .table-dev__col.point
+                      .t-vertical
+                        span Примерочная
+
+                  each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    a(href='#developerEdit').table-dev__row.popup-with-zoom-anim
+                      .table-dev__col.point
+                        i.ico.ico-status.ico-status--green
+                      .table-dev__col.checkbox
+                        .ui-checkbox
+                          input(type="checkbox" name="checkbox" id='table_'+ val +'')
+                          label(for='table_'+ val +'') 
+                            span
+                      .table-dev__col.id
+                        .fz10 000000
+                      .table-dev__col.name Центр бизнес услуг Mail Boxes Etc
+                      .table-dev__col.region Ханты-Мансийский <br> автономный округ — Югра
+                      .table-dev__col.city Нефтеюганск
+                      .table-dev__col.adress Тихоокеанская ул., д.184, рынок «Депо-2», <br> оф.100, торговый павильон №3, место №100
+                      .table-dev__col.point
+                        i.ico.ico-status.ico-status--green
+                      .table-dev__col.point
+                        i.ico.ico-status.ico-status--green
+                      .table-dev__col.point
+                        i.ico.ico-status.ico-status--green
+                      .table-dev__col.point
+                        i.ico.ico-status.ico-status--gray
+                      .table-dev__col.point
+                        i.ico.ico-status.ico-status--gray
+
+        // MODALS
+        #developerEdit.modal.modal--developer.zoom-anim-dialog.mfp-hide
+          .modal__wrapper.modal__wrapper--no-pad
+            .modal__developer
+              .modal__developer__content
+                .bold Редактирование пункта выдачи заказа
+                
+                .ui-group
+                  label название:
+                  .ui-input
+                    input(type='text')
+                .ui-group
+                  label ФИАС:
+                  .ui-input
+                    input(type='text')
+                      
+                .row
+                  .col.col--4-6 
+                    .ui-group
+                      label регион:
+                      .ui-input
+                        input(type='text')
+                  .col.col--2-6 
+                    .ui-group
+                      label населенный пункт:
+                      .ui-input
+                        input(type='text')
+                    
+                .row
+                  .col.col--1-6 
+                    .ui-group
+                      label индекс:
+                      .ui-input
+                        input(type='text')
+                  .col.col--5-6 
+                    .ui-group
+                      label адрес:
+                      .ui-input
+                        input(type='text')   
+                          
+                .row
+                  .col.col--3-6 
+                    .ui-group
+                      label Округ или район:
+                      .ui-input
+                        input(type='text')
+                  .col.col--3-6.mr30
+                    .ui-group
+                      label широта, долгота:
+                      .ui-input
+                        input(type='text')
+                          
+                .row
+                  .col.col--3-6 
+                    .ui-group
+                      label метро (если есть):
+                      .ui-input
+                        input(type='text')
+                  .col.col--3-6
+                    .ui-group
+                      label ЖД станция (если есть):
+                      .ui-input
+                        input(type='text')
+                
+                hr
+                  
+                .row
+                  .col.col--2-6 
+                    .ui-group
+                      label макс. цена:
+                      .ui-input
+                        input(type='text')
+                  .col.col--2-6
+                    .ui-group
+                      label ЖД станция (если есть):
+                      .ui-input
+                        input(type='text')
+                  .col.col--2-6
+                    .ui-group
+                      label макс. сумма габаритов:
+                      .ui-input
+                        input(type='text')
+                
+                .row
+                  .col.col--auto
+                    .ui-group
+                      label дополнительные опции:      
+                .row
+                  .col.col--2-6 
+                    .ui-group
+                      .ui-checkbox
+                        input(type="checkbox" name="checkbox" id='modal_1')
+                        label(for='modal_1') 
+                          span Примерочная
+                  .col.col--2-6
+                    .ui-group
+                      .ui-checkbox
+                        input(type="checkbox" name="checkbox" id='modal_2' checked)
+                        label(for='modal_2') 
+                          span Оплата картой
+                  .col.col--2-6
+                    .ui-group
+                      .ui-checkbox
+                        input(type="checkbox" name="checkbox" id='modal_2' checked)
+                        label(for='modal_2') 
+                          span Частичный выкуп
+                                 
+              // right   
+              .modal__developer__sidebar
+                img(src="http://placehold.it/380x350").img-fluid
+                .ui-group.mt20
+                  label график работы:
+                  .ui-input
+                    input(type='text')
+                .ui-group
+                  label описание маршрута:
+                  .ui-input
+                    textarea(rows='10')
+                
+            .modal__developer__bottom
+              .row.row--no-col.row--aic.mt20
+                a(href='#').btn.btn--primary 
+                  span Сохранить
+                span.fz14.ml10 или <a href='#' class="c-blue c-blue--dash">отменить</a>
+               
+      include shared/footer.pug

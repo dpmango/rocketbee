@@ -38,6 +38,13 @@ body, html
     max-width: 100%
     padding-left: 40px
     padding-right: 40px
+  &--wide
+    max-width: 1400px
+    padding-left: 20px
+    padding-right: 20px
+  &--no-pad
+    padding-left: 0
+    padding-right: 0
 
 @media($desktop)
   .container
@@ -86,6 +93,13 @@ body, html
     overflow: auto
     .header, .footer
       min-width: 1000px
+  &.developer
+    min-width: 1000px
+    overflow: auto
+    .header, .footer
+      min-width: 1000px
+    .app__content
+      margin-top: 60px
 
 
 @media($tablet)
