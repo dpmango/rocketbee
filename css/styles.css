@@ -1625,6 +1625,12 @@ body, html {
 .ml10 {
     margin-left: 10px;
 }
+.ml15 {
+    margin-left: 15px;
+}
+.ml20 {
+    margin-left: 20px;
+}
 .ml30 {
     margin-left: 30px;
 }
@@ -3381,6 +3387,57 @@ button {
     margin-right: 10px;
     margin-left: 10px;
 }
+/* TOOLTIP */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+.tooltip .ico {
+    cursor: pointer;
+}
+.tooltip .ico:hover + .tooltip__content {
+    opacity: 1;
+    pointer-events: all;
+}
+.tooltip__content {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    z-index: 9;
+    padding: 20px;
+    width: 440px;
+    background: white;
+    -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    color: #222222;
+    font-size: 14px;
+    opacity: 0;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.tooltip__content:before {
+    position: absolute;
+    top: 45%;
+    left: -15px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    content: ' ';
+    -webkit-transform: rotate(45deg) translateY(-50%);
+        -ms-transform: rotate(45deg) translateY(-50%);
+            transform: rotate(45deg) translateY(-50%);
+}
+.xml-code {
+    overflow-x: scroll;
+}
+.xml-code pre, .xml-code xmp {
+    margin: 0;
+}
 /* INDEX PAGE */
 .info {}
 .info--mega-pad {
@@ -4461,7 +4518,6 @@ button {
 }
 /* CONSTRUCTOR CLASSES */
 .white-shadow {
-    overflow: hidden;
     border-radius: 5px;
     background: white;
     -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -4508,6 +4564,9 @@ button {
     font-weight: 700;
     font-size: 36px;
     line-height: 1;
+}
+.dib {
+    display: inline-block;
 }
 .bold {
     font-weight: 700;
@@ -4848,6 +4907,17 @@ a.c-blue:hover {
     border-bottom: 1px solid #CCCCCC;
     background: #FCF9F2;
 }
+.backoffice__settings__yellow-bg--code {
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 0;
+}
+.backoffice__settings__yellow-bg--code.visible {
+    overflow: auto;
+    height: auto;
+    border-top: 1px solid #CCCCCC;
+}
 .backoffice__single-row {
     display: -webkit-flex;
     display: -ms-flex;
@@ -4867,8 +4937,9 @@ a.c-blue:hover {
     color: rgba(34, 34, 34, 0.5);
 }
 .backoffice__show-xml {
-    display: inline-block;
-    padding: 20px 50px;
+    display: block;
+    margin-top: 5px;
+    padding: 0px 50px 30px 50px;
     color: #1D59FB;
     font-size: 14px;
 }
@@ -5174,6 +5245,70 @@ a.c-blue:hover {
 }
 .table__logo img {
     max-width: 100%;
+}
+.table-order {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 14px;
+}
+.table-order__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    padding: 15px 20px;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.table-order__row--head {
+    border-bottom: 1px solid #CCCCCC;
+    color: #222222;
+    color: rgba(34, 34, 34, 0.6);
+}
+.table-order__row--head:hover {
+    background: white;
+    cursor: auto;
+}
+.table-order__col {
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    -webkit-box-flex: 0;
+}
+.table-order__col:nth-child(1) {
+    -webkit-flex-basis: 90px;
+            flex-basis: 90px;
+    padding-left: 0;
+        -ms-flex-preferred-size: 90px;
+}
+.table-order__col:nth-child(2) {
+    -webkit-flex-grow: 1;
+            flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+}
+.table-order__col:nth-child(3) {
+    -webkit-flex-basis: 55px;
+            flex-basis: 55px;
+        -ms-flex-preferred-size: 55px;
+}
+.table-order__col:nth-child(4) {
+    -webkit-flex-basis: 85px;
+            flex-basis: 85px;
+        -ms-flex-preferred-size: 85px;
+}
+.table-order__col:nth-child(4) {
+    -webkit-flex-basis: 85px;
+            flex-basis: 85px;
+        -ms-flex-preferred-size: 85px;
 }
 
 /* + check secondary for icons, animations and modal */
