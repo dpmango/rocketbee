@@ -1,0 +1,174 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html') Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html').active Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .text-center
+              .c-muted.fz14 Интернет-скейтшоп Сквот    —    Транспортные компании
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='backoffice-tk.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к ТК
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Данные юридического лица
+              .col.col--1-4
+            
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings.backoffice__settings--no-pad-t
+                    .backoffice__settings__yellow-bg
+                      .fz14.lh2 Вы можете работать с транспортными компаниями как от частного лица, так и от организации. Для того, чтобы в бланках, ярлыках и других носителях в качестве отправителя указывались реквизиты юридического лица.
+                      
+                    .row.mt30
+                      .col.col--5-6
+                        form(action='')
+                          .row
+                            .col.col--auto
+                              .ui-group
+                                label Название организации:
+                                .ui-input
+                                  input(type='text' placeholder="ООО «Название организации»")
+                          
+                          .row
+                            .col.col--5-6
+                              .row.row--medium
+                                .col.col--2-6
+                                  .ui-group
+                                    label ИНН
+                                    .ui-input
+                                      input(type='tel' placeholder="Ваш ИНН" data-mask="0000 0000 00")
+                                .col.col--2-6
+                                  .ui-group
+                                    label КПП
+                                    .ui-input
+                                      input(type='tel' placeholder="Ваш КПП" data-mask="0000 0000 00")
+                                .col.col--2-6
+                                  .ui-group
+                                    label ОГРН:
+                                    .ui-input
+                                      input(type='tel' placeholder="Ваш ОГРН" data-mask="0000 0000 00")
+                                    
+                          .row
+                            .col.col--auto
+                              .ui-group
+                                label Название банка:
+                                .ui-input
+                                  input(type='text' placeholder="ПАО «Название банка»")
+                                
+                          .row
+                            .col.col--auto.mr30
+                              .row.row--medium
+                                .col.col--2-6
+                                  .ui-group
+                                    label БИК:
+                                    .ui-input
+                                      input(type='tel' placeholder="00 00 00 000" data-mask="00 00 00 000")
+                                .col.col--4-6
+                                  .row.row--medium
+                                    .col.col--3-6
+                                      .ui-group
+                                        label Корреспондентский счёт:
+                                        .ui-input
+                                          input(type='tel' placeholder="0000 0000 0000 0000 0000" data-mask="0000 0000 0000 0000 0000")
+                                    .col.col--3-6
+                                      .ui-group
+                                        label Расчётный счёт:
+                                        .ui-input
+                                          input(type='tel' placeholder="0000 0000 0000 0000 0000" data-mask="0000 0000 0000 0000 0000")
+                                        
+                          .row
+                            .col.col--auto
+                              .ui-group
+                                label Юридический адрес:
+                                .ui-input
+                                  input(type='text' placeholder="Введите адрес")
+                              .ui-group
+                                label Фактический адрес:
+                                .ui-input
+                                  input(type='text' placeholder="Введите адрес")
+                                                                      
+                          // Persons
+                          .row.row--narrow
+                            .col.col--3-6
+                              .ui-group
+                                label Генеральный директор, фамилия:
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                                    
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                          
+                          .row.row--narrow
+                            .col.col--3-6
+                              .ui-group
+                                label Главный бухгалтер, фамилия:
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                                    
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                            
+
+                    .row
+                      .col.col--auto
+                          hr
+                            
+                          .row.row--no-col.row--aic.mt20
+                            a(href='#').btn.btn--primary 
+                              span Сохранить
+                            span.fz14.ml10 или <a href='#' class="c-blue c-blue--dash">отменить</a>
+                        
+                    
+
+                                              
+      include shared/footer.pug

@@ -148,6 +148,14 @@
     p
       margin-top: 1em
       margin-bottom: 1em
+    &--no-pad-t
+      padding-top: 0
+      .backoffice__settings__yellow-bg
+        border-bottom: 0
+        padding-top: 25px
+        padding-bottom: 25px
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
 
   &__settings__yellow-bg
     background: #FCF9F2
@@ -284,6 +292,33 @@
         margin-left: 10px
         margin-right: 10px
       .btn
+
+  &__tk-row
+    display: flex
+    align-items: center
+    font-size: 14px
+    margin-bottom: 12px
+    &__left
+      flex-basis: 280px
+      display: flex
+      align-items: center
+      img
+        display: inline-block
+        max-width: 50px
+        margin-right: 20px
+      .ui-checkbox
+        margin-right: 17px
+        display: inline-block
+    &__status
+      flex-basis: 230px
+      text-align: center
+      padding-left: 15px
+      padding-right: 30px
+      color: #555555
+      .ico-warn
+        margin-right: 5px
+    &__action
+      flex-basis: 120px
 
 
 // TABLE

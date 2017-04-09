@@ -324,18 +324,64 @@
                               </div>
                             </div>
                           </div>
-                          <div class="bold mt30">Паспортные данные отправителя
-                            <div class="row mt20">
-                              <div class="col col--2-4"></div>
+                          <div class="bold mt30">Паспортные данные отправителя</div>
+                          <div class="row mt10 row--aie">
+                            <div class="col col--2-4">
+                              <div class="ui-group">
+                                <label class="db">Серия, номер:</label>
+                                <div class="ui-input ui-input--short dib">
+                                  <input type="text" data-mask="0000">
+                                </div>
+                                <div class="ui-input ui-input--90 dib ml10">
+                                  <input type="text" data-mask="000000">
+                                </div>
+                              </div>
                             </div>
-                            <div class="ui-group">
-                              <label>Серия, номер:</label>
-                              <div class="ui-input ui-input--short">
-                                <input type="text" data-mask="0000">
+                            <div class="col col--3-6">
+                              <div class="ui-group">
+                                <label>Выдан:</label>
+                                <div class="ui-input-collection">
+                                  <select class="js-styler__select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                  <select class="js-styler__select">
+                                    <option>январь</option>
+                                    <option>февраль</option>
+                                    <option>март</option>
+                                    <option>апрель</option>
+                                    <option>май</option>
+                                  </select>
+                                  <select class="js-styler__select">
+                                    <option>1990</option>
+                                    <option>1991</option>
+                                    <option>1992</option>
+                                    <option>1993</option>
+                                    <option>1994</option>
+                                  </select>
+                                </div>
                               </div>
-                              <div class="ui-input ui-input--short">
-                                <input type="text" data-mask="000000">
-                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col col--5-6">
+                          <div class="ui-group">
+                            <label>Адресс прописки</label>
+                            <div class="ui-input">
+                              <input type="text" value="Отделение УФМС № 10 по Санкт-Петербургу и ЛО">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col--1-6">
+                          <div class="ui-group">
+                            <label>Код подразделения</label>
+                            <div class="ui-input">
+                              <input type="text" data-mask="000 000">
                             </div>
                           </div>
                         </div>

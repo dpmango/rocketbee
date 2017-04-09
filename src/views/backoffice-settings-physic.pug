@@ -1,0 +1,137 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html') Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html').active Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .text-center
+              .c-muted.fz14 Интернет-скейтшоп Сквот    —    Транспортные компании
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='backoffice-tk.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к ТК
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Данные физического лица
+              .col.col--1-4
+            
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings.backoffice__settings--no-pad-t
+                    .backoffice__settings__yellow-bg
+                      .fz14.lh2 Для отправки грузов от физического лица в любой транспортной компании вам потребуется заполнить паспортные данные отправителя и контактный телефон. Заполните здесь и в дальнейшем они будут во всех формах и бланках подставляться автоматически. Перед печатью бланков или перед отправкой заявок в транспортную компанию вы сможете предварительно просмотреть и проверить отсылаемые данные.
+                      
+                    .row.mt30
+                      .col.col--5-6
+                        form(action='')
+                          .row.row--narrow
+                            .col.col--3-6
+                              .ui-group
+                                label Фамилия
+                                .ui-input
+                                  input(type='text' placeholder='Ваша фамилия')
+                            .col.col--3-6
+                              .row.row--narrow
+                                .col.col--3-6
+                                  .ui-group
+                                    label Имя:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше имя')
+                                .col.col--3-6
+                                  .ui-group
+                                    label Отчество:
+                                    .ui-input
+                                      input(type='text' placeholder='Ваше отчество')
+                            
+                          .row.row--narrow
+                            .col.col--3-6            
+                              .ui-group
+                                label Телефон
+                                .ui-input
+                                  input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
+
+                          .bold.mt30 Паспортные данные
+                          .row.mt10.row--aie
+                            .col.col--2-4
+                              .ui-group
+                                label.db Серия, номер:
+                                .ui-input.ui-input--short.dib
+                                  input(type='text' data-mask='0000')
+                                .ui-input.ui-input--90.dib.ml10
+                                  input(type='text' data-mask='000000')
+                            .col.col--3-6
+                              .ui-group
+                                label Выдан:
+                                .ui-input-collection
+                                  select.js-styler__select
+                                    option() 1
+                                    option() 2
+                                    option() 3
+                                    option() 4
+                                    option() 5
+                                  select.js-styler__select
+                                    option() январь
+                                    option() февраль
+                                    option() март
+                                    option() апрель
+                                    option() май
+                                  select.js-styler__select
+                                    option() 1990
+                                    option() 1991
+                                    option() 1992
+                                    option() 1993
+                                    option() 1994
+                      
+                    .row
+                      .col.col--5-6
+                        .ui-group
+                          label Адресс прописки
+                          .ui-input
+                            input(type='text' value='Отделение УФМС № 10 по Санкт-Петербургу и ЛО')
+                      .col.col--1-6
+                        .ui-group
+                          label Код подразделения
+                          .ui-input
+                            input(type='text' data-mask='000 000')
+
+                    .row
+                      .col.col--auto
+                          hr
+                            
+                          .row.row--no-col.row--aic.mt20
+                            a(href='#').btn.btn--primary 
+                              span Сохранить
+                            span.fz14.ml10 или <a href='#' class="c-blue c-blue--dash">отменить</a>
+                        
+                    
+
+                                              
+      include shared/footer.pug

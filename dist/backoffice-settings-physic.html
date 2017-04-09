@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- link(rel="stylesheet" href="components/highlight/styles/default.css" type="text/css")-->
     <meta name="description" keywords="">
   </head>
   <body>
@@ -62,7 +63,7 @@
             <div class="row">
               <div class="col col--auto">
                 <div class="backoffice__head">
-                  <div class="backoffice__head__navi"><a class="active" href="backoffice-shops.html">Магазины</a><a href="backoffice-calc.html">Калькулятор</a><a href="backoffice-settings.html">Настройки</a></div>
+                  <div class="backoffice__head__navi"><a href="backoffice-shops.html">Магазины</a><a href="backoffice-calc.html">Калькулятор</a><a class="active" href="backoffice-settings.html">Настройки</a></div>
                   <div class="backoffice__head__details">
                     <div class="backoffice__head__price"><span>баланс:</span><span>1280 ₽</span></div><a class="btn btn--primary" href="#"> <span>ПОПОЛНИТЬ</span></a>
                   </div>
@@ -74,51 +75,27 @@
         <!-- SHOPS-->
         <div class="section-m-t--small">
           <div class="container">
-            <div class="row row--aic">
-              <div class="col col--1-4"><a class="btn btn--gray btn--h40 btn--p15" href="backoffice-shops.html"><span> <i class="ico ico-prev"></i>Назад к магазинам</span></a></div>
+            <div class="text-center">
+              <div class="c-muted fz14">Интернет-скейтшоп Сквот    —    Транспортные компании</div>
+            </div>
+            <div class="row row--aic mt5">
+              <div class="col col--1-4"><a class="btn btn--gray btn--h40 btn--p15" href="backoffice-tk.html"><span> <i class="ico ico-prev"></i>Назад к ТК</span></a></div>
               <div class="col col--3-6 text-center">
-                <h3 class="h3-title h3-title--no-m ml10">Добавление нового магазина</h3>
+                <h3 class="h3-title h3-title--no-m ml10">Данные физического лица</h3>
               </div>
               <div class="col col--1-4"></div>
             </div>
             <div class="row mt20">
               <div class="col col--auto">
                 <div class="white-shadow">
-                  <div class="backoffice__settings">
-                    <div class="row">
+                  <div class="backoffice__settings backoffice__settings--no-pad-t">
+                    <div class="backoffice__settings__yellow-bg">
+                      <div class="fz14 lh2">Для отправки грузов от физического лица в любой транспортной компании вам потребуется заполнить паспортные данные отправителя и контактный телефон. Заполните здесь и в дальнейшем они будут во всех формах и бланках подставляться автоматически. Перед печатью бланков или перед отправкой заявок в транспортную компанию вы сможете предварительно просмотреть и проверить отсылаемые данные.</div>
+                    </div>
+                    <div class="row mt30">
                       <div class="col col--5-6">
                         <form action="">
-                          <div class="bold">Данные отправителя</div>
-                          <div class="row row--medium mt20">
-                            <div class="col col--4-6">
-                              <div class="ui-group">
-                                <label>Название магазина:</label>
-                                <div class="ui-input">
-                                  <input type="text" placeholder="Магазин">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col col--2-6">
-                              <div class="ui-group">
-                                <label>Адрес сайта:</label>
-                                <div class="ui-input">
-                                  <input type="text" placeholder="www.site.ru">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <div class="row row--narrow">
-                            <div class="col col--3-6">
-                              <div class="ui-group">
-                                <label>Город отгрузки:</label>
-                                <div class="ui-input">
-                                  <input type="text" placeholder="Ростов-на-Дону">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="bold mt20">Контакты</div>
-                          <div class="row row--narrow mt20">
                             <div class="col col--3-6">
                               <div class="ui-group">
                                 <label>Фамилия</label>
@@ -148,48 +125,54 @@
                               </div>
                             </div>
                           </div>
-                          <div class="row row--medium">
-                            <div class="col col--3-6">           
-                              <div class="ui-group">
-                                <label>Контактный телефон:</label>
-                                <div class="ui-input">
-                                  <input type="tel" placeholder="Ваш телефон" data-mask="0 (000) 000-0000">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col col--3-6">           
-                              <div class="ui-group">
-                                <label>Телефон для оповещений (не обязательно):</label>
-                                <div class="ui-input">
-                                  <input type="tel" placeholder="Ваш телефон" data-mask="0 (000) 000-0000">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row row--medium">
-                            <div class="col col--3-6">           
-                              <div class="ui-group">
-                                <label>E-mail:</label>
-                                <div class="ui-input">
-                                  <input type="email" placeholder="Ваш email">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col col--3-6">           
-                              <div class="ui-group">
-                                <label>E-mail для логов (не обязательно):</label>
-                                <div class="ui-input">
-                                  <input type="tel" placeholder="Ваш email">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <div class="row row--narrow">
                             <div class="col col--3-6">           
                               <div class="ui-group">
-                                <label>Skype (не обязательно):</label>
+                                <label>Телефон</label>
                                 <div class="ui-input">
-                                  <input type="text" placeholder="Ваш skype">
+                                  <input type="tel" placeholder="Ваш телефон" data-mask="0 (000) 000-0000">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="bold mt30">Паспортные данные</div>
+                          <div class="row mt10 row--aie">
+                            <div class="col col--2-4">
+                              <div class="ui-group">
+                                <label class="db">Серия, номер:</label>
+                                <div class="ui-input ui-input--short dib">
+                                  <input type="text" data-mask="0000">
+                                </div>
+                                <div class="ui-input ui-input--90 dib ml10">
+                                  <input type="text" data-mask="000000">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col--3-6">
+                              <div class="ui-group">
+                                <label>Выдан:</label>
+                                <div class="ui-input-collection">
+                                  <select class="js-styler__select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                  <select class="js-styler__select">
+                                    <option>январь</option>
+                                    <option>февраль</option>
+                                    <option>март</option>
+                                    <option>апрель</option>
+                                    <option>май</option>
+                                  </select>
+                                  <select class="js-styler__select">
+                                    <option>1990</option>
+                                    <option>1991</option>
+                                    <option>1992</option>
+                                    <option>1993</option>
+                                    <option>1994</option>
+                                  </select>
                                 </div>
                               </div>
                             </div>
@@ -198,9 +181,27 @@
                       </div>
                     </div>
                     <div class="row">
+                      <div class="col col--5-6">
+                        <div class="ui-group">
+                          <label>Адресс прописки</label>
+                          <div class="ui-input">
+                            <input type="text" value="Отделение УФМС № 10 по Санкт-Петербургу и ЛО">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col--1-6">
+                        <div class="ui-group">
+                          <label>Код подразделения</label>
+                          <div class="ui-input">
+                            <input type="text" data-mask="000 000">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
                       <div class="col col--auto">
                         <hr>
-                        <div class="row row--no-col row--aic mt20"><a class="btn btn--primary" href="#"> <span>Добавить</span></a><span class="fz14 ml10">или <a href='#' class="c-blue c-blue--dash">отменить</a></span></div>
+                        <div class="row row--no-col row--aic mt20"><a class="btn btn--primary" href="#"> <span>Сохранить</span></a><span class="fz14 ml10">или <a href='#' class="c-blue c-blue--dash">отменить</a></span></div>
                       </div>
                     </div>
                   </div>

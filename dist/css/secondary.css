@@ -280,6 +280,9 @@
     font-size: 10px;
     line-height: 1;
 }
+.ico-counter--gray {
+    background: #D8D8D8;
+}
 /* Styles for dialog window */
 .modal {
     overflow: visible;

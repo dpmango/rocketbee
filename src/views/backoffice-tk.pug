@@ -1,0 +1,167 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.non-responsive
+      
+      include shared/header-user.pug
+      
+      .app__content
+        
+        // BACKOFFICE HEAD
+        .backoffice.section-m-t--smaller
+          .container
+            .row
+              .col.col--auto
+                .backoffice__head
+                  .backoffice__head__navi
+                    a(href='backoffice-shops.html').active Магазины
+                    a(href='backoffice-calc.html') Калькулятор
+                    a(href='backoffice-settings.html') Настройки
+                  
+                  .backoffice__head__details
+                    .backoffice__head__price
+                      span баланс:
+                      span 1280 ₽
+                    a(href='#').btn.btn--primary 
+                      span ПОПОЛНИТЬ
+                  
+        // SHOPS
+        .section-m-t--small
+          .container
+            .text-center
+              .c-muted.fz14 Интернет-скейтшоп Сквот
+            .row.row--aic.mt5
+              .col.col--1-4
+                a(href='backoffice-shops.html').btn.btn--gray.btn--h40.btn--p15
+                  span 
+                    i.ico.ico-prev
+                    | Назад к магазинам
+              .col.col--3-6.text-center
+                h3.h3-title.h3-title--no-m.ml10 Транспортные компании
+              .col.col--1-4
+
+            .row.mt20
+              .col.col--auto
+                .white-shadow
+                  .backoffice__settings
+                    .row
+                      .col.col.col--5-6
+                        .bold Данные для работы с транспортными компаниями
+                        .backoffice__tk-row.mt20
+                          .backoffice__tk-row__left
+                            span для физического лица
+                          .backoffice__tk-row__status
+                            span данные не заполнены
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link редактировать
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            span для юридического лица
+                          .backoffice__tk-row__status
+                            span данные не заполнены
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link редактировать
+                        
+                        // transport compnaies
+                        .bold.mt30 Выберите транспортные компании
+                        .backoffice__tk-row.mt20
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_1" checked)
+                              label(for="check_1") 
+                                span
+                            img(src='images/resultsCard_ruspost.png')
+                            span Почта России
+                          .backoffice__tk-row__status
+                            i.ico.ico-warn
+                            span.c-validation данные не заполнены
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+                        // next company
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_2" checked)
+                              label(for="check_2") 
+                                span
+                            img(src='images/resultsCard_inpost.png')
+                            span InPost
+                          .backoffice__tk-row__status
+                            i.ico.ico-warn
+                            span.c-validation данные не заполнены
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+                        
+                        // next company
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_3" checked)
+                              label(for="check_3") 
+                                span
+                            img(src='images/resultsCard_ems.png')
+                            span EMS Почта России
+                          .backoffice__tk-row__status
+                            span свой договор
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+                        
+                        // next company
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_4" checked)
+                              label(for="check_4") 
+                                span
+                            img(src='images/resultsCard_dpd.png')
+                            span DPD
+                          .backoffice__tk-row__status
+                            span единый договор
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+
+                        // next company
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_5")
+                              label(for="check_5") 
+                                span
+                            img(src='images/resultsCard_hermes.png')
+                            span Hermes
+                          .backoffice__tk-row__status
+                            span единый договор
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+                            
+                        // next company
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_6" checked)
+                              label(for="check_6") 
+                                span
+                            span Мои пункты выдачи
+                            i.ico.ico-counter.ico-counter--gray 7
+                          .backoffice__tk-row__status
+
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+
+                        // next company
+                        .backoffice__tk-row
+                          .backoffice__tk-row__left
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id="check_7")
+                              label(for="check_7") 
+                                span
+                            span Мой курьер
+                          .backoffice__tk-row__status
+
+                          .backoffice__tk-row__action
+                            a(href='#').backoffice__shop__link настроить
+                                    
+                                        
+      include shared/footer.pug

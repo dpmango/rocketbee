@@ -215,15 +215,49 @@ html
                                       input(type='text' placeholder="Офис")        
                           
                           .bold.mt30 Паспортные данные отправителя
-                            .row.mt20
-                              .col.col--2-4
-                            .ui-group
-                              label Серия, номер:
-                              .ui-input.ui-input--short
-                                input(type='text' data-mask='0000')
-                              .ui-input.ui-input--short
-                                input(type='text' data-mask='000000')
-                          
+                          .row.mt10.row--aie
+                            .col.col--2-4
+                              .ui-group
+                                label.db Серия, номер:
+                                .ui-input.ui-input--short.dib
+                                  input(type='text' data-mask='0000')
+                                .ui-input.ui-input--90.dib.ml10
+                                  input(type='text' data-mask='000000')
+                            .col.col--3-6
+                              .ui-group
+                                label Выдан:
+                                .ui-input-collection
+                                  select.js-styler__select
+                                    option() 1
+                                    option() 2
+                                    option() 3
+                                    option() 4
+                                    option() 5
+                                  select.js-styler__select
+                                    option() январь
+                                    option() февраль
+                                    option() март
+                                    option() апрель
+                                    option() май
+                                  select.js-styler__select
+                                    option() 1990
+                                    option() 1991
+                                    option() 1992
+                                    option() 1993
+                                    option() 1994
+                      
+
+                      .row
+                        .col.col--5-6
+                          .ui-group
+                            label Адресс прописки
+                            .ui-input
+                              input(type='text' value='Отделение УФМС № 10 по Санкт-Петербургу и ЛО')
+                        .col.col--1-6
+                          .ui-group
+                            label Код подразделения
+                            .ui-input
+                              input(type='text' data-mask='000 000')
 
                     .row
                       .col.col--auto

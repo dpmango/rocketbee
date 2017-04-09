@@ -27,6 +27,9 @@
   &--short
     input
       max-width: 70px
+  &--90
+    input
+      max-width: 90px
   &--error
     input
       display: block
@@ -327,6 +330,25 @@
       &::after
         display: none
 
+  .js-styler__select
+    display: inline-block
+    font-size: 16px
+    margin-left: -2px
+    margin-bottom: 20px
+    .jq-selectbox__select
+      border-radius: 0
+    &:nth-child(1)
+      width: 65px
+      .jq-selectbox__select
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+    &:nth-child(2)
+      width: 115px
+    &:nth-child(3)
+      width: 85px
+      .jq-selectbox__select
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
 
 
 // NOT SURE WHAT IS THAT
@@ -358,24 +380,6 @@
     .ui-input-collection
       display: inline-block
 
-
-.ui-number
-  position: relative
-  display: inline-block
-  .ico
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    padding: 10px
-    background-size: auto
-    transition: opacity $transitionSpeed ease
-    &:hover
-      opacity: .6
-  .ico-inputNum-less
-    left: 2px
-    transform: translateY(-50%) rotate(180deg)
-  .ico-inputNum-more
-    right: 2px
 
 
 // styler UI

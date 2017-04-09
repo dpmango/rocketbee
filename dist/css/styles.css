@@ -1100,6 +1100,12 @@ body, html {
     -webkit-box-align: center;
         -ms-flex-align: center;
 }
+.row--aie {
+    -webkit-align-items: flex-end;
+            align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+}
 .row--jcsb {
     -webkit-justify-content: space-between;
             justify-content: space-between;
@@ -1582,6 +1588,24 @@ body, html {
 .mt100 {
     margin-top: 100px;
 }
+.ml7p {
+    margin-left: 7%;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.ml15 {
+    margin-left: 15px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.ml30 {
+    margin-left: 30px;
+}
+.mr30 {
+    margin-right: 30px;
+}
 /* Paddings */
 .pt5 {
     padding-top: 5px;
@@ -1619,26 +1643,58 @@ body, html {
 .pt100 {
     padding-top: 100px;
 }
-.ml7p {
-    margin-left: 7%;
-}
-.ml10 {
-    margin-left: 10px;
-}
-.ml15 {
-    margin-left: 15px;
-}
-.ml20 {
-    margin-left: 20px;
-}
-.ml30 {
-    margin-left: 30px;
-}
 .text-center {
     text-align: center;
 }
 .text-right {
     text-align: right;
+}
+/* TEXT STYLES */
+.dib {
+    display: inline-block;
+}
+.db {
+    display: block !important;
+}
+.bold {
+    font-weight: 700;
+}
+.italic {
+    font-style: italic;
+}
+.fz12 {
+    font-size: 12px;
+}
+.fz14 {
+    font-size: 14px;
+}
+.fz20 {
+    font-size: 20px;
+}
+.lh18 {
+    line-height: 1.8;
+}
+.lh2 {
+    line-height: 2;
+}
+.img-fluid {
+    max-width: 100%;
+}
+.c-blue {
+    color: #1D59FB;
+}
+.c-blue--dashed {
+    border-bottom: 1px dashed #1D59FB;
+}
+a.c-blue {
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+a.c-blue:hover {
+    color: #658FFF;
+}
+.c-validation {
+    color: #D0021B;
 }
 @media(max-width: 768px) {
     .mt20--tablet {
@@ -1977,6 +2033,9 @@ button {
 }
 .ui-input--short input {
     max-width: 70px;
+}
+.ui-input--90 input {
+    max-width: 90px;
 }
 .ui-input--error input {
     display: block;
@@ -2338,6 +2397,32 @@ button {
 .ui-input-collection .ui-input:last-child:after {
     display: none;
 }
+.ui-input-collection .js-styler__select {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: -2px;
+    font-size: 16px;
+}
+.ui-input-collection .js-styler__select .jq-selectbox__select {
+    border-radius: 0;
+}
+.ui-input-collection .js-styler__select:nth-child(1) {
+    width: 65px;
+}
+.ui-input-collection .js-styler__select:nth-child(1) .jq-selectbox__select {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.ui-input-collection .js-styler__select:nth-child(2) {
+    width: 115px;
+}
+.ui-input-collection .js-styler__select:nth-child(3) {
+    width: 85px;
+}
+.ui-input-collection .js-styler__select:nth-child(3) .jq-selectbox__select {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 /* NOT SURE WHAT IS THAT */
 .ui-caption {
     margin-bottom: 20px;
@@ -2389,33 +2474,6 @@ button {
 }
 .ui-row--inline .ui-input-collection {
     display: inline-block;
-}
-.ui-number {
-    position: relative;
-    display: inline-block;
-}
-.ui-number .ico {
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    background-size: auto;
-    -webkit-transition: opacity .2s ease;
-    transition: opacity .2s ease;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-}
-.ui-number .ico:hover {
-    opacity: .6;
-}
-.ui-number .ico-inputNum-less {
-    left: 2px;
-    -webkit-transform: translateY(-50%) rotate(180deg);
-        -ms-transform: translateY(-50%) rotate(180deg);
-            transform: translateY(-50%) rotate(180deg);
-}
-.ui-number .ico-inputNum-more {
-    right: 2px;
 }
 /* styler UI */
 .jq-selectbox ul li {
@@ -4565,49 +4623,6 @@ button {
     font-size: 36px;
     line-height: 1;
 }
-.dib {
-    display: inline-block;
-}
-.bold {
-    font-weight: 700;
-}
-.italic {
-    font-style: italic;
-}
-.c-blue {
-    color: #1D59FB;
-}
-.c-blue--dashed {
-    border-bottom: 1px dashed #1D59FB;
-}
-a.c-blue {
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-}
-a.c-blue:hover {
-    color: #658FFF;
-}
-.fz12 {
-    font-size: 12px;
-}
-.fz14 {
-    font-size: 14px;
-}
-.italic {
-    font-style: italic;
-}
-.fz20 {
-    font-size: 20px;
-}
-.lh18 {
-    line-height: 1.8;
-}
-.lh2 {
-    line-height: 2;
-}
-.img-fluid {
-    max-width: 100%;
-}
 .yellow-bg {
     padding: 40px;
     background: #FFDF5E;
@@ -4900,6 +4915,16 @@ a.c-blue:hover {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+.backoffice__settings--no-pad-t {
+    padding-top: 0;
+}
+.backoffice__settings--no-pad-t .backoffice__settings__yellow-bg {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 .backoffice__settings__yellow-bg {
     margin-right: -50px;
     margin-left: -50px;
@@ -5139,6 +5164,57 @@ a.c-blue:hover {
     -webkit-box-flex: 1;
 }
 .backoffice__sticky__filter .btn {}
+.backoffice__tk-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.backoffice__tk-row__left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: 280px;
+            flex-basis: 280px;
+    -webkit-align-items: center;
+            align-items: center;
+        -ms-flex-preferred-size: 280px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.backoffice__tk-row__left img {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 50px;
+}
+.backoffice__tk-row__left .ui-checkbox {
+    display: inline-block;
+    margin-right: 17px;
+}
+.backoffice__tk-row__status {
+    -webkit-flex-basis: 230px;
+            flex-basis: 230px;
+    padding-right: 30px;
+    padding-left: 15px;
+    color: #555555;
+    text-align: center;
+        -ms-flex-preferred-size: 230px;
+}
+.backoffice__tk-row__status .ico-warn {
+    margin-right: 5px;
+}
+.backoffice__tk-row__action {
+    -webkit-flex-basis: 120px;
+            flex-basis: 120px;
+        -ms-flex-preferred-size: 120px;
+}
 /* TABLE */
 .table {
     margin-top: 15px;
