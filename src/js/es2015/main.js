@@ -283,6 +283,18 @@ $(document).ready( function() {
     }
   });
 
+  // SHOW XML
+  $('.backoffice__show-xml a').on('click', function(){
+    $(this).closest('.row').find('.backoffice__settings__yellow-bg--code').toggleClass('visible');
+
+    if ( $(this).text() == 'Показать XML-код заказа' ){
+      $(this).text('Скрыть XML-код заказа');
+    } else {
+      $(this).text('Показать XML-код заказа');
+    }
+
+  });
+
   // STICKY FILTER
   // _window.on('scroll', function(){
   //   var stickyEl = $('.backoffice__sticky');
@@ -298,3 +310,5 @@ $(document).ready( function() {
   // });
 
 });
+
+// hljs.initHighlightingOnLoad();

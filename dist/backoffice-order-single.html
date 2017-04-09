@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- link(rel="stylesheet" href="components/highlight/styles/default.css" type="text/css")-->
     <meta name="description" keywords="">
   </head>
   <body>
@@ -95,7 +96,7 @@
                         <p class="fz14">+7 000 000-00-00</p>
                         <p class="fz14">someemail@gmail.com</p>
                         <div class="bold mt20">Доставка</div>
-                        <p class="fz14">199600, Щелково, ул. Курсанта Корзуна, д. 6к2А, кв. 150</p>
+                        <p class="fz14">199600, Щелково, ул. Курсанта Корзуна, д. 6к2А, кв. 150</p><a class="backoffice__shop__link" href="#">Показать на карте</a>
                       </div>
                       <div class="col col--3-6">
                         <div class="bold">Информация о заказе</div>
@@ -119,13 +120,74 @@
                     </div>
                     <!-- table-->
                     <div class="bold mt20">Список позиций</div>
+                    <div class="table-order">
+                      <div class="table-order__row table-order__row--head">
+                        <div class="table-order__col">Артикул</div>
+                        <div class="table-order__col">Позиция</div>
+                        <div class="table-order__col"></div>
+                        <div class="table-order__col">Цена</div>
+                        <div class="table-order__col">Сумма</div>
+                      </div>
+                      <div class="table-order__row">
+                        <div class="table-order__col">000000000</div>
+                        <div class="table-order__col">Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN</div>
+                        <div class="table-order__col">1 шт.</div>
+                        <div class="table-order__col">6940,00 ₽</div>
+                        <div class="table-order__col">6940,00 ₽</div>
+                      </div>
+                      <div class="table-order__row">
+                        <div class="table-order__col">000000000</div>
+                        <div class="table-order__col">Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN</div>
+                        <div class="table-order__col">1 шт.</div>
+                        <div class="table-order__col">6940,00 ₽</div>
+                        <div class="table-order__col">6940,00 ₽</div>
+                      </div>
+                      <div class="table-order__row">
+                        <div class="table-order__col">000000000</div>
+                        <div class="table-order__col">Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN</div>
+                        <div class="table-order__col">1 шт.</div>
+                        <div class="table-order__col">6940,00 ₽</div>
+                        <div class="table-order__col">6940,00 ₽</div>
+                      </div>
+                    </div>
+                    <div class="bold fz14 text-right"><span>Итого:</span><span class="ml15 dib">3 товара на сумму 20820,00 ₽</span>
+                      <!-- XML CODE-->
+                    </div>
+                    <div class="backoffice__settings__yellow-bg backoffice__settings__yellow-bg--code mt30">
+                      <div class="xml-code">
+                        <pre><code class="html">
+                            <xmp><?xml version=«1.0» encoding=«UTF-8» ?>
+<OrdersList>
+  <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
+    <UserInfo>
+      <family>Громович</family>
+      <name>Алексей</name>
+      <patronymic>Алексеевич</patronymic>
+      <phone>79252458485</phone>
+      <email>grmvch@gmail.com</email>
+    </UserInfo>
+    <Delivery>
+      <transport_companies>4</transport_companies>
+      <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
+      <delivery_points_id>900305</delivery_points_id>
+      <price_delivery>400</price_delivery>
+    </Delivery>
+    <Commentary></Commentary>
+    <Items>
+      <Item article_product=«00122000» title=«Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN» count=«1» price=«6940»/>
+    </Items>
+  </SendOrder>
+</OrdersList>
+
+                            </xmp></code></pre>
+                      </div>
+                    </div>
                   </div>
-                  <!-- XML CODE-->
-                  <div class="backoffice__settings__yellow-bg mt20">
-                    <div class="xml-code"><code>
-                        <xmp></xmp></code></div>
+                  <div class="backoffice__show-xml"><a href="#">Показать XML-код заказа</a>
+                    <div class="tooltip"><i class="ico ico-tooltip"></i>
+                      <div class="tooltip__content">Покажите это своим программистам или интеграторам, <br> они знают, что с этим делать.</div>
+                    </div>
                   </div>
-                  <div class="backoffice__show-xml"><a href="#">Показать XML-код заказа</a></div>
                 </div>
               </div>
             </div>

@@ -30,4 +30,4 @@ __Production__
 
 
 ### Recend push command
-gulp build && git add . && git commit -m "backoffice pages r3" && git push && git subtree --prefix dist push origin gh-pages
+gulp build && git add . && git commit -m "xml section on order sorted out" && git push && git subtree --prefix dist push origin gh-pages

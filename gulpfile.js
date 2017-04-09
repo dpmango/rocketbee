@@ -96,12 +96,12 @@ gulp.task('postcss', function() {
 gulp.task('pug', function buildHTML() {
   return gulp.src('./src/views/*.pug')
       // cache controll
-      .pipe(cache(pug({
-        pretty: true
-      })))
-      // .pipe(pug({
+      // .pipe(cache(pug({
       //   pretty: true
-      // }))
+      // })))
+      .pipe(pug({
+        pretty: true
+      }))
       .pipe( gulp.dest('./src/') )
       .pipe(browserSync.reload({
         stream: true

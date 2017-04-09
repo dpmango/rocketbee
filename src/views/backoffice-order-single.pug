@@ -55,6 +55,7 @@ html
                         
                         .bold.mt20 Доставка
                         p.fz14 199600, Щелково, ул. Курсанта Корзуна, д. 6к2А, кв. 150
+                        a(href='#').backoffice__shop__link Показать на карте
                         
                       .col.col--3-6
                         .bold Информация о заказе
@@ -92,37 +93,60 @@ html
                     // table
                     .bold.mt20 Список позиций
                     
+                    .table-order
+                      .table-order__row.table-order__row--head
+                        .table-order__col Артикул
+                        .table-order__col Позиция
+                        .table-order__col
+                        .table-order__col Цена
+                        .table-order__col Сумма
+                      each val in [1, 2, 3]
+                        .table-order__row
+                          .table-order__col 000000000
+                          .table-order__col Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN
+                          .table-order__col 1 шт.
+                          .table-order__col 6940,00 ₽
+                          .table-order__col 6940,00 ₽
                     
-                  // XML CODE
-                  .backoffice__settings__yellow-bg.mt20
-                    .xml-code
-                      code
-                        xmp
-                          //- <?xml version=«1.0» encoding=«UTF-8» ?>
-                          //- <OrdersList>
-                          //-   <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
-                          //-     <UserInfo>
-                          //-       <family>Громович</family>
-                          //-       <name>Алексей</name>
-                          //-       <patronymic>Алексеевич</patronymic>
-                          //-       <phone>79252458485</phone>
-                          //-       <email>grmvch@gmail.com</email>
-                          //-     </UserInfo>
-                          //-     <Delivery>
-                          //-       <transport_companies>4</transport_companies>
-                          //-       <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
-                          //-       <delivery_points_id>900305</delivery_points_id>
-                          //-       <price_delivery>400</price_delivery>
-                          //-     </Delivery>
-                          //-     <Commentary></Commentary>
-                          //-     <Items>
-                          //-       <Item article_product=«00122000» title=«Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN» count=«1» price=«6940»/>
-                          //-     </Items>
-                          //-   </SendOrder>
-                          //- </OrdersList>
+                    .bold.fz14.text-right
+                      span Итого:
+                      span.ml15.dib 3 товара на сумму 20820,00 ₽
+                    
+                    
+                      // XML CODE
+                    .backoffice__settings__yellow-bg.backoffice__settings__yellow-bg--code.mt30
+                      .xml-code
+                        pre
+                          code.html
+                            xmp.
+                              <?xml version=«1.0» encoding=«UTF-8» ?>
+                              <OrdersList>
+                                <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
+                                  <UserInfo>
+                                    <family>Громович</family>
+                                    <name>Алексей</name>
+                                    <patronymic>Алексеевич</patronymic>
+                                    <phone>79252458485</phone>
+                                    <email>grmvch@gmail.com</email>
+                                  </UserInfo>
+                                  <Delivery>
+                                    <transport_companies>4</transport_companies>
+                                    <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
+                                    <delivery_points_id>900305</delivery_points_id>
+                                    <price_delivery>400</price_delivery>
+                                  </Delivery>
+                                  <Commentary></Commentary>
+                                  <Items>
+                                    <Item article_product=«00122000» title=«Сноубордический рюкзак DAKINE HELI PRO 20L BOZEMAN» count=«1» price=«6940»/>
+                                  </Items>
+                                </SendOrder>
+                              </OrdersList>
+                  
                   .backoffice__show-xml
                     a(href='#') Показать XML-код заказа
-                        
+                    .tooltip
+                      i.ico.ico-tooltip
+                      .tooltip__content Покажите это своим программистам или интеграторам, <br> они знают, что с этим делать.
 
 
                   
