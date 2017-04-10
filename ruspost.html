@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- link(rel="stylesheet" href="components/highlight/styles/default.css" type="text/css")-->
     <meta name="description" keywords="">
   </head>
   <body>
@@ -51,21 +50,21 @@
       <div class="app__content">
         <!-- STAND OUT BLOCK-->
         <div class="section-m-t">
-          <div class="container">
+          <div class="container container--0-mobile">
             <div class="row">
               <div class="col col--auto">
                 <div class="white-shadow p80-wrapper">
-                  <div class="row row--aic">
+                  <div class="row row--aic row--column-rev--mobile">
                     <div class="col col--4-6">
-                      <p>Службы доставки</p>
+                      <p class="pl20--mobile">Службы доставки</p>
                       <div class="info__title">Почта России</div>
                       <div class="info__subtitle">Доставляйте заказы вашим клиентам любыми удобными для них способами</div>
                     </div>
-                    <div class="col col--2-6"><img class="img-fluid" src="images/russianPost.png"></div>
+                    <div class="col col--2-6"><img class="img-fluid img--100--mobile" src="images/russianPost.png"></div>
                   </div>
                   <hr>
-                  <div class="row mt40">
-                    <div class="col col--3-6"><i class="ico ico-plus-blot"></i><span class="fz20 bold ml10">Отрицательные стороны</span>
+                  <div class="row mt40 row--column--tablet">
+                    <div class="col col--3-6 col--350--tablet"><i class="ico ico-plus-blot"></i><span class="fz20 bold ml10">Отрицательные стороны</span>
                       <ul class="list-line">
                         <li>Самая большая территория охвата.</li>
                         <li>Отделение в каждом населенном пункте.</li>
@@ -73,7 +72,7 @@
                         <li>Отправка наложенным платежом.</li>
                       </ul>
                     </div>
-                    <div class="col col--3-6"><i class="ico ico-minus-blot"></i><span class="fz20 bold ml10">Отрицательные стороны</span>
+                    <div class="col col--3-6 col--350--tablet mt40--tablet"><i class="ico ico-minus-blot"></i><span class="fz20 bold ml10">Отрицательные стороны</span>
                       <ul class="list-line">
                         <li>Нужно заполнять кучу бланков.</li>
                         <li>Очень сложно заключить договор.</li>
@@ -110,20 +109,23 @@
             <div class="row mt10">
               <div class="col col--auto">
                 <div class="white-shadow">
-                  <div class="row tabss">
+                  <div class="row tab">
                     <div class="col col--auto">
                       <div class="tab__title active" data-tab="1">Личный кабинет <span class="label label--red">Бесплатно</span></div>
                     </div>
-                    <div class="col col--auto">
+                    <div class="col col--auto hidden--tablet">
                       <div class="tab__title" data-tab="1">RocketBee API</div>
                     </div>
                   </div>
                   <div class="p50-wrapper">
-                    <div class="row">
+                    <div class="row row--column--tablet">
                       <div class="col col--3-6">
                         <div class="row row--no-col row--ul row--aic"><i class="ico ico-checkmark-blot"></i><span class="fz14">Расчет стоимости, сроков доставки и наложенного платежа Почтой России с учетом ограничений</span></div>
                         <div class="row row--no-col row--ul row--aic"><i class="ico ico-checkmark-blot"></i><span class="fz14">Расчет стоимости, сроков доставки и наложенного платежа Почтой России с учетом ограничений</span></div>
                         <div class="row row--no-col row--ul row--aic"><i class="ico ico-checkmark-blot"></i><span class="fz14">Ускорение заполнения этикеток и бланков при помощи шаблонов</span></div>
+                      </div>
+                      <div class="col col--3-6 visible--tablet mt20--tablet">
+                        <div class="tab__title" data-tab="1">RocketBee API</div>
                       </div>
                       <div class="col col--3-6">
                         <div class="row row--no-col row--ul row--aic"><i class="ico ico-checkmark-blot"></i><span class="fz14">Отслеживание отправлений по трекинг-номеру</span></div>
@@ -133,8 +135,8 @@
                     </div>
                   </div>
                   <div class="yellow-bg">
-                    <div class="row row--no-col row--ul"><i class="ico ico-rocket"></i>
-                      <div class="row__content">
+                    <div class="row row--no-col row--ul row--column--mobile row--aic--mobile"><i class="ico ico-rocket"></i>
+                      <div class="row__content mt20--mobile">
                         <p class="fz14 lh2 mt0">Для максимальной автоматизации работы с Почтой России мы предлагаем подключение к нашему сервису через API. Это платный сервис. Подключить его может как физическое, так и юридическое лицо. У нас нет абонентской платы вы платите только за оформленный заказ. Цена зависит от кол-ва обработанных заказов в течение месяца.</p><a class="btn btn--black" href="#">Подключиться</a>
                       </div>
                     </div>
@@ -157,7 +159,7 @@
               <div class="col col--auto">
                 <div class="white-shadow">
                   <div class="line-feature">
-                    <div class="line-feature__image"><img src="images/lineFeature_1.png"></div>
+                    <div class="line-feature__image line-feature__image--red"><img src="images/lineFeature_1.png"></div>
                     <div class="line-feature__content">
                       <h3 class="h3-title">Передача посылок без сопроводительных бланков</h3>
                       <div class="section-text">вы распечатываете и наклеиваете только небольшой ярлык со штрих-кодом на посылку и распечатываете перечень передаваемых посылок. Все остальные бланки сформируем и напечатаем для вас мы*</div>
@@ -167,7 +169,7 @@
                 <!-- next feature-->
                 <div class="white-shadow">
                   <div class="line-feature line-feature--reverse">
-                    <div class="line-feature__image"><img src="images/lineFeature_2.png"></div>
+                    <div class="line-feature__image line-feature__image--orange"><img src="images/lineFeature_2.png"></div>
                     <div class="line-feature__content">
                       <h3 class="h3-title">Отправка посылок через единое окно</h3>
                       <div class="section-text">вы распечатываете и наклеиваете только небольшой ярлык со штрих-кодом на посылку и распечатываете перечень передаваемых посылок. Все остальные бланки сформируем и напечатаем для вас мы*</div>
@@ -177,7 +179,7 @@
                 <!-- next feature-->
                 <div class="white-shadow">
                   <div class="line-feature">
-                    <div class="line-feature__image"><img src="images/lineFeature_3.png"></div>
+                    <div class="line-feature__image line-feature__image--blue"><img src="images/lineFeature_3.png"></div>
                     <div class="line-feature__content">
                       <h3 class="h3-title">Забор отправлений с вашего склада</h3>
                       <div class="section-text">вы распечатываете и наклеиваете только небольшой ярлык со штрих-кодом на посылку и распечатываете перечень передаваемых посылок. Все остальные бланки сформируем и напечатаем для вас мы*</div>
@@ -200,7 +202,7 @@
               <div class="col col--auto">
                 <div class="white-shadow p80-wrapper">
                   <div class="row row--aic">
-                    <div class="col col--5-6 lh18">
+                    <div class="col col--5-6 lh18 col--full--tablet">
                       <h2 class="h2-title">Почему мы?</h2>
                       <p>Мы не навязываем вам свои платные опции и не предлагаем пакетных тарифных планов. Вы платите только за те функции, которые вам нужны.</p>
                       <p>Мы знаем, что почти все интернет-магазины начинаются с единичных заказов в день. У нас оплата только за оформленный заказ. Мы работаем от 1 заказа. Работаем как с физическими, так и с юридическими лицами.</p>

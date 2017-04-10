@@ -1118,6 +1118,27 @@ button.mfp-close:active {
         width: 150px;
         height: 37px;
     }
+    .ico {}
+    .ico-plus-blot {
+        width: 47px;
+        height: 45px;
+    }
+    .ico-minus-blot {
+        width: 47px;
+        height: 45px;
+    }
+}
+
+@media(max-width: 768px) {
+    .ico {}
+    .ico-plus-blot {
+        width: 55px;
+        height: 53px;
+    }
+    .ico-minus-blot {
+        width: 55px;
+        height: 53px;
+    }
 }
 
 @media(max-width: 880px) {
