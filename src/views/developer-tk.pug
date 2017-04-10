@@ -1,0 +1,51 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+    .app.developer.developer--tk
+      
+      include shared/header-dev.pug
+      
+      .app__content
+        // DEV HEAD
+        .section-m-t--small
+          .container
+            .row.row--aic.mt5
+              .col.col--auto.text-center
+                h3.h3-title.h3-title--no-m Транспортные компании
+
+        // DEV TABLE
+        .container.container--no-pad
+          .row
+            .col.col--auto
+              .table-dev-tk
+                .table-dev-tk__row.table-dev-tk__row--head
+                  .table-dev-tk__col Название
+                  .table-dev-tk__col Подкл.
+                  .table-dev-tk__col Настройки транспортной компании
+                
+                each val, index in ['Почта России', 'InPost', 'EMS Почта России', 'DPD', 'Hermes']
+                  .table-dev-tk__row
+                    .table-dev-tk__col 
+                      img(src='images/resultsCard_ruspost.png')
+                      span= val
+                    .table-dev-tk__col 256
+                    .table-dev-tk__col
+                      a(href='#') Описание
+                      span.ml20 Города 
+                        a(href='#') отправки
+                        i.ico.ico-counter.ico-counter--gray 500 
+                      span.ml10 и 
+                        a(href='#') доставки
+                        i.ico.ico-counter.ico-counter--gray 500 
+                      a(href='#').ml20 Стоимость
+                      span.ml20
+                        a(href='#') Пункты выдачи
+                        i.ico.ico-counter.ico-counter--gray 500 
+                    .table-dev-tk__col
+                      .table-dev-tk__datetime.ml10
+                        span + 35000
+                        span на 28.07.16
+                
+      include shared/footer.pug

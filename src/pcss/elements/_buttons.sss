@@ -91,15 +91,27 @@ button
     text-transform: uppercase
     border-radius: 5px
     border: 2px solid color(#555555 a(60%))
+    span
+      transition: none
+    .ico
+      vertical-align: 0px
+      margin-right: 3px
     &:hover
       background: color(#555555 a(60%))
       color: white
+      .ico
+        filter: brightness(100)
     &.btn--h40
       padding: 13px 35px
     &.btn--p15
       padding-left: 15px
       padding-right: 15px
-      
+    .ico-toggle
+      margin-left: 10px
+      vertical-align: 2px
+      opacity: .5
+      transform: rotate(180deg)
+
   &--block
     width: 100%
     span

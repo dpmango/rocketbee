@@ -8,24 +8,47 @@ html
       include shared/header-dev.pug
       
       .app__content
-        
+        .developer-overlay
         // DEV HEAD
         .section-m-t--small
           .container.container--wide
             .row.row--aic.mt5
-              .col.col--1-4
+              .col.col--3-6
                 a(href='#').btn.btn--gray.btn--h40.btn--p15
                   span 
                     i.ico.ico-prev
                     | Назад к транспортным компаниям
               .col.col--3-6.text-center
                 h3.h3-title.h3-title--no-m.ml10 Пункты выдачи Hermes DPD
-              .col.col--1-6.text-right
+              .col.col--3-6.text-right
                 a(href='#').btn.btn--gray.btn--h40.btn--p15
                   span ДОБАВИТЬ ПУНКТ ВЫДАЧИ
-                a(href='#').btn.btn--gray.btn--h40.btn--p15
-                  span ПОКАЗАТЬ ПОЛЯ
-        
+                .developer-filter
+                  a(href='#').btn.btn--gray.btn--h40.btn--p15.ml10.js-developer-filter
+                    span ПОКАЗАТЬ ПОЛЯ
+                    i.ico.ico-toggle
+                
+                // filter
+                .developer-filter__content
+                  .developer-filter__head
+                    span.bold ПОКАЗАТЬ ПОЛЯ
+                    i.ico.ico-toggle
+                  .developer-filter__wrapper
+                    .row
+                      .col.col--3-6
+                        each val, index in ['ID', 'Название', 'Регион', 'ФИАС', 'Населенный пункт', 'Индекс', 'Адрес', 'График работы', 'Широта, Долгота']
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id='filter_'+ index +'')
+                            label(for='filter_'+ index +'') 
+                              span= val 
+                      .col.col--3-6
+                        each val, index in ['Описание маршрута', 'Метро', 'ЖД станция', 'Макс. цена', 'Макс. вес', 'Макс. сумма габаритов', 'Оплата картой', 'Частичный выкуп', 'Примерочная']
+                          .ui-checkbox
+                            input(type="checkbox" name="checkbox" id='filter_2_'+ index +'')
+                            label(for='filter_2_'+ index +'') 
+                              span= val 
+
+
         // DEV TABLE
         .section-m-t--small
           .container.container--wide.container--no-pad

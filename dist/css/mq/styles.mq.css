@@ -1007,6 +1007,10 @@ body, html {
 }
 .app.developer .app__content {
     margin-top: 60px;
+    width: 1440px;
+}
+.app.developer--tk .app__content {
+    width: auto;
 }
 /* CUSTOM 6 COL FLEX GRID */
 .row {
@@ -1379,13 +1383,13 @@ a.c-blue:hover {
 .t-vertical {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 0%;
 }
 .t-vertical span {
     display: inline-block;
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg) translateX(-5px);
+        -ms-transform: rotate(-90deg) translateX(-5px);
+            transform: rotate(-90deg) translateX(-5px);
     -webkit-transform-origin: left top;
         -ms-transform-origin: left top;
             transform-origin: left top;
@@ -1518,10 +1522,30 @@ button {
     text-transform: uppercase;
     font-size: 12px;
 }
+.btn--gray span {
+    -webkit-transition: none;
+    transition: none;
+}
+.btn--gray .ico {
+    margin-right: 3px;
+    vertical-align: 0px;
+}
+.btn--gray .ico-toggle {
+    margin-left: 10px;
+    vertical-align: 2px;
+    opacity: .5;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
 .btn--gray:hover {
     background: #555555;
     background: rgba(85, 85, 85, 0.6);
     color: white;
+}
+.btn--gray:hover .ico {
+    -webkit-filter: brightness(100);
+            filter: brightness(100);
 }
 .btn--gray.btn--h40 {
     padding: 13px 35px;
@@ -4494,7 +4518,7 @@ button {
 }
 /* DEVELOPER SECTION */
 .table-dev {
-    margin-top: 5px;
+    margin-top: 35px;
     margin-bottom: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -4544,6 +4568,7 @@ button {
 .table-dev__col.checkbox {
     -webkit-flex-basis: 40px;
             flex-basis: 40px;
+    padding-left: 0;
         -ms-flex-preferred-size: 40px;
 }
 .table-dev__col.id {
@@ -4573,6 +4598,181 @@ button {
 }
 .table-dev__col:first-child {
     padding-left: 0;
+}
+.developer-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    display: block;
+    background: #ffffff;
+    background: rgba(255, 255, 255, 0.8);
+    content: ' ';
+    opacity: 0;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    pointer-events: none;
+}
+.developer-overlay.active {
+    opacity: 1;
+}
+.developer-filter {
+    position: relative;
+    display: inline-block;
+}
+.developer-filter__head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    padding: 30px 40px;
+    border-bottom: 1px solid #CCCCCC;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.developer-filter__wrapper {
+    padding: 20px 40px 30px 40px;
+}
+.developer-filter__content {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 100;
+    width: 480px;
+    border-radius: 5px;
+    background: white;
+    -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    opacity: 0;
+    -webkit-transition: tranform .2s ease;
+    transition: tranform .2s ease;
+    -webkit-transform: translate3d(0,100px,0);
+            transform: translate3d(0,100px,0);
+    pointer-events: none;
+}
+.developer-filter__content.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    pointer-events: all;
+}
+/* DEVELOPER TK */
+.table-dev-tk {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+.table-dev-tk__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    padding: 15px 0px;
+    width: 100%;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.table-dev-tk__row:hover {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 15px;
+    width: -webkit-calc(100% + 30px);
+    width: calc(100% + 30px);
+    border-radius: 5px;
+    background: white;
+    -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.table-dev-tk__row--head {
+    border-bottom: 1px solid #CCCCCC;
+    color: #222222;
+    color: rgba(34, 34, 34, 0.6);
+}
+.table-dev-tk__row--head:hover {
+    background: transparent;
+    cursor: auto;
+}
+.table-dev-tk__col {
+    position: relative;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+}
+.table-dev-tk__col a {
+    color: #1D59FB;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.table-dev-tk__col a:hover {
+    color: #658FFF;
+}
+.table-dev-tk__col img {
+    max-width: 50px;
+}
+.table-dev-tk__col:nth-child(1) {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: 210px;
+            flex-basis: 210px;
+    -webkit-align-items: center;
+            align-items: center;
+    padding-left: 0;
+        -ms-flex-preferred-size: 210px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.table-dev-tk__col:nth-child(1) span {
+    display: inline-block;
+    margin-left: 13px;
+}
+.table-dev-tk__col:nth-child(2) {
+    -webkit-flex-basis: 60px;
+            flex-basis: 60px;
+    text-align: right;
+        -ms-flex-preferred-size: 60px;
+}
+.table-dev-tk__col:nth-child(3) {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-flex: 1;
+}
+.table-dev-tk__col:nth-child(4) {
+    padding-right: 0;
+    padding-left: 0px;
+}
+.table-dev-tk__datetime {
+    display: inline-block;
+    min-width: 55px;
+    font-size: 10px;
+}
+.table-dev-tk__datetime span {
+    display: block;
+    line-height: 1;
+}
+.table-dev-tk__datetime span:first-child {
+    color: #D0021B;
 }
 
 /* + check secondary for icons, animations and modal */

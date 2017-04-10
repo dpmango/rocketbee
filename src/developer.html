@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="components/owl.carousel/dist/assets/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!--endbuild-->
-    <!-- link(rel="stylesheet" href="components/highlight/styles/default.css" type="text/css")-->
     <meta name="description" keywords="">
   </head>
   <body>
@@ -37,15 +36,102 @@
         </div>
       </header>
       <div class="app__content">
+        <div class="developer-overlay"></div>
         <!-- DEV HEAD-->
         <div class="section-m-t--small">
           <div class="container container--wide">
             <div class="row row--aic mt5">
-              <div class="col col--1-4"><a class="btn btn--gray btn--h40 btn--p15" href="#"><span> <i class="ico ico-prev"></i>Назад к транспортным компаниям</span></a></div>
+              <div class="col col--3-6"><a class="btn btn--gray btn--h40 btn--p15" href="#"><span> <i class="ico ico-prev"></i>Назад к транспортным компаниям</span></a></div>
               <div class="col col--3-6 text-center">
                 <h3 class="h3-title h3-title--no-m ml10">Пункты выдачи Hermes DPD</h3>
               </div>
-              <div class="col col--1-6 text-right"><a class="btn btn--gray btn--h40 btn--p15" href="#"><span>ДОБАВИТЬ ПУНКТ ВЫДАЧИ</span></a><a class="btn btn--gray btn--h40 btn--p15" href="#"><span>ПОКАЗАТЬ ПОЛЯ</span></a></div>
+              <div class="col col--3-6 text-right"><a class="btn btn--gray btn--h40 btn--p15" href="#"><span>ДОБАВИТЬ ПУНКТ ВЫДАЧИ</span></a>
+                <div class="developer-filter"><a class="btn btn--gray btn--h40 btn--p15 ml10 js-developer-filter" href="#"><span>ПОКАЗАТЬ ПОЛЯ</span><i class="ico ico-toggle"></i></a></div>
+                <!-- filter-->
+                <div class="developer-filter__content">
+                  <div class="developer-filter__head"><span class="bold">ПОКАЗАТЬ ПОЛЯ</span><i class="ico ico-toggle"></i></div>
+                  <div class="developer-filter__wrapper">
+                    <div class="row">
+                      <div class="col col--3-6">
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_0">
+                          <label for="filter_0"> <span>ID</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_1">
+                          <label for="filter_1"> <span>Название</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2">
+                          <label for="filter_2"> <span>Регион</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_3">
+                          <label for="filter_3"> <span>ФИАС</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_4">
+                          <label for="filter_4"> <span>Населенный пункт</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_5">
+                          <label for="filter_5"> <span>Индекс</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_6">
+                          <label for="filter_6"> <span>Адрес</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_7">
+                          <label for="filter_7"> <span>График работы</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_8">
+                          <label for="filter_8"> <span>Широта, Долгота</span></label>
+                        </div>
+                      </div>
+                      <div class="col col--3-6">
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_0">
+                          <label for="filter_2_0"> <span>Описание маршрута</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_1">
+                          <label for="filter_2_1"> <span>Метро</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_2">
+                          <label for="filter_2_2"> <span>ЖД станция</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_3">
+                          <label for="filter_2_3"> <span>Макс. цена</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_4">
+                          <label for="filter_2_4"> <span>Макс. вес</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_5">
+                          <label for="filter_2_5"> <span>Макс. сумма габаритов</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_6">
+                          <label for="filter_2_6"> <span>Оплата картой</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_7">
+                          <label for="filter_2_7"> <span>Частичный выкуп</span></label>
+                        </div>
+                        <div class="ui-checkbox">
+                          <input type="checkbox" name="checkbox" id="filter_2_8">
+                          <label for="filter_2_8"> <span>Примерочная</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -463,7 +549,6 @@
       <script src="components/owl.carousel/dist/owl.carousel.min.js"></script>
       <script src="components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
       <script src="js/libs/jquery.formstyler.js"></script>
-      <!-- script(src="components/highlight/highlight.pack.js")-->
       <script src="components/EasyAutocomplete/dist/jquery.easy-autocomplete.min.js"></script>
       <script src="js/main.js"></script>
       <!--endbuild-->

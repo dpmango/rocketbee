@@ -218,6 +218,11 @@
 .ico-more:hover {
     opacity: 1;
 }
+.ico-toggle {
+    width: 12px;
+    height: 6px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='12px' height='6px' viewBox='0 0 12 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ERectangle 3%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='D_DEVELOPER' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='D_developer_filters' transform='translate(-1383.000000, -117.000000)' fill='%23222222'%3E %3Cg id='Group-13' transform='translate(944.000000, 79.000000)'%3E %3Cg id='Group-4-Copy' transform='translate(40.083333, 31.000000)'%3E %3Cpolygon id='Rectangle-3' transform='translate(404.841667, 10.000000) scale(1, -1) translate(-404.841667, -10.000000) ' points='410.854167 7 404.841667 13 398.829167 7'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
 .ico-owl-prev, .ico-owl-next {
     width: 50px;
     height: 50px;

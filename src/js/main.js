@@ -288,6 +288,21 @@ $(document).ready(function () {
     }
   });
 
+  // DEVELOPER
+
+  $('.js-developer-filter').on('click', function () {
+    $('.developer-overlay').addClass('active');
+    $('.developer-filter__content').addClass('active');
+  });
+
+  _document.click(function (e) {
+    var _value = $('.js-developer-filter');
+    if (!_value.is(e.target) && _value.has(e.target).length === 0) {
+      $('.developer-overlay').removeClass('active');
+      $('.developer-filter__content').removeClass('active');
+    }
+  });
+
   // STICKY FILTER
   // _window.on('scroll', function(){
   //   var stickyEl = $('.backoffice__sticky');
@@ -302,5 +317,3 @@ $(document).ready(function () {
   //   }
   // });
 });
-
-// hljs.initHighlightingOnLoad();
