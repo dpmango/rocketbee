@@ -58,18 +58,28 @@
       &--absolute
         top: -1140px
         left: -140px
+    &--inner
+      padding-top: 80px
+    &__image-circle
+      size: 230px
+      margin-left: auto !important
+      margin-right: auto !important
+
 
 @media($mobile)
   .info
     &--mega-pad
       padding-top: 185px
+    &--inner
+      padding-top: 40px
     &__picture
       &--absolute
         top: -1160px
         left: -130px
         transform: scale(.8)
         transform-origin: bottom left
-
+    &__image-circle
+      size: 190px
     &__title
       font-size: 24px
       letter-spacing: -.4px
@@ -177,8 +187,12 @@
 // NEWS
 .news
   &--multiple
+    .col
+      display: flex
+      flex-direction: column
     .news__card
       margin-bottom: 40px
+      flex: 1 1 auto
   &__wrapper
     display: flex
     justify-content: space-between

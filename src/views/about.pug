@@ -10,21 +10,22 @@ html
       .app__content
       
         // INFO::START
-        .info.info--mega-pad
+        .info.info--mega-pad.info--inner
           .container
             .row
               .col.col--auto.text-center
                 h1.info__title Для чего это всё
                 .info__subtitle Доставляйте заказы вашим клиентам любыми удобными для них способами
                 
-            .row.mt40
+            .row.mt40.row--column-rev--tablet
               .col.col--3-6
                 .section-text.mt20 Было такое время, когда я открыл свой первый интернет магазин, это была лютая эйфория, когда был продан первый товар, оформлена первая доставка, ну короче ты понял… Когда количество проданных товаров первалило за тысячу, а магазин, десятый по счёту, готовился к открытию, мне уже хотелось получить простую и прозрачную схему логистики и чтобы этот самый отдел логистини не жрал время и деньги.
-                .info__subtitle.mt15 Иннокентий Крестовоздвижнический, основатель сервиса
+                .info__subtitle.mt15.hidden--tablet Иннокентий Крестовоздвижнический, основатель сервиса
               .col.col--3-6
                 .info__image-circle.ml7p
                   .info__image-circle__wrapper
                     img(src='images/aboutDirector.png')
+                .info__subtitle.mt15.visible--tablet.text-center Иннокентий Крестовоздвижнический, основатель сервиса
         
         // STAND OUT BLOCK
         .section-m-t--small
@@ -32,27 +33,27 @@ html
             .row
               .col.col--auto
                 .white-shadow.p50-wrapper
-                  h3.h3-title Как наладить автоматизацию логистики сразу?
-                  .row.row--narrow.text-center
-                    .col.col--1-4
+                  h3.h3-title.text-center--mobile-s Как наладить автоматизацию логистики сразу?
+                  .row.row--narrow.text-center.row--wrap--tablet.row--collumn--mobile-s
+                    .col.col--1-4.col--3-6--tablet
                       .muted-text-row
                         .muted-text-row__title ШАГ 1
                         .div(style='background-color: #f2f2f2; height: 100px')
                         .muted-text-row__caption Автоматизированная печать бланков
                       
-                    .col.col--1-4
+                    .col.col--1-4.col--3-6--tablet
                       .muted-text-row
                         .muted-text-row__title ШАГ 2
                         .div(style='background-color: #f2f2f2; height: 100px')
                         .muted-text-row__caption Виджеты для сайтов и API
                           
-                    .col.col--1-4
+                    .col.col--1-4.col--3-6--tablet
                       .muted-text-row
                         .muted-text-row__title ШАГ 3
                         .div(style='background-color: #f2f2f2; height: 100px')
                         .muted-text-row__caption Обслуживание <br> по договору
                     
-                    .col.col--1-4
+                    .col.col--1-4.col--3-6--tablet
                       .muted-text-row
                         .muted-text-row__title ШАГ 4
                         .div(style='background-color: #f2f2f2; height: 100px')
@@ -62,11 +63,11 @@ html
         // INFO::START
         .info.mt30
           .container
-            .row
+            .row.row--column--tablet
               .col.col--3-6
                 .section-text.mt20 Было такое время, когда я открыл свой первый интернет магазин, это была лютая эйфория, когда был продан первый товар, оформлена первая доставка, ну короче ты понял… Когда количество проданных товаров первалило за тысячу, а магазин, десятый по счёту, готовился к открытию, мне уже хотелось получить простую и прозрачную схему логистики и чтобы этот самый отдел логистини не жрал время и деньги.
               .col.col--3-6
-                .ml7p.mt30
+                .ml7p.mt30.ml0--tablet
                   i.ico.ico-price-blot
                   i.ico.ico-long-dash
                   span.huge-text 1600 ₽/д

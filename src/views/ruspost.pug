@@ -11,22 +11,22 @@ html
       
         // STAND OUT BLOCK
         .section-m-t
-          .container
+          .container.container--0-mobile
             .row
               .col.col--auto
                 .white-shadow.p80-wrapper
-                  .row.row--aic
+                  .row.row--aic.row--column-rev--mobile
                     .col.col--4-6
-                      p Службы доставки
+                      p.pl20--mobile Службы доставки
                       .info__title Почта России
                       .info__subtitle Доставляйте заказы вашим клиентам любыми удобными для них способами
                     .col.col--2-6
-                      img(src='images/russianPost.png').img-fluid
+                      img(src='images/russianPost.png').img-fluid.img--100--mobile
                   
                   hr
                     
-                  .row.mt40
-                    .col.col--3-6
+                  .row.mt40.row--column--tablet
+                    .col.col--3-6.col--350--tablet
                       i.ico.ico-plus-blot
                       span.fz20.bold.ml10 Отрицательные стороны
                       ul.list-line
@@ -35,7 +35,7 @@ html
                         li Низкая стоимость доставки.
                         li Отправка наложенным платежом.
 
-                    .col.col--3-6
+                    .col.col--3-6.col--350--tablet.mt40--tablet
                       i.ico.ico-minus-blot
                       span.fz20.bold.ml10 Отрицательные стороны
                       
@@ -65,16 +65,16 @@ html
             .row.mt10
               .col.col--auto
                 .white-shadow
-                  .row.tabss
+                  .row.tab
                     .col.col--auto
                       .tab__title.active(data-tab='1') Личный кабинет 
                         span.label.label--red Бесплатно
                         
-                    .col.col--auto
+                    .col.col--auto.hidden--tablet
                       .tab__title(data-tab='1') RocketBee API
                   
                   .p50-wrapper
-                    .row
+                    .row.row--column--tablet
                       .col.col--3-6
                         .row.row--no-col.row--ul.row--aic
                           i.ico.ico-checkmark-blot
@@ -85,7 +85,9 @@ html
                         .row.row--no-col.row--ul.row--aic
                           i.ico.ico-checkmark-blot
                           span.fz14 Ускорение заполнения этикеток и бланков при помощи шаблонов
-                          
+                      
+                      .col.col--3-6.visible--tablet.mt20--tablet
+                        .tab__title(data-tab='1') RocketBee API
                       .col.col--3-6
                         .row.row--no-col.row--ul.row--aic
                           i.ico.ico-checkmark-blot
@@ -98,9 +100,9 @@ html
                           span.fz14 Учет отправок через личный кабинет
                   
                   .yellow-bg
-                    .row.row--no-col.row--ul
+                    .row.row--no-col.row--ul.row--column--mobile.row--aic--mobile
                       i.ico.ico-rocket
-                      .row__content
+                      .row__content.mt20--mobile
                         p.fz14.lh2.mt0 Для максимальной автоматизации работы с Почтой России мы предлагаем подключение к нашему сервису через API. Это платный сервис. Подключить его может как физическое, так и юридическое лицо. У нас нет абонентской платы вы платите только за оформленный заказ. Цена зависит от кол-ва обработанных заказов в течение месяца.
                         a(href='#').btn.btn--black Подключиться
                       
@@ -116,7 +118,7 @@ html
               .col.col--auto
                 .white-shadow
                   .line-feature
-                    .line-feature__image
+                    .line-feature__image.line-feature__image--red
                       img(src='images/lineFeature_1.png')
                     .line-feature__content
                       h3.h3-title Передача посылок без сопроводительных бланков
@@ -124,7 +126,7 @@ html
                 // next feature
                 .white-shadow
                   .line-feature.line-feature--reverse
-                    .line-feature__image
+                    .line-feature__image.line-feature__image--orange
                       img(src='images/lineFeature_2.png')
                     .line-feature__content
                       h3.h3-title Отправка посылок через единое окно
@@ -132,7 +134,7 @@ html
                 // next feature
                 .white-shadow
                   .line-feature
-                    .line-feature__image
+                    .line-feature__image.line-feature__image--blue
                       img(src='images/lineFeature_3.png')
                     .line-feature__content
                       h3.h3-title Забор отправлений с вашего склада
@@ -148,7 +150,7 @@ html
               .col.col--auto
                 .white-shadow.p80-wrapper
                   .row.row--aic
-                    .col.col--5-6.lh18
+                    .col.col--5-6.lh18.col--full--tablet
                       h2.h2-title Почему мы?
                       p Мы не навязываем вам свои платные опции и не предлагаем пакетных тарифных планов. Вы платите только за те функции, которые вам нужны.
  

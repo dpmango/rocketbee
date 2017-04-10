@@ -98,6 +98,8 @@
     margin-left: -10%
     margin-right: -10%
 
+
+
 .muted-text-row
   color: #555555
   line-height: 1.425
@@ -138,6 +140,7 @@
     color: white
     height: 400px
     overflow: hidden
+    border-radius: 5px
     img
       position: absolute
       top: 50%
@@ -178,5 +181,129 @@
 
   &__content
     padding: 40px 8% 80px 8%
+    margin-top: -5px
     p
       line-height: 1.8
+
+
+
+@media($desktop)
+  .p80-wrapper
+    padding: 60px 50px 80px 50px
+    &.post__hero__info
+      padding-bottom: 40px
+    hr
+      margin-left: -50px
+      margin-right: -50px
+
+@media($tablet)
+  .p50-wrapper
+    padding: 35px
+    hr
+      margin-left: -35px
+      margin-right: -35px
+  .p80-wrapper
+    padding: 40px 40px 50px 40px
+    &.post__hero__info
+      padding-bottom: 30px
+    hr
+      margin-left: -40px
+      margin-right: -40px
+  .yellow-bg
+    padding: 35px
+
+  .muted-text-row
+    &__caption
+      margin-top: 7px
+      margin-bottom: 25px
+
+  .huge-text
+    font-size: 32px
+
+  .cta-line
+    &__wrapper
+      flex-direction: column
+
+      .btn
+        margin-top: 20px
+        margin-left: 0px
+
+  .row--ul
+    margin-bottom: 20px
+
+  .line-feature
+    flex-direction: column
+    justify-content: space-between
+    &--reverse
+      flex-direction: column
+
+    &__image
+      flex: 0 1 200px
+      width: 100%
+      &--red
+        background: #FF5873
+      &--orange
+        background: #FF7047
+      &--blue
+        background: #2997DE
+      img
+        display: block
+        margin-left: auto
+        margin-right: auto
+        max-width: 200px
+    &__content
+      margin: 20px 35px
+      font-size: 16px
+
+  .tab
+    &__title
+      background: white
+
+  .post
+    &__hero
+      height: 300px
+    &__title
+      font-size: 30px
+    &__content
+      padding: 40px 40px 50px 40px
+
+@media($mobile)
+  .p50-wrapper
+    padding: 25px 25px
+    hr
+      margin-left: -25px
+      margin-right: -25px
+  .p80-wrapper
+    padding: 30px 25px 40px 25px
+    hr
+      margin-left: -25px
+      margin-right: -25px
+
+  .yellow-bg
+    padding: 25px 35px
+
+  .row__content
+    margin-left: 0px
+
+  .post
+    &__hero
+      height: auto
+      color: $fontColor
+      &::after
+        display: none
+      img
+        position: static
+        transform: none
+        z-index: 1
+      &__info
+        position: static
+    &__title
+      font-size: 25px
+    &__content
+      padding: 30px 25px 40px 25px
+
+@media($mobile-s)
+  .post
+
+    &__title
+      font-size: 22px

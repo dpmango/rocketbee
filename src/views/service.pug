@@ -14,16 +14,20 @@ html
           .container
             .row
               .col.col--auto
-                .white-shadow.p80-wrapper
+                .text-center
+                  p.pl20--mobile Услуги
+                  .info__title Печать бланков
+                  .info__subtitle От описи до накладной, бесплатно, без регитрации и СМС
+                  img(src='images/servicePrint.png').img-fluid
                   
                   
                   
         // INFO::START
-        .mt40
+        .mt-20
           .container
             .row
               .col.col--auto
-                .section-text Отправка заказов Почтой России это ключик к миллионам потенциальных клиентов по всей России!  Это единственная компания, у которой есть свое представительство почти в каждом населенном пункте нашей огромной страны. Плюс возможность отправки товаров с наложенным платежом. Но есть целый ряд трудностей, с которыми приходится сталкиваться при организации работы с Почтой России.  Мы предлагаем максимально упростить этот процесс.
+                .section-text Анализ зарубежного опыта индуцирует BTL. Эффективность действий вырождена. Медиавес тормозит нестандартный подход. Медийная реклама ускоряет культурный план размещения, не считаясь с затратами. Молодежная аудитория однообразно специфицирует сублимированный имидж предприятия. Стратегический маркетинг, анализируя результаты рекламной кампании, транслирует эмпирический направленный маркетинг.
               
                                 
         
@@ -33,21 +37,21 @@ html
             .row
               .col.col--auto
                 .text-center
-                  h2.h2-title Возможности при работе с Почтой России
+                  h2.h2-title Возможности при печати бланков
             
             .row.mt10
               .col.col--auto
                 .white-shadow
-                  .row.tabss
+                  .row.tab
                     .col.col--auto
                       .tab__title.active(data-tab='1') Личный кабинет 
                         span.label.label--red Бесплатно
                         
-                    .col.col--auto
+                    .col.col--auto.hidden--tablet
                       .tab__title(data-tab='1') RocketBee API
                   
                   .p50-wrapper
-                    .row
+                    .row.row--column--tablet
                       .col.col--3-6
                         .row.row--no-col.row--ul.row--aic
                           i.ico.ico-checkmark-blot
@@ -58,7 +62,9 @@ html
                         .row.row--no-col.row--ul.row--aic
                           i.ico.ico-checkmark-blot
                           span.fz14 Ускорение заполнения этикеток и бланков при помощи шаблонов
-                          
+                      
+                      .col.col--3-6.visible--tablet.mt20--tablet
+                        .tab__title(data-tab='1') RocketBee API
                       .col.col--3-6
                         .row.row--no-col.row--ul.row--aic
                           i.ico.ico-checkmark-blot
@@ -71,9 +77,9 @@ html
                           span.fz14 Учет отправок через личный кабинет
                   
                   .yellow-bg
-                    .row.row--no-col.row--ul
+                    .row.row--no-col.row--ul.row--column--mobile.row--aic--mobile
                       i.ico.ico-rocket
-                      .row__content
+                      .row__content.mt20--mobile
                         p.fz14.lh2.mt0 Для максимальной автоматизации работы с Почтой России мы предлагаем подключение к нашему сервису через API. Это платный сервис. Подключить его может как физическое, так и юридическое лицо. У нас нет абонентской платы вы платите только за оформленный заказ. Цена зависит от кол-ва обработанных заказов в течение месяца.
                         a(href='#').btn.btn--black Подключиться
                       
@@ -89,7 +95,7 @@ html
               .col.col--auto
                 .white-shadow
                   .line-feature
-                    .line-feature__image
+                    .line-feature__image.line-feature__image--red
                       img(src='images/lineFeature_1.png')
                     .line-feature__content
                       h3.h3-title Передача посылок без сопроводительных бланков
@@ -97,7 +103,7 @@ html
                 // next feature
                 .white-shadow
                   .line-feature.line-feature--reverse
-                    .line-feature__image
+                    .line-feature__image.line-feature__image--orange
                       img(src='images/lineFeature_2.png')
                     .line-feature__content
                       h3.h3-title Отправка посылок через единое окно
@@ -105,7 +111,7 @@ html
                 // next feature
                 .white-shadow
                   .line-feature
-                    .line-feature__image
+                    .line-feature__image.line-feature__image--blue
                       img(src='images/lineFeature_3.png')
                     .line-feature__content
                       h3.h3-title Забор отправлений с вашего склада
@@ -121,10 +127,10 @@ html
               .col.col--auto
                 .white-shadow.p80-wrapper
                   .row.row--aic
-                    .col.col--5-6.lh18
+                    .col.col--5-6.lh18.col--full--tablet
                       h2.h2-title Почему мы?
                       p Мы не навязываем вам свои платные опции и не предлагаем пакетных тарифных планов. Вы платите только за те функции, которые вам нужны.
- 
+
                       p Мы знаем, что почти все интернет-магазины начинаются с единичных заказов в день. У нас оплата только за оформленный заказ. Мы работаем от 1 заказа. Работаем как с физическими, так и с юридическими лицами.
 
                       p Почти все наши конкуренты предлагают работать с ними по единому договору. Мы знаем, что у такой схемы есть существенные минусы, именно по этому мы предлагаем вам самим выбирать — работать напрямую с транспортными кампаниями по собственному договору и на собственных условиях или работать по договору с нами. В первом варианте мы просто сделаем все, чтобы упростить работу напрямую. Выбор транспортных компаний тоже за вами.

@@ -48,6 +48,10 @@
 .mr30
   margin-right: 30px
 
+// negative margins
+.mt-20
+  margin-top: -20px
+
 // Paddings
 .pt5
   padding-top: 5px
@@ -141,9 +145,34 @@ a.c-blue
     transform-origin: left top
 
 
+@media($desktop)
+  .fz20
+    font-size: 18px
 
 @media($tablet)
   .mt20--tablet
     margin-top: 20px
   .mt40--tablet
     margin-top: 40px
+
+  .ml0--tablet
+    margin-left: 0
+
+@media($mobile)
+  .mt20--mobile
+    margin-top: 20px
+  .mt30--mobile
+    margin-top: 30px
+
+  .pl20--mobile
+    padding-left: 20px
+
+  .img--100--mobile
+    max-width: 100px
+
+  .fz20
+    font-size: 16px
+
+@media($mobile-s)
+  .text-center--mobile-s
+    text-align: center
