@@ -2774,7 +2774,7 @@ button {
 .blot--one {
     width: 145px;
     height: 131px;
-    background-image: url('../images/el/blot-1.png');
+    background-image: url('../../images/el/blot-1.png');
 }
 .blot--one .ico {
     margin-top: 5px;
@@ -2783,7 +2783,7 @@ button {
 .blot--two {
     width: 127px;
     height: 131px;
-    background-image: url('../images/el/blot-2.png');
+    background-image: url('../../images/el/blot-2.png');
 }
 .blot--two .ico {
     margin-bottom: 7px;
@@ -2791,7 +2791,7 @@ button {
 .blot--three {
     width: 117px;
     height: 131px;
-    background-image: url('../images/el/blot-3.png');
+    background-image: url('../../images/el/blot-3.png');
 }
 .list-line li {
     position: relative;
