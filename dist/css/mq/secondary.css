@@ -143,23 +143,23 @@
 .ico-price-blot {
     width: 60px;
     height: 60px;
-    background-image: url('../images/el/ico-price-blot.png');
+    background-image: url('../../images/el/ico-price-blot.png');
     mix-blend-mode: multiply;/* this is bad! - refactor png */
 }
 .ico-plus-blot {
     width: 68px;
     height: 65px;
-    background-image: url('../images/el/ico-plus-blot.png');
+    background-image: url('../../images/el/ico-plus-blot.png');
 }
 .ico-minus-blot {
     width: 68px;
     height: 65px;
-    background-image: url('../images/el/ico-minus-blot.png');
+    background-image: url('../../images/el/ico-minus-blot.png');
 }
 .ico-checkmark-blot {
     width: 68px;
     height: 65px;
-    background-image: url('../images/el/ico-checkmark-blot.png');
+    background-image: url('../../images/el/ico-checkmark-blot.png');
 }
 .ico-rocket {
     width: 100px;
@@ -180,7 +180,7 @@
 .ico-prev {
     width: 15px;
     height: 8px;
-    background-image: url('../images/el/ico-prev.png');
+    background-image: url('../../images/el/ico-prev.png');
 }
 .ico-print {
     width: 26px;
@@ -483,7 +483,7 @@ button.mfp-close {
     right: -25px;
     width: 50px;
     height: 50px;
-    background: url('../images/el/close-btn.png') no-repeat center;
+    background: url('../../images/el/close-btn.png') no-repeat center;
     background-size: contain;
     font-size: 0;
     opacity: 1;
