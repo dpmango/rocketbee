@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- link(rel="stylesheet" href="components/highlight/styles/default.css" type="text/css")-->
+    <link rel="stylesheet" href="css/mq/styles.css">
     <meta name="description" keywords="">
   </head>
   <body>
@@ -76,7 +75,8 @@
         <div class="calculator section-m-t section-m-t--small">
           <div class="container container--0-mobile">
             <div class="calculator__wrapper">
-              <div class="row row--column--tablet">
+              <!-- new class here-->
+              <div class="row backoffice__calc">
                 <div class="col col--4-6">
                   <div class="calculator__head">
                     <h3 class="h3-title">Калькулятор доставки</h3>
@@ -168,17 +168,101 @@
                   </div>
                 </div>
                 <div class="col col--2-6">
-                  <div class="ui-group border-top--tablet">
-                    <label>шаблоны отправлений:</label>
+                  <div class="backoffice__calc__templates">
+                    <label>шаблоны отправлений</label>
+                    <div class="backoffice__calc__templates__list"><a href="#"><span>Сноуборд</span><i class="ico ico-remove"></i></a><a href="#"><span>Лыжи</span><i class="ico ico-remove"></i></a><a href="#"><span>Скейт</span><i class="ico ico-remove"></i></a><a href="#"><span>Сноуборд. ботинки</span><i class="ico ico-remove"></i></a><a href="#"><span>Кеды</span><i class="ico ico-remove"></i></a><a class="calculator__inputs__templates__new" href="#"><i class="ico ico-plus-btn"></i><span class="ml10">Создать шаблон</span></a></div>
                   </div>
-                  <div class="calculator__inputs__templates"><a href="#"><i class="ico ico-template-snowboard"></i><span>Крупный спорт-инвентарь</span></a><a href="#"><i class="ico ico-template-shoe"></i><span>Одежда и обувь</span></a><a href="#"><i class="ico ico-template-smartphone"></i><span>Электроника</span></a><a class="calculator__inputs__templates__new" href="#"><i class="ico ico-template-plus"></i><span>Создать свой шаблон</span></a></div>
                 </div>
               </div>
             </div>
             <!-- calc results-->
-            <div class="calculator__results">
-              <div class="calculator__results__head">
-                <h3 class="h3-title">Вот, что нам удалось найти:</h3>
+            <div class="calculator__results__head mt40">
+              <div class="bold ml20">Вот, что нам удалось найти:</div>
+            </div>
+            <div class="table-calc">
+              <div class="table-calc__row table-calc__row--head">
+                <div class="table-calc__col"><span>Транспортная компания</span><i class="ico ico-toggle"></i></div>
+                <div class="table-calc__col">
+                  <div class="t-vertical"> <span>ПВЗ</span></div>
+                </div>
+                <div class="table-calc__col">
+                  <div class="t-vertical"> <span>ПРИМЕРКА</span></div>
+                </div>
+                <div class="table-calc__col">
+                  <div class="t-vertical"> <span>НП</span></div>
+                </div>
+                <div class="table-calc__col">
+                  <div class="t-vertical"> <span>
+                       >15К     </span></div>
+                </div>
+                <div class="table-calc__col">
+                  <div class="t-vertical"> <span>ДО ДВЕРИ</span></div>
+                </div>
+                <div class="table-calc__col">
+                  <div class="t-vertical"> <span>КАРТОЙ</span></div>
+                </div>
+                <div class="table-calc__col">сроки</div>
+                <div class="table-calc__col">цена</div>
+              </div>
+              <!-- DATA-->
+              <div class="table-calc__row">
+                <div class="table-calc__col"><img src="images/resultsCard_ruspost.png"><span class="table-calc__col__dash">Почта России</span><span class="fz10 ml10">ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА</span></div>
+                <div class="table-calc__col">256</div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green ico-status--small"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green ico-status--small">  </i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col">2—5 д.</div>
+                <div class="table-calc__col">150 Р</div><i class="ico ico-table-next"></i>
+              </div>
+              <!--row-->
+              <div class="table-calc__row">
+                <div class="table-calc__col"><img src="images/resultsCard_inpost.png"><span class="table-calc__col__dash">InPost</span><span class="fz10 ml10">ДОСТАВКА МАЛОГАБАРИТНЫХ ГРУЗОВ</span></div>
+                <div class="table-calc__col">256</div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green ico-status--small">  </i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray"></i></div>
+                <div class="table-calc__col">2—5 д.</div>
+                <div class="table-calc__col">150 Р</div><i class="ico ico-table-next"></i>
+              </div>
+              <!--row-->
+              <div class="table-calc__row">
+                <div class="table-calc__col"><img src="images/resultsCard_ems.png"><span class="table-calc__col__dash">EMS Почта России</span></div>
+                <div class="table-calc__col">256</div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small">  </i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col">2—5 д.</div>
+                <div class="table-calc__col">150 Р</div><i class="ico ico-table-next"></i>
+              </div>
+              <!--row-->
+              <div class="table-calc__row">
+                <div class="table-calc__col"><img src="images/resultsCard_dpd.png"><span class="table-calc__col__dash">DPD</span></div>
+                <div class="table-calc__col">256</div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small">  </i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col">2—5 д.</div>
+                <div class="table-calc__col">150 Р    </div><i class="ico ico-table-next"></i>
+              </div>
+              <!--row-->
+              <div class="table-calc__row">
+                <div class="table-calc__col"><img src="images/resultsCard_hermes.png"><span class="table-calc__col__dash">Hermes</span></div>
+                <div class="table-calc__col">256</div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--gray ico-status--small">  </i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col"><i class="ico ico-status ico-status--green"></i></div>
+                <div class="table-calc__col">2—5 д.</div>
+                <div class="table-calc__col">150 Р</div><i class="ico ico-table-next"></i>
               </div>
             </div>
           </div>
@@ -205,7 +289,7 @@
         </div>
       </div>
       <!-- SECONDARY STYLES-->
-      <link rel="stylesheet" href="css/secondary.css">
+      <link rel="stylesheet" href="css/mq/secondary.css">
       <!-- SCRIPTS-->
       <script src="js/scripts.min.js"></script>
     </div>

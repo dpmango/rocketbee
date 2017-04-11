@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mq/styles.css">
     <meta name="description" keywords="">
   </head>
   <body>
@@ -41,86 +41,87 @@
                 <h3 class="h3-title h3-title--no-m ml10">Пункты выдачи Hermes DPD</h3>
               </div>
               <div class="col col--3-6 text-right"><a class="btn btn--gray btn--h40 btn--p15" href="#"><span>ДОБАВИТЬ ПУНКТ ВЫДАЧИ</span></a>
-                <div class="developer-filter"><a class="btn btn--gray btn--h40 btn--p15 ml10 js-developer-filter" href="#"><span>ПОКАЗАТЬ ПОЛЯ</span><i class="ico ico-toggle"></i></a></div>
-                <!-- filter-->
-                <div class="developer-filter__content">
-                  <div class="developer-filter__head"><span class="bold">ПОКАЗАТЬ ПОЛЯ</span><i class="ico ico-toggle"></i></div>
-                  <div class="developer-filter__wrapper">
-                    <div class="row">
-                      <div class="col col--3-6">
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_0">
-                          <label for="filter_0"> <span>ID</span></label>
+                <div class="developer-filter"><a class="btn btn--gray btn--h40 btn--p15 ml10 js-developer-filter" href="#"><span>ПОКАЗАТЬ ПОЛЯ</span><i class="ico ico-toggle"></i></a>
+                  <!-- filter-->
+                  <div class="developer-filter__content">
+                    <div class="developer-filter__head"><span class="bold">ПОКАЗАТЬ ПОЛЯ</span><i class="ico ico-toggle"></i></div>
+                    <div class="developer-filter__wrapper">
+                      <div class="row">
+                        <div class="col col--3-6">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_0">
+                            <label for="filter_0"> <span>ID</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_1">
+                            <label for="filter_1"> <span>Название</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2">
+                            <label for="filter_2"> <span>Регион</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_3">
+                            <label for="filter_3"> <span>ФИАС</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_4">
+                            <label for="filter_4"> <span>Населенный пункт</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_5">
+                            <label for="filter_5"> <span>Индекс</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_6">
+                            <label for="filter_6"> <span>Адрес</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_7">
+                            <label for="filter_7"> <span>График работы</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_8">
+                            <label for="filter_8"> <span>Широта, Долгота</span></label>
+                          </div>
                         </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_1">
-                          <label for="filter_1"> <span>Название</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2">
-                          <label for="filter_2"> <span>Регион</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_3">
-                          <label for="filter_3"> <span>ФИАС</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_4">
-                          <label for="filter_4"> <span>Населенный пункт</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_5">
-                          <label for="filter_5"> <span>Индекс</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_6">
-                          <label for="filter_6"> <span>Адрес</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_7">
-                          <label for="filter_7"> <span>График работы</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_8">
-                          <label for="filter_8"> <span>Широта, Долгота</span></label>
-                        </div>
-                      </div>
-                      <div class="col col--3-6">
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_0">
-                          <label for="filter_2_0"> <span>Описание маршрута</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_1">
-                          <label for="filter_2_1"> <span>Метро</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_2">
-                          <label for="filter_2_2"> <span>ЖД станция</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_3">
-                          <label for="filter_2_3"> <span>Макс. цена</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_4">
-                          <label for="filter_2_4"> <span>Макс. вес</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_5">
-                          <label for="filter_2_5"> <span>Макс. сумма габаритов</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_6">
-                          <label for="filter_2_6"> <span>Оплата картой</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_7">
-                          <label for="filter_2_7"> <span>Частичный выкуп</span></label>
-                        </div>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" name="checkbox" id="filter_2_8">
-                          <label for="filter_2_8"> <span>Примерочная</span></label>
+                        <div class="col col--3-6">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_0">
+                            <label for="filter_2_0"> <span>Описание маршрута</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_1">
+                            <label for="filter_2_1"> <span>Метро</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_2">
+                            <label for="filter_2_2"> <span>ЖД станция</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_3">
+                            <label for="filter_2_3"> <span>Макс. цена</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_4">
+                            <label for="filter_2_4"> <span>Макс. вес</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_5">
+                            <label for="filter_2_5"> <span>Макс. сумма габаритов</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_6">
+                            <label for="filter_2_6"> <span>Оплата картой</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_7">
+                            <label for="filter_2_7"> <span>Частичный выкуп</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="checkbox" id="filter_2_8">
+                            <label for="filter_2_8"> <span>Примерочная</span></label>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -343,10 +344,12 @@
         <!-- MODALS-->
         <div class="modal modal--developer zoom-anim-dialog mfp-hide" id="developerEdit">
           <div class="modal__wrapper modal__wrapper--no-pad">
-            <div class="modal__developer">
+            <div class="modal__developer ui-inputs-h40">
               <div class="modal__developer__content">
-                <div class="bold">Редактирование пункта выдачи заказа</div>
-                <div class="ui-group">
+                <div class="row row--no-col row--jcsb row--aic">
+                  <div class="bold">Редактирование пункта выдачи заказа</div><span class="modal__developer__id">ID 930001</span>
+                </div>
+                <div class="ui-group mt20">
                   <label>название:</label>
                   <div class="ui-input">
                     <input type="text">
@@ -358,8 +361,8 @@
                     <input type="text">
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col col--4-6"> 
+                <div class="row row--narrow">
+                  <div class="col col--4-6">
                     <div class="ui-group">
                       <label>регион:</label>
                       <div class="ui-input">
@@ -367,7 +370,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col col--2-6"> 
+                  <div class="col col--2-6">
                     <div class="ui-group">
                       <label>населенный пункт:</label>
                       <div class="ui-input">
@@ -376,8 +379,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col col--1-6"> 
+                <div class="row row--narrow">
+                  <div class="col col--1-6">
                     <div class="ui-group">
                       <label>индекс:</label>
                       <div class="ui-input">
@@ -385,17 +388,17 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col col--5-6"> 
-                    <div class="ui-group">
+                  <div class="col col--5-6">
+                    <div class="ui-group ui-input--labeled">
                       <label>адрес:</label>
                       <div class="ui-input">
-                        <input type="text">
+                        <input type="text"><a class="ui-input__label" href="#"><i class="ico ico-geolocation"></i></a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col col--3-6"> 
+                <div class="row row--narrow">
+                  <div class="col col--3-6">
                     <div class="ui-group">
                       <label>Округ или район:</label>
                       <div class="ui-input">
@@ -403,17 +406,22 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col col--3-6 mr30">
+                  <div class="col col--3-6">
                     <div class="ui-group">
                       <label>широта, долгота:</label>
-                      <div class="ui-input">
-                        <input type="text">
+                      <div class="ui-input-collection ui-input-collection--geolocation">
+                        <div class="ui-input">
+                          <input type="text" placeholder="60.000">
+                        </div>
+                        <div class="ui-input ui-input--labeled">
+                          <input type="text" placeholder="60.000"><a class="ui-input__label" href="#"><i class="ico-geolocation"> </i></a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col col--3-6"> 
+                <div class="row row--narrow">
+                  <div class="col col--3-6">
                     <div class="ui-group">
                       <label>метро (если есть):</label>
                       <div class="ui-input">
@@ -431,28 +439,31 @@
                   </div>
                 </div>
                 <hr>
-                <div class="row">
-                  <div class="col col--2-6"> 
+                <div class="row row--narrow mt20">
+                  <div class="col col--2-6">
                     <div class="ui-group">
                       <label>макс. цена:</label>
-                      <div class="ui-input">
+                      <div class="ui-input ui-input--labeled">
                         <input type="text">
+                        <div class="ui-input__label"><span>₽</span></div>
                       </div>
                     </div>
                   </div>
                   <div class="col col--2-6">
-                    <div class="ui-group">
+                    <div class="ui-group ui-input--labeled">
                       <label>ЖД станция (если есть):</label>
                       <div class="ui-input">
                         <input type="text">
+                        <div class="ui-input__label"><span>кг</span></div>
                       </div>
                     </div>
                   </div>
                   <div class="col col--2-6">
-                    <div class="ui-group">
+                    <div class="ui-group ui-input--labeled">
                       <label>макс. сумма габаритов:</label>
                       <div class="ui-input">
                         <input type="text">
+                        <div class="ui-input__label"><span>см</span></div>
                       </div>
                     </div>
                   </div>
@@ -464,8 +475,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col col--2-6"> 
+                <div class="row row--narrow">
+                  <div class="col col--2-6">
                     <div class="ui-group">
                       <div class="ui-checkbox">
                         <input type="checkbox" name="checkbox" id="modal_1">
@@ -534,7 +545,7 @@
         </div>
       </div>
       <!-- SECONDARY STYLES-->
-      <link rel="stylesheet" href="css/secondary.css">
+      <link rel="stylesheet" href="css/mq/secondary.css">
       <!-- SCRIPTS-->
       <script src="js/scripts.min.js"></script>
     </div>
