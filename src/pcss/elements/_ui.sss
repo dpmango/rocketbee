@@ -47,6 +47,28 @@
     display: inline-block
     margin-left: 5px
 
+  &--labeled
+    position: relative
+  &__label
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    border-left: 1px solid $borderColor
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    width: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+.ui-inputs-h40
+  .ui-input
+    margin-bottom: 10px
+    input, textarea
+      font-size: 14px
+      padding: 10px
 
 // SELECT
 .ui-select
@@ -329,6 +351,19 @@
         border-bottom-right-radius: 5px
       &::after
         display: none
+  &--geolocation
+    max-width: 200px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    .ui-input
+      &:first-child
+        flex: 0 0 40%
+      &:last-child
+        flex: 0 0 60%
+
+      &::after
+        display: none
 
   .js-styler__select
     display: inline-block
@@ -337,6 +372,8 @@
     margin-bottom: 20px
     .jq-selectbox__select
       border-radius: 0
+    .jq-selectbox__dropdown
+      transform: translate3d(0px, -20px,0)
     &:nth-child(1)
       width: 65px
       .jq-selectbox__select

@@ -28,25 +28,25 @@ html
                     span ПОКАЗАТЬ ПОЛЯ
                     i.ico.ico-toggle
                 
-                // filter
-                .developer-filter__content
-                  .developer-filter__head
-                    span.bold ПОКАЗАТЬ ПОЛЯ
-                    i.ico.ico-toggle
-                  .developer-filter__wrapper
-                    .row
-                      .col.col--3-6
-                        each val, index in ['ID', 'Название', 'Регион', 'ФИАС', 'Населенный пункт', 'Индекс', 'Адрес', 'График работы', 'Широта, Долгота']
-                          .ui-checkbox
-                            input(type="checkbox" name="checkbox" id='filter_'+ index +'')
-                            label(for='filter_'+ index +'') 
-                              span= val 
-                      .col.col--3-6
-                        each val, index in ['Описание маршрута', 'Метро', 'ЖД станция', 'Макс. цена', 'Макс. вес', 'Макс. сумма габаритов', 'Оплата картой', 'Частичный выкуп', 'Примерочная']
-                          .ui-checkbox
-                            input(type="checkbox" name="checkbox" id='filter_2_'+ index +'')
-                            label(for='filter_2_'+ index +'') 
-                              span= val 
+                  // filter
+                  .developer-filter__content
+                    .developer-filter__head
+                      span.bold ПОКАЗАТЬ ПОЛЯ
+                      i.ico.ico-toggle
+                    .developer-filter__wrapper
+                      .row
+                        .col.col--3-6
+                          each val, index in ['ID', 'Название', 'Регион', 'ФИАС', 'Населенный пункт', 'Индекс', 'Адрес', 'График работы', 'Широта, Долгота']
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id='filter_'+ index +'')
+                              label(for='filter_'+ index +'') 
+                                span= val 
+                        .col.col--3-6
+                          each val, index in ['Описание маршрута', 'Метро', 'ЖД станция', 'Макс. цена', 'Макс. вес', 'Макс. сумма габаритов', 'Оплата картой', 'Частичный выкуп', 'Примерочная']
+                            .ui-checkbox
+                              input(type="checkbox" name="checkbox" id='filter_2_'+ index +'')
+                              label(for='filter_2_'+ index +'') 
+                                span= val 
 
 
         // DEV TABLE
@@ -112,11 +112,13 @@ html
         // MODALS
         #developerEdit.modal.modal--developer.zoom-anim-dialog.mfp-hide
           .modal__wrapper.modal__wrapper--no-pad
-            .modal__developer
+            .modal__developer.ui-inputs-h40
               .modal__developer__content
-                .bold Редактирование пункта выдачи заказа
+                .row.row--no-col.row--jcsb.row--aic
+                  .bold Редактирование пункта выдачи заказа
+                  span.modal__developer__id ID 930001
                 
-                .ui-group
+                .ui-group.mt20
                   label название:
                   .ui-input
                     input(type='text')
@@ -125,7 +127,7 @@ html
                   .ui-input
                     input(type='text')
                       
-                .row
+                .row.row--narrow
                   .col.col--4-6 
                     .ui-group
                       label регион:
@@ -137,31 +139,38 @@ html
                       .ui-input
                         input(type='text')
                     
-                .row
+                .row.row--narrow
                   .col.col--1-6 
                     .ui-group
                       label индекс:
                       .ui-input
                         input(type='text')
                   .col.col--5-6 
-                    .ui-group
+                    .ui-group.ui-input--labeled
                       label адрес:
                       .ui-input
-                        input(type='text')   
+                        input(type='text')
+                        a(href='#').ui-input__label
+                          i.ico.ico-geolocation
                           
-                .row
+                .row.row--narrow
                   .col.col--3-6 
                     .ui-group
                       label Округ или район:
                       .ui-input
                         input(type='text')
-                  .col.col--3-6.mr30
+                  .col.col--3-6
                     .ui-group
                       label широта, долгота:
-                      .ui-input
-                        input(type='text')
+                      .ui-input-collection.ui-input-collection--geolocation
+                        .ui-input
+                          input(type='text' placeholder='60.000')
+                        .ui-input.ui-input--labeled
+                          input(type='text' placeholder='60.000')
+                          a(href='#').ui-input__label
+                            i.ico-geolocation 
                           
-                .row
+                .row.row--narrow
                   .col.col--3-6 
                     .ui-group
                       label метро (если есть):
@@ -175,28 +184,34 @@ html
                 
                 hr
                   
-                .row
+                .row.row--narrow.mt20
                   .col.col--2-6 
                     .ui-group
                       label макс. цена:
-                      .ui-input
+                      .ui-input.ui-input--labeled
                         input(type='text')
+                        .ui-input__label
+                          span ₽
                   .col.col--2-6
-                    .ui-group
+                    .ui-group.ui-input--labeled
                       label ЖД станция (если есть):
                       .ui-input
                         input(type='text')
+                        .ui-input__label
+                          span кг
                   .col.col--2-6
-                    .ui-group
+                    .ui-group.ui-input--labeled
                       label макс. сумма габаритов:
                       .ui-input
                         input(type='text')
+                        .ui-input__label
+                          span см
                 
                 .row
                   .col.col--auto
                     .ui-group
                       label дополнительные опции:      
-                .row
+                .row.row--narrow
                   .col.col--2-6 
                     .ui-group
                       .ui-checkbox

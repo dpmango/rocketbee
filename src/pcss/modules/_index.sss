@@ -233,8 +233,16 @@
       line-height: 1.35
       margin-top: 10px
 
+@media($tablet)
+  .news--multiple
+    .news__card
+      margin-bottom: 30px
+
 @media($mobile)
   .news
+    &--multiple
+      .news__card
+        margin-bottom: 20px
     &__card
       &__image
         height: auto

@@ -31,7 +31,8 @@ html
         .calculator.section-m-t.section-m-t--small
           .container.container--0-mobile
             .calculator__wrapper
-              .row.row--column--tablet
+              // new class here
+              .row.backoffice__calc
                 .col.col--4-6
                   .calculator__head
                     h3.h3-title Калькулятор доставки
@@ -115,27 +116,161 @@ html
                       a(href="#") очистить
                   
                 .col.col--2-6
-                  .ui-group.border-top--tablet
-                    label шаблоны отправлений:
-                  .calculator__inputs__templates
-                    a(href="#")
-                      i.ico.ico-template-snowboard
-                      span Крупный спорт-инвентарь
-                    a(href="#")
-                      i.ico.ico-template-shoe
-                      span Одежда и обувь
-                    a(href="#")
-                      i.ico.ico-template-smartphone
-                      span Электроника
-                    a(href="#").calculator__inputs__templates__new
-                      i.ico.ico-template-plus
-                      span Создать свой шаблон
-                            
+                  .backoffice__calc__templates
+                    label шаблоны отправлений
+                    .backoffice__calc__templates__list
+                      a(href="#")
+                        span Сноуборд
+                        i.ico.ico-remove
+                      a(href="#")
+                        span Лыжи
+                        i.ico.ico-remove
+                      a(href="#")
+                        span Скейт
+                        i.ico.ico-remove
+                      a(href="#")
+                        span Сноуборд. ботинки
+                        i.ico.ico-remove
+                      a(href="#")
+                        span Кеды
+                        i.ico.ico-remove
+                        
+                      a(href="#").calculator__inputs__templates__new
+                        i.ico.ico-plus-btn
+                        span.ml10 Создать шаблон
+
+
+      
             // calc results
-            .calculator__results
-              .calculator__results__head
-                h3.h3-title Вот, что нам удалось найти:
+            .calculator__results__head.mt40
+              .bold.ml20 Вот, что нам удалось найти:
+              
+            .table-calc
+                .table-calc__row.table-calc__row--head
+                  .table-calc__col
+                    span Транспортная компания
+                    i.ico.ico-toggle
+                  .table-calc__col
+                    .t-vertical 
+                      span ПВЗ
+                  .table-calc__col
+                    .t-vertical 
+                      span ПРИМЕРКА
+                  .table-calc__col
+                    .t-vertical 
+                      span НП
+                  .table-calc__col
+                    .t-vertical 
+                      span 
+                        | >15К     
+                  .table-calc__col
+                    .t-vertical 
+                      span ДО ДВЕРИ
+                  .table-calc__col
+                    .t-vertical 
+                      span КАРТОЙ
+                  .table-calc__col сроки
+                  .table-calc__col цена
+                // DATA
+                .table-calc__row
+                  .table-calc__col
+                    img(src='images/resultsCard_ruspost.png')
+                    span.table-calc__col__dash Почта России
+                    span.fz10.ml10 ОТПРАВЛЕНИЕ ПЕРВОГО КЛАССА
+                  .table-calc__col 256
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green.ico-status--small
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green.ico-status--small   
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col 2—5 д.
+                  .table-calc__col 150 Р
+                  i.ico.ico-table-next
+                    
+                //row
+                .table-calc__row
+                  .table-calc__col
+                    img(src='images/resultsCard_inpost.png')
+                    span.table-calc__col__dash InPost
+                    span.fz10.ml10 ДОСТАВКА МАЛОГАБАРИТНЫХ ГРУЗОВ
+                  .table-calc__col 256
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green.ico-status--small   
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray
+                  .table-calc__col 2—5 д.
+                  .table-calc__col 150 Р
+                  i.ico.ico-table-next
+                    
+                //row
+                .table-calc__row
+                  .table-calc__col
+                    img(src='images/resultsCard_ems.png')
+                    span.table-calc__col__dash EMS Почта России
+                  .table-calc__col 256
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small   
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col 2—5 д.
+                  .table-calc__col 150 Р
+                  i.ico.ico-table-next
 
-
-                                              
+                //row
+                .table-calc__row
+                  .table-calc__col
+                    img(src='images/resultsCard_dpd.png')
+                    span.table-calc__col__dash DPD
+                  .table-calc__col 256
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small   
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col 2—5 д.
+                  .table-calc__col 150 Р    
+                  i.ico.ico-table-next
+                                         
+                //row
+                .table-calc__row
+                  .table-calc__col
+                    img(src='images/resultsCard_hermes.png')
+                    span.table-calc__col__dash Hermes
+                  .table-calc__col 256
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--gray.ico-status--small   
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col
+                    i.ico.ico-status.ico-status--green
+                  .table-calc__col 2—5 д.
+                  .table-calc__col 150 Р
+                  i.ico.ico-table-next
+                    
       include shared/footer.pug

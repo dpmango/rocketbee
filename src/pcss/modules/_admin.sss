@@ -18,6 +18,10 @@
       font-size: 12px
       color: color($fontColor a(60%))
       border-bottom: 1px solid $borderColor
+      .point
+        .t-vertical
+          span
+            transform: rotate(-90deg) translateX(-5px) translateY(5px)
       &:hover
         cursor: auto
         background: transparent
@@ -29,18 +33,18 @@
     &.point
       flex-basis: 40px
     &.checkbox
-      flex-basis: 40px
+      flex-basis: 45px
       padding-left: 0
     &.id
-      flex-basis: 60px
+      flex-basis: 65px
     &.name
-      flex-basis: 250px
+      flex-basis: 260px
     &.region
-      flex-basis: 200px
+      flex-basis: 230px
     &.city
-      flex-basis: 150px
+      flex-basis: 180px
     &.adress
-      flex-basis: 330px
+      flex-basis: 350px
 
     &:first-child
       padding-left: 0
@@ -57,6 +61,8 @@
   transition: opacity $transitionSpeed ease
   &.active
     opacity: 1
+    pointer-events: all
+
 
 .developer-filter
   display: inline-block
@@ -102,7 +108,7 @@
     align-items: center
     padding: 15px 0px
     transition: all $transitionSpeed ease
-    &:hover
+    &:hover:not(.table-dev-tk__row--head)
       background: white
       border-radius: 5px
       box-shadow: 0 20px 40px color(black a(10%))
@@ -113,7 +119,11 @@
     &--head
       color: color($fontColor a(60%))
       border-bottom: 1px solid $borderColor
-
+      .table-dev-tk__col
+        &:nth-child(2)
+          margin-left: -14px
+        &:nth-child(3)
+          margin-left: 0px
       &:hover
         cursor: auto
         background: transparent

@@ -29,6 +29,10 @@
     overflow: hidden
     border-radius: 5px
     box-shadow: 0 20px 40px color(black a(20%))
+    @media($mobile)
+      padding-left: 15px
+      padding-right: 15px
+      padding-bottom: 50px
     &--no-pad
       padding: 0
 
@@ -100,16 +104,21 @@
   &__developer
     display: flex
     &__content
-      flex: 0 0 64%
+      flex: 0 0 62%
       padding: 40px 40px 40px 40px
     &__bottom
       border-top: 1px solid $borderColor
       padding: 20px 40px 30px 20px
     &__sidebar
-      flex: 0 0 36%
+      flex: 0 0 38%
       font-size: 0
       .ui-group
         margin-right: 20px
+    &__id
+      display: inline-block
+      background: #FDFAF2
+      padding: 6px 10px
+      font-size: 14px
 
 button.mfp-close
   size: 50px

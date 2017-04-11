@@ -302,13 +302,18 @@ $(document).ready( function() {
     $('.developer-filter__content').addClass('active');
   });
 
-  _document.click(function (e) {
-    var _value = $('.js-developer-filter');
-    if (!_value.is(e.target) && _value.has(e.target).length === 0) {
-      $('.developer-overlay').removeClass('active');
-      $('.developer-filter__content').removeClass('active');
-    }
+  $('.developer-overlay').on('click', function(){
+    $('.developer-overlay').removeClass('active');
+    $('.developer-filter__content').removeClass('active');
   });
+
+  // _document.click(function (e) {
+  //   var _value = $('.js-developer-filter');
+  //   if (!_value.is(e.target) && _value.has(e.target).length === 0) {
+  //     $('.developer-overlay').removeClass('active');
+  //     $('.developer-filter__content').removeClass('active');
+  //   }
+  // });
 
   // STICKY FILTER
   // _window.on('scroll', function(){
