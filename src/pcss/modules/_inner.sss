@@ -43,8 +43,13 @@
     font-weight: 700
     cursor: pointer
     background: #fafafa
+    transition: all $transitionSpeed ease
     &.active
       background: white
+  &__content
+    display: none
+    &.active
+      display: block
 
 .row--ul
   margin-bottom: 45px
@@ -254,10 +259,6 @@
     &__content
       margin: 20px 35px
       font-size: 16px
-
-  .tab
-    &__title
-      background: white
 
   .post
     &__hero

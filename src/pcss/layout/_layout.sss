@@ -26,6 +26,10 @@ body, html
   // not supported by Noto sans ???
   // -webkit-font-smoothing: antialiased
   // -moz-osx-font-smoothing: grayscale
+  &.lock
+    overflow-y: hidden
+    max-height: 100vh
+    margin-bottom: 0 !important
 
 .container
   max-width: 1000px
@@ -80,9 +84,6 @@ body, html
     position: relative
     z-index: 1
     background: #F6F6F6
-  &.lock
-    overflow-y: hidden
-    max-height: 100vh
   &.no-header-float
     .header
       position: static

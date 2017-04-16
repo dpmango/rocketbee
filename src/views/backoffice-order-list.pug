@@ -106,6 +106,27 @@ html
                       .table__col телефон
                       .table__col сумма, ₽
                       .table__col 
+                    // data row
+                    .table__row(data-id=val)
+                      .table__col
+                        .ui-checkbox
+                          input(type="checkbox" name="checkbox" id='table_00')
+                          label(for='table_00') 
+                            span
+                      .table__col 02.02.17 12:35 <br> 00000000
+                      .table__col.table__logo
+                        img(src='images/resultsCard_ems.png')
+                      .table__col.table__col--grow Петропавловск-Камчатский
+                      .table__col.table__col--grow.fz14 Крестовоздвижнический <br> Иннокентий Иннокентьевич
+                      .table__col +7 000 000-00-00
+                      .table__col 10000,00
+                      .table__col 
+                        a(href='#backofficePrint').popup-with-zoom-anim
+                          i.ico.ico-print
+                        a(href='#backofficeTrack').popup-with-zoom-anim.active
+                          i.ico.ico-track
+                        a(href='backoffice-order-single.html')
+                          i.ico.ico-more
                     each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
                       // data row
                       .table__row(data-id=val)

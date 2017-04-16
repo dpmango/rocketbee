@@ -65,40 +65,59 @@ html
             .row.mt10
               .col.col--auto
                 .white-shadow
-                  .row.tab
+                  .row.tab.row--column--tablet
                     .col.col--auto
                       .tab__title.active(data-tab='1') Личный кабинет 
                         span.label.label--red Бесплатно
                         
-                    .col.col--auto.hidden--tablet
-                      .tab__title(data-tab='1') RocketBee API
+                    .col.col--auto
+                      .tab__title(data-tab='2') RocketBee API
                   
                   .p50-wrapper
-                    .row.row--column--tablet
-                      .col.col--3-6
-                        .row.row--no-col.row--ul.row--aic
-                          i.ico.ico-checkmark-blot
-                          span.fz14 Расчет стоимости, сроков доставки и наложенного платежа Почтой России с учетом ограничений
-                        .row.row--no-col.row--ul.row--aic
-                          i.ico.ico-checkmark-blot
-                          span.fz14 Расчет стоимости, сроков доставки и наложенного платежа Почтой России с учетом ограничений
-                        .row.row--no-col.row--ul.row--aic
-                          i.ico.ico-checkmark-blot
-                          span.fz14 Ускорение заполнения этикеток и бланков при помощи шаблонов
-                      
-                      .col.col--3-6.visible--tablet.mt20--tablet
-                        .tab__title(data-tab='1') RocketBee API
-                      .col.col--3-6
-                        .row.row--no-col.row--ul.row--aic
-                          i.ico.ico-checkmark-blot
-                          span.fz14 Отслеживание отправлений по трекинг-номеру
-                        .row.row--no-col.row--ul.row--aic
-                          i.ico.ico-checkmark-blot
-                          span.fz14 Ускорение расчета сроков и стоимости при помощи шаблонов
-                        .row.row--no-col.row--ul.row--aic
-                          i.ico.ico-checkmark-blot
-                          span.fz14 Учет отправок через личный кабинет
-                  
+                    .tab__content.active(data-tab='1')
+                      .row.row--column--tablet
+                        .col.col--3-6
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Расчет стоимости, сроков доставки и наложенного платежа Почтой России с учетом ограничений
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Расчет стоимости, сроков доставки и наложенного платежа Почтой России с учетом ограничений
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Ускорение заполнения этикеток и бланков при помощи шаблонов
+                        
+                        //- .col.col--3-6.visible--tablet.mt20--tablet
+                        //-   .tab__title(data-tab='1') RocketBee API
+                        .col.col--3-6
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Отслеживание отправлений по трекинг-номеру
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Ускорение расчета сроков и стоимости при помощи шаблонов
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Учет отправок через личный кабинет
+                    // next tab
+                    .tab__content(data-tab='2')
+                      .row.row--column--tablet
+                        .col.col--3-6
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        .col.col--3-6
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+                          .row.row--no-col.row--ul.row--aic
+                            i.ico.ico-checkmark-blot
+                            span.fz14 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
                   .yellow-bg
                     .row.row--no-col.row--ul.row--column--mobile.row--aic--mobile
                       i.ico.ico-rocket

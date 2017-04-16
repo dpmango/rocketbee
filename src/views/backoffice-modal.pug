@@ -12,19 +12,19 @@ html
         .text-center(style='display: flex; align-items:center; justify-content: center; height: 70vh;')
           .row.row--column
             .col.col--auto
-              a(href='#backofficeLogin').btn.btn--primary.popup-with-zoom-anim
+              a(href='#backofficeLogin').btn.btn--primary.popup-with-zoom-anim.popup-lock-body
                 span Вход
             .col.col--auto.mt20
-              a(href='#backofficeRegister').btn.btn--primary.popup-with-zoom-anim
+              a(href='#backofficeRegister').btn.btn--primary.popup-with-zoom-anim.popup-lock-body
                 span Регистрация
             .col.col--auto.mt20
-              a(href='#backofficeAbstract').btn.btn--primary.popup-with-zoom-anim
+              a(href='#backofficeAbstract').btn.btn--primary.popup-with-zoom-anim.popup-lock-body
                 span Абстрактное сообщение
             .col.col--auto.mt20
-              a(href='#backofficeRecover').btn.btn--primary.popup-with-zoom-anim
+              a(href='#backofficeRecover').btn.btn--primary.popup-with-zoom-anim.popup-lock-body
                 span Восстановить пароль
             .col.col--auto.mt20
-              a(href='#backofficeReset').btn.btn--primary.popup-with-zoom-anim
+              a(href='#backofficeReset').btn.btn--primary.popup-with-zoom-anim.popup-lock-body
                 span Сменить пароль   
         
         // LOGIN
@@ -43,10 +43,10 @@ html
                 label Пароль
                 .ui-input
                   input(type='password' placeholder='Введите пароль')
-              .row.row--no-col.row--aic.row--jcsb.mt30
+              .row.row--no-col.row--aic.row--jcsb.row--column--mobile.mt30
                 a(href='#').btn.btn--primary 
                   span Войти
-                a(href='#').modal__link Восстановить пароль
+                a(href='#').modal__link.mt20--mobile Восстановить пароль
         
         // ABSTRACT
         #backofficeAbstract.modal.modal--narrow.zoom-anim-dialog.mfp-hide
@@ -95,14 +95,14 @@ html
               .modal__header-action
                 | <a href="#backofficeLogin" class='popup-with-zoom-anim'>Вход </a><span> или </span><a class="active" href="#">регистрация</a>
             form(action='')
-              .row.row--narrow
+              .row.row--narrow.row--column--tablet
                 .col.col--3-6
                   .ui-group
                     label Фамилия
                     .ui-input
                       input(type='text' placeholder='Ваша фамилия')
                 .col.col--3-6
-                  .row.row--narrow
+                  .row.row--narrow.row--column--mobile
                     .col.col--3-6
                       .ui-group
                         label Имя:
@@ -114,23 +114,23 @@ html
                         .ui-input
                           input(type='text' placeholder='Ваше отчество')
                 
-              .row.row--narrow
+              .row.row--narrow.row--column--mobile
                 .col.col--3-6            
                   .ui-group
                     label Телефон
                     .ui-input
                       input(type='tel' placeholder="Ваш телефон" data-mask="0 (000) 000-0000")
 
-              .row.row--narrow
+              .row.row--narrow.row--column--mobile
                 .col.col--3-6            
                   .ui-group
                     label E-mail:
                     .ui-input
                       input(type='email' placeholder="Ваш email")
                 .col.col--3-6
-                  .muted-text-row.fz14.mt30 Будет использоваться для входа в личный кабинет и восстановления пароля
+                  .muted-text-row.fz14.mt30.mt10--mobile Будет использоваться для входа в личный кабинет и восстановления пароля
                   
-              .row.row--narrow
+              .row.row--narrow.row--column--mobile
                 .col.col--3-6            
                   .ui-group
                     label Пароль:
@@ -144,9 +144,9 @@ html
               
               hr
                 
-              .row.row--no-col.row--aic.mt30
+              .row.row--no-col.row--aic.mt30.row--column--mobile
                 a(href='#').btn.btn--primary 
                   span Зарегистрироваться
-                span.fz14.ml7p Не заполнены поля <a href='#' class="c-blue c-blue--dash">«Телефон»</a> и <a href='#' class='c-blue c-blue--dash'>«E-mail»</a>
+                span.fz14.ml7p.mt20--mobile.ml0--mobile Не заполнены поля <a href='#' class="c-blue c-blue--dash">«Телефон»</a> и <a href='#' class='c-blue c-blue--dash'>«E-mail»</a>
                                                                                          
       include shared/footer.pug

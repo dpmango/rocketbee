@@ -216,7 +216,7 @@ $(document).ready( function() {
   // Magnific Popup
   $('.popup-with-zoom-anim').magnificPopup({
     type: 'inline',
-    fixedContentPos: false,
+    fixedContentPos: true,
     fixedBgPos: true,
     overflowY: 'auto',
     closeBtnInside: true,
@@ -226,9 +226,35 @@ $(document).ready( function() {
     mainClass: 'my-mfp-zoom-in'
   });
 
+  // Modal with locked body
+  $('.popup-lock-body').on('click', function(){
+    // $('body').addClass('lock');
+  });
+
   // MASK
   // $(".js-phoneMask").mask("0 (000) 000-0000");
 
+  // TABS
+  $('.tab__title').on('click', function(){
+    var currentTab = $(this).data('tab');
+
+    $('.tab__title').each(function(i, val){
+      if ( $(val).data('tab') == currentTab ){
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active');
+      }
+    });
+
+    $('.tab__content').each(function(i, val){
+      if ( $(val).data('tab') == currentTab ){
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active');
+      }
+    });
+
+  });
 
   ///////////////
   // BACKOFFICE
@@ -272,15 +298,15 @@ $(document).ready( function() {
       }
   });
 
-  $('.table__row').on('click', function(){
+  $('.table__row').on('click touchstart', function(){
     var checkbox = $(this).find(':checkbox');
-    console.log(checkbox)
 
     if( checkbox.is(':checked') ) {
         checkbox.prop('checked', false);
     } else {
         checkbox.prop('checked', true);
     }
+    checkbox.trigger('change');
   });
 
   // SHOW XML
@@ -307,26 +333,30 @@ $(document).ready( function() {
     $('.developer-filter__content').removeClass('active');
   });
 
-  // _document.click(function (e) {
-  //   var _value = $('.js-developer-filter');
-  //   if (!_value.is(e.target) && _value.has(e.target).length === 0) {
-  //     $('.developer-overlay').removeClass('active');
-  //     $('.developer-filter__content').removeClass('active');
-  //   }
-  // });
+  $('.table-dev__col.checkbox').on('click touchstart', function(e){
+    var checkbox = $(this).find(':checkbox');
+
+    if( checkbox.is(':checked') ) {
+        checkbox.prop('checked', false);
+    } else {
+        checkbox.prop('checked', true);
+    }
+    checkbox.trigger('change');
+
+    return false;
+  });
 
   // STICKY FILTER
-  // _window.on('scroll', function(){
-  //   var stickyEl = $('.backoffice__sticky');
-  //   var stickyElPos = stickyEl.offset().top;
-  //   var windowHeight = _document.height();
-  //   var stopPoint = windowHeight - bodyMargin;
-  //
-  //   if ( stickyElPos >= stopPoint){
-  //     stickyEl.addClass('backoffice__sticky--stop');
-  //   } else {
-  //     stickyEl.removeClass('backoffice__sticky--stop');
-  //   }
-  // });
+  _window.scrolled(10, function(){
+    var stickyEl = $('.backoffice__sticky');
+    var windowBottomScroll = _window.scrollTop() + _window.height();
+    var stopPoint = _document.height(); - bodyMargin;
+
+    if ( windowBottomScroll >= stopPoint){
+      stickyEl.addClass('backoffice__sticky--stop');
+    } else if ( windowBottomScroll < stopPoint) {
+      stickyEl.removeClass('backoffice__sticky--stop');
+    }
+  });
 
 });

@@ -934,6 +934,11 @@ body, html {
     font-size: 16px;
     font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;/* not supported by Noto sans ??? *//* -webkit-font-smoothing: antialiased *//* -moz-osx-font-smoothing: grayscale */
 }
+body.lock, html.lock {
+    overflow-y: hidden;
+    margin-bottom: 0 !important;
+    max-height: 100vh;
+}
 .container {
     margin-right: auto;
     margin-left: auto;
@@ -980,10 +985,6 @@ body, html {
     background: #F6F6F6;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;/* heading pad */
-}
-.app.lock {
-    overflow-y: hidden;
-    max-height: 100vh;
 }
 .app.no-header-float .header {
     position: static;
@@ -2774,7 +2775,7 @@ button {
 .blot--one {
     width: 145px;
     height: 131px;
-    background-image: url('../../images/el/blot-1.png');
+    background-image: url('../..images/el/blot-1.png');
 }
 .blot--one .ico {
     margin-top: 5px;
@@ -2783,7 +2784,7 @@ button {
 .blot--two {
     width: 127px;
     height: 131px;
-    background-image: url('../../images/el/blot-2.png');
+    background-image: url('../..images/el/blot-2.png');
 }
 .blot--two .ico {
     margin-bottom: 7px;
@@ -2791,7 +2792,7 @@ button {
 .blot--three {
     width: 117px;
     height: 131px;
-    background-image: url('../../images/el/blot-3.png');
+    background-image: url('../..images/el/blot-3.png');
 }
 .list-line li {
     position: relative;
@@ -2884,7 +2885,9 @@ button {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #CCCCCC;
+    background: -webkit-gradient(linear, left top, right top, from(#CCC), to(#CCC));
+    background: -webkit-linear-gradient(left, #CCC, #CCC);
+    background: linear-gradient(to right, #CCC, #CCC);
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
@@ -3751,9 +3754,17 @@ button {
     font-size: 20px;
     line-height: 2;
     cursor: pointer;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
 }
 .tab__title.active {
     background: white;
+}
+.tab__content {
+    display: none;
+}
+.tab__content.active {
+    display: block;
 }
 .row--ul {
     margin-bottom: 45px;

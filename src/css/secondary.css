@@ -192,12 +192,12 @@
     width: 26px;
     height: 26px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='26px' height='26px' viewBox='0 0 26 26' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EGroup%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E %3Cpath d='M6,23 L0,23 L0,12.9931023 C0,10.7877728 1.78708529,9 4.00552025,9 L21.9944797,9 C24.2066675,9 26,10.7873299 26,12.9931023 L26,23 L20,23' id='path-1'/%3E %3Cmask id='mask-2' maskContentUnits='userSpaceOnUse' maskUnits='objectBoundingBox' x='0' y='0' width='26' height='14' fill='white'%3E %3Cuse xlink:href='%23path-1'/%3E %3C/mask%3E %3Crect id='path-3' x='5' y='0' width='16' height='11'/%3E %3Cmask id='mask-4' maskContentUnits='userSpaceOnUse' maskUnits='objectBoundingBox' x='0' y='0' width='16' height='11' fill='white'%3E %3Cuse xlink:href='%23path-3'/%3E %3C/mask%3E %3Crect id='path-5' x='5' y='17' width='16' height='9'/%3E %3Cmask id='mask-6' maskContentUnits='userSpaceOnUse' maskUnits='objectBoundingBox' x='0' y='0' width='16' height='9' fill='white'%3E %3Cuse xlink:href='%23path-5'/%3E %3C/mask%3E %3C/defs%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='ICN/printer' stroke='%23222222'%3E %3Cg id='Group'%3E %3Cg%3E %3Cuse id='Rectangle-16' mask='url(%23mask-2)' stroke-width='4' xlink:href='%23path-1'/%3E %3Cuse id='Rectangle-16-Copy' mask='url(%23mask-4)' stroke-width='4' xlink:href='%23path-3'/%3E %3Cuse id='Rectangle-16-Copy-2' mask='url(%23mask-6)' stroke-width='4' xlink:href='%23path-5'/%3E %3Cpath d='M21,14 L19,14 L21,14 Z' id='Path-3' stroke-width='2'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
-    opacity: .2;
+    opacity: 1;
     -webkit-transition: opacity .2s ease;
     transition: opacity .2s ease;
 }
 .ico-print:hover {
-    opacity: 1;
+    opacity: 0.7;
 }
 .ico-print--acent {
     opacity: 1;
@@ -243,6 +243,9 @@
     width: 22px;
     height: 22px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='22px' height='22px' viewBox='0 0 22 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eicn/show-on-map%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E %3Ccircle id='path-1' cx='11' cy='11' r='8'/%3E %3Cmask id='mask-2' maskContentUnits='userSpaceOnUse' maskUnits='objectBoundingBox' x='0' y='0' width='16' height='16' fill='white'%3E %3Cuse xlink:href='%23path-1'/%3E %3C/mask%3E %3C/defs%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='icn/show-on-map'%3E %3Cg%3E %3Ccircle id='Oval-108' fill='%23222222' cx='11' cy='11' r='3'/%3E %3Cuse id='Oval-108-Copy' stroke='%23222222' mask='url(%23mask-2)' stroke-width='4' xlink:href='%23path-1'/%3E %3Cg id='Group-32' transform='translate(10.000000, 0.000000)' fill='%23222222'%3E %3Crect id='Rectangle-322' x='0' y='19' width='2' height='3'/%3E %3Crect id='Rectangle-322-Copy' x='0' y='0' width='2' height='3'/%3E %3C/g%3E %3Cg id='Group-32-Copy' transform='translate(11.000000, 11.000000) rotate(-270.000000) translate(-11.000000, -11.000000) translate(10.000000, 0.000000)' fill='%23222222'%3E %3Crect id='Rectangle-322' x='1.77635684e-15' y='19' width='2' height='3'/%3E %3Crect id='Rectangle-322-Copy' x='-1.77635684e-15' y='0' width='2' height='3'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.table__col .active > .ico-track {
+    opacity: 1;
 }
 .ico-owl-prev, .ico-owl-next {
     width: 50px;
@@ -376,6 +379,16 @@
 }
 .modal--narrow .modal__wrapper--smaller {
     padding: 30px 10% 40px 10%;
+}
+@media(max-width: 568px) {
+    .modal--narrow .modal__wrapper {
+        padding: 30px 30px 40px 30px;
+    }
+}
+@media(max-width: 568px) {
+    .modal--narrow .modal__wrapper--smaller {
+        padding: 30px 20px 30px 20px;
+    }
 }
 .modal--developer {
     max-width: 980px;
@@ -536,6 +549,16 @@ button.mfp-close:hover {
 }
 button.mfp-close:active {
     top: -25px;
+}
+@media(max-width: 880px) {
+    .modal--wide button.mfp-close {
+        right: 0;
+    }
+}
+@media(max-width: 530px) {
+    .modal--narrow button.mfp-close {
+        right: 0;
+    }
 }
 /* Fade-zoom animation for first dialog */
 .my-mfp-zoom-in .zoom-anim-dialog {
@@ -893,6 +916,11 @@ button.mfp-close:active {
     -webkit-box-shadow: none;
             box-shadow: none;
     color: #888;
+}
+.jq-selectbox.opened .jq-selectbox__trigger-arrow {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+        -ms-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
 }
 .jq-selectbox__select-text {
     display: block;

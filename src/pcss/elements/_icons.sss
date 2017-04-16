@@ -149,10 +149,10 @@
   &-print
     background-image: svg-load('../../images/svg/ico-print.svg')
     size: 26px
-    opacity: .2
+    opacity: 1
     transition: opacity $transitionSpeed ease
     &:hover
-      opacity: 1
+      opacity: 0.7
     &--acent
       opacity: 1
   &-track
@@ -185,6 +185,10 @@
   &-geolocation
     background-image: svg-load('../../images/svg/ico-geolocation.svg')
     size: 22px
+
+.table__col .active
+  > .ico-track
+    opacity: 1
 
 .ico-owl-prev, .ico-owl-next
   size: 50px
