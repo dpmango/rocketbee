@@ -3,11 +3,13 @@
   <head>
     <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rocket Bee</title>
-    <link rel="stylesheet" href="css/mq/styles.css">
-    <!-- link(rel="stylesheet" href="components/highlight/styles/default.css" type="text/css")-->
-    <meta name="description" keywords="">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="app no-header-float">
@@ -51,11 +53,11 @@
       <div class="app__content">
         <div class="text-center" style="display: flex; align-items:center; justify-content: center; height: 70vh;">
           <div class="row row--column">
-            <div class="col col--auto"><a class="btn btn--primary popup-with-zoom-anim" href="#backofficeLogin"><span>Вход</span></a></div>
-            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim" href="#backofficeRegister"><span>Регистрация</span></a></div>
-            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim" href="#backofficeAbstract"><span>Абстрактное сообщение</span></a></div>
-            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim" href="#backofficeRecover"><span>Восстановить пароль</span></a></div>
-            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim" href="#backofficeReset"><span>Сменить пароль   </span></a></div>
+            <div class="col col--auto"><a class="btn btn--primary popup-with-zoom-anim popup-lock-body" href="#backofficeLogin"><span>Вход</span></a></div>
+            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim popup-lock-body" href="#backofficeRegister"><span>Регистрация</span></a></div>
+            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim popup-lock-body" href="#backofficeAbstract"><span>Абстрактное сообщение</span></a></div>
+            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim popup-lock-body" href="#backofficeRecover"><span>Восстановить пароль</span></a></div>
+            <div class="col col--auto mt20"><a class="btn btn--primary popup-with-zoom-anim popup-lock-body" href="#backofficeReset"><span>Сменить пароль   </span></a></div>
           </div>
         </div>
         <!-- LOGIN-->
@@ -78,7 +80,7 @@
                   <input type="password" placeholder="Введите пароль">
                 </div>
               </div>
-              <div class="row row--no-col row--aic row--jcsb mt30"><a class="btn btn--primary" href="#"> <span>Войти</span></a><a class="modal__link" href="#">Восстановить пароль</a></div>
+              <div class="row row--no-col row--aic row--jcsb row--column--mobile mt30"><a class="btn btn--primary" href="#"> <span>Войти</span></a><a class="modal__link mt20--mobile" href="#">Восстановить пароль</a></div>
             </form>
           </div>
         </div>
@@ -135,7 +137,7 @@
               <div class="modal__header-action"><a href="#backofficeLogin" class='popup-with-zoom-anim'>Вход </a><span> или </span><a class="active" href="#">регистрация</a></div>
             </div>
             <form action="">
-              <div class="row row--narrow">
+              <div class="row row--narrow row--column--tablet">
                 <div class="col col--3-6">
                   <div class="ui-group">
                     <label>Фамилия</label>
@@ -145,7 +147,7 @@
                   </div>
                 </div>
                 <div class="col col--3-6">
-                  <div class="row row--narrow">
+                  <div class="row row--narrow row--column--mobile">
                     <div class="col col--3-6">
                       <div class="ui-group">
                         <label>Имя:</label>
@@ -165,8 +167,8 @@
                   </div>
                 </div>
               </div>
-              <div class="row row--narrow">
-                <div class="col col--3-6">
+              <div class="row row--narrow row--column--mobile">
+                <div class="col col--3-6">           
                   <div class="ui-group">
                     <label>Телефон</label>
                     <div class="ui-input">
@@ -175,8 +177,8 @@
                   </div>
                 </div>
               </div>
-              <div class="row row--narrow">
-                <div class="col col--3-6">
+              <div class="row row--narrow row--column--mobile">
+                <div class="col col--3-6">           
                   <div class="ui-group">
                     <label>E-mail:</label>
                     <div class="ui-input">
@@ -185,11 +187,11 @@
                   </div>
                 </div>
                 <div class="col col--3-6">
-                  <div class="muted-text-row fz14 mt30">Будет использоваться для входа в личный кабинет и восстановления пароля</div>
+                  <div class="muted-text-row fz14 mt30 mt10--mobile">Будет использоваться для входа в личный кабинет и восстановления пароля</div>
                 </div>
               </div>
-              <div class="row row--narrow">
-                <div class="col col--3-6">
+              <div class="row row--narrow row--column--mobile">
+                <div class="col col--3-6">           
                   <div class="ui-group">
                     <label>Пароль:</label>
                     <div class="ui-input">
@@ -203,7 +205,7 @@
                 <label for="checkbox_1"> <span>Принимаю условия <a href='#' class="c-blue">договора оферты</a></span></label>
               </div>
               <hr>
-              <div class="row row--no-col row--aic mt30"><a class="btn btn--primary" href="#"> <span>Зарегистрироваться</span></a><span class="fz14 ml7p">Не заполнены поля <a href='#' class="c-blue c-blue--dash">«Телефон»</a> и <a href='#' class='c-blue c-blue--dash'>«E-mail»</a></span></div>
+              <div class="row row--no-col row--aic mt30 row--column--mobile"><a class="btn btn--primary" href="#"> <span>Зарегистрироваться</span></a><span class="fz14 ml7p mt20--mobile ml0--mobile">Не заполнены поля <a href='#' class="c-blue c-blue--dash">«Телефон»</a> и <a href='#' class='c-blue c-blue--dash'>«E-mail»</a></span></div>
             </form>
           </div>
         </div>
@@ -229,7 +231,7 @@
         </div>
       </div>
       <!-- SECONDARY STYLES-->
-      <link rel="stylesheet" href="css/mq/secondary.css">
+      <link rel="stylesheet" href="css/secondary.css">
       <!-- SCRIPTS-->
       <script src="js/scripts.min.js"></script>
     </div>
