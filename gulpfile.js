@@ -155,7 +155,7 @@ gulp.task('mqpicker', function () {
   return gulp.src('./dist/css/*.css')
     .pipe( postcss([mqpacker()]) )
     .pipe(rename({ extname: '.mq.css' }))
-    .pipe(gulp.dest('dist/css/mq'));;
+    .pipe(gulp.dest('dist/css'));;
 });
 
 

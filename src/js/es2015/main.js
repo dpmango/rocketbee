@@ -214,6 +214,7 @@ $(document).ready( function() {
   });
 
   // Magnific Popup
+  var startWindowScroll = 0;
   $('.popup-with-zoom-anim').magnificPopup({
     type: 'inline',
     fixedContentPos: true,
@@ -223,12 +224,17 @@ $(document).ready( function() {
     preloader: false,
     midClick: true,
     removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
-
-  // Modal with locked body
-  $('.popup-lock-body').on('click', function(){
-    // $('body').addClass('lock');
+    mainClass: 'my-mfp-zoom-in',
+    callbacks: {
+      beforeOpen: function() {
+        startWindowScroll = _window.scrollTop();
+        $('html').addClass('mfp-helper');
+      },
+      close: function() {
+        $('html').removeClass('mfp-helper');
+        _window.scrollTop(startWindowScroll);
+      }
+    }
   });
 
   // MASK
@@ -262,9 +268,11 @@ $(document).ready( function() {
 
   // DISABLE MEDIA QUERIES
   if ( $('.app').is('.non-responsive') ){
-    $('meta[name="viewport"]').prop('content', 'width=1200');
+    $('meta[name="viewport"]').prop('content', 'width=1020');
   }
-
+  if ( $('.app').is('.developer') ){
+    $('meta[name="viewport"]').prop('content', 'width=1400');
+  }
 
   // TRIGGER USER DROPDOWN
   $('.header__user__trigger').on('click', function(){
@@ -298,7 +306,7 @@ $(document).ready( function() {
       }
   });
 
-  $('.table__row').on('click touchstart', function(){
+  $('.table__row').on('click', function(){
     var checkbox = $(this).find(':checkbox');
 
     if( checkbox.is(':checked') ) {
@@ -333,7 +341,7 @@ $(document).ready( function() {
     $('.developer-filter__content').removeClass('active');
   });
 
-  $('.table-dev__col.checkbox').on('click touchstart', function(e){
+  $('.table-dev__col.checkbox').on('click', function(e){
     var checkbox = $(this).find(':checkbox');
 
     if( checkbox.is(':checked') ) {

@@ -1,5 +1,17 @@
 // Styles for dialog window
 
+.mfp-wrap
+  -webkit-overflow-scrolling: touch
+  -webkit-transform: translateZ(0)
+
+html.mfp-helper
+  height: 100%
+  body
+    overflow: hidden
+    height: 100%
+    -webkit-transform: translateZ(0)
+    margin-bottom: 0 !important
+
 .modal
   margin: 40px auto
   overflow: visible
@@ -8,9 +20,16 @@
     @media(width <= 880px)
       margin-left: 25px
       margin-right: 25px
+    @media($tablet)
+      margin-left: 10px
+      margin-right: 10px
 
   &--narrow
     max-width: 480px
+    @media(width <= 500px)
+      margin-left: 10px
+      margin-right: 10px
+
     .modal__wrapper
       padding: 30px 15% 60px 15%
       @media($mobile)
@@ -141,12 +160,14 @@ button.mfp-close
 @media(width <= 880px)
   .modal--wide
     button.mfp-close
-      right: 0
+      right: -10px
+      top: -10px
 
 @media(width <= 530px)
   .modal--narrow
     button.mfp-close
-      right: 0
+      right: -10px
+      top: -10px
 
 // Fade-zoom animation for first dialog
 

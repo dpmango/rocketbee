@@ -18,12 +18,12 @@
 .ico-logo {
     width: 215px;
     height: 50px;
-    background-image: url(../../images/logo.png);
+    background-image: url(../images/logo.png);
 }
 .ico-info-hero-abstract-1 {
     width: 1200px;
     height: 1200px;
-    background-image: url(../../images/el/heroPic.png);
+    background-image: url(../images/el/heroPic.png);
 }
 .ico-arrow-right {
     width: 16px;
@@ -143,18 +143,18 @@
 .ico-price-blot {
     width: 60px;
     height: 60px;
-    background-image: url('../../images/el/ico-price-blot.png');
+    background-image: url('../images/el/ico-price-blot.png');
     mix-blend-mode: multiply;/* this is bad! - refactor png */
 }
 .ico-plus-blot {
     width: 68px;
     height: 65px;
-    background-image: url('../../images/el/ico-plus-blot.png');
+    background-image: url('../images/el/ico-plus-blot.png');
 }
 .ico-minus-blot {
     width: 68px;
     height: 65px;
-    background-image: url('../../images/el/ico-minus-blot.png');
+    background-image: url('../images/el/ico-minus-blot.png');
 }
 .ico-checkmark-blot {
     width: 68px;
@@ -180,7 +180,7 @@
 .ico-prev {
     width: 15px;
     height: 8px;
-    background-image: url('../../images/el/ico-prev.png');
+    background-image: url('../images/el/ico-prev.png');
 }
 .ico-print {
     width: 26px;
@@ -316,6 +316,19 @@
     height: 8px;
 }
 /* Styles for dialog window */
+.mfp-wrap {
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+}
+html.mfp-helper {
+    height: 100%;
+}
+html.mfp-helper body {
+    overflow: hidden;
+    margin-bottom: 0 !important;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+}
 .modal {
     overflow: visible;
     margin: 40px auto;
@@ -486,7 +499,7 @@ button.mfp-close {
     right: -25px;
     width: 50px;
     height: 50px;
-    background: url('../../images/el/close-btn.png') no-repeat center;
+    background: url('../images/el/close-btn.png') no-repeat center;
     background-size: contain;
     font-size: 0;
     opacity: 1;
