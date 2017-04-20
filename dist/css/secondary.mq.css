@@ -325,7 +325,6 @@ html.mfp-helper {
 }
 html.mfp-helper body {
     overflow: hidden;
-    margin-bottom: 0 !important;
     height: 100%;
     -webkit-transform: translateZ(0);
 }
@@ -533,10 +532,13 @@ button.mfp-close:active {
         -ms-transform: scale(0.8);
             transform: scale(0.8);
 }
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0 !important;
+}
 .my-mfp-zoom-in.mfp-bg {
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-out;
-    transition: opacity 0.3s ease-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .my-mfp-zoom-in.mfp-ready.mfp-bg {
     opacity: 0.8;
@@ -869,10 +871,11 @@ button.mfp-close:active {
             box-shadow: none;
     color: #888;
 }
-.jq-selectbox.opened .jq-selectbox__trigger-arrow {
-    -webkit-transform: translateY(-50%) rotate(180deg);
-        -ms-transform: translateY(-50%) rotate(180deg);
-            transform: translateY(-50%) rotate(180deg);
+.jq-selectbox.opened .jq-selectbox__trigger-arrow {}
+.jq-selectbox.opened .jq-selectbox__trigger-arrow:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 .jq-selectbox__select-text {
     display: block;
@@ -892,19 +895,26 @@ button.mfp-close:active {
     height: 100%;
 }
 .jq-selectbox__trigger-arrow {
-    position: absolute;
-    top: 50%;
-    right: 15px;
     width: 0;
     height: 0;
-    border-top: 6px solid #CCCCCC;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+}
+.jq-selectbox__trigger-arrow:after {
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 12px;
+    height: 6px;
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='12px' height='6px' viewBox='0 0 12 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ERectangle 3%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='D_INDEX' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='D_index' transform='translate(-672.000000, -1637.000000)' fill='%23CCCCCC'%3E %3Cg id='Group-20' transform='translate(230.000000, 1390.000000)'%3E %3Cg id='Group-2-Copy-6' transform='translate(249.000000, 205.000000)'%3E %3Cpolygon id='Rectangle-3' points='205 42 199 48 193 42'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+    background-size: 12px 6px;
+    content: ' ';
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
 }
 .jq-selectbox {}
 .jq-selectbox:hover .jq-selectbox__trigger-arrow {

@@ -222,12 +222,20 @@ $(document).ready(function () {
     mainClass: 'my-mfp-zoom-in',
     callbacks: {
       beforeOpen: function beforeOpen() {
-        startWindowScroll = _window.scrollTop();
-        $('html').addClass('mfp-helper');
+        // $('html').addClass('mfp-helper');
+        startWindowScroll = $(window).scrollTop();
+      },
+      open: function open() {
+        if ($('.mfp-content').height() < $(window).height()) {
+          $('body').on('touchmove', function (e) {
+            e.preventDefault();
+          });
+        }
       },
       close: function close() {
-        $('html').removeClass('mfp-helper');
-        _window.scrollTop(startWindowScroll);
+        // $('html').removeClass('mfp-helper');
+        $(window).scrollTop(startWindowScroll);
+        $('body').off('touchmove');
       }
     }
   });
@@ -351,7 +359,7 @@ $(document).ready(function () {
   _window.scrolled(10, function () {
     var stickyEl = $('.backoffice__sticky');
     var windowBottomScroll = _window.scrollTop() + _window.height();
-    var stopPoint = _document.height();-bodyMargin;
+    var stopPoint = _document.height() - bodyMargin;
 
     if (windowBottomScroll >= stopPoint) {
       stickyEl.addClass('backoffice__sticky--stop');

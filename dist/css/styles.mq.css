@@ -2241,6 +2241,12 @@ button {
 .ui-row--inline .ui-input-collection {
     display: inline-block;
 }
+.ui-row--location .ui-group {
+    -webkit-flex: 0 0 230px;
+        -ms-flex: 0 0 230px;
+            flex: 0 0 230px;
+    -webkit-box-flex: 0;
+}
 /* styler UI */
 .jq-selectbox ul li {
     display: block;

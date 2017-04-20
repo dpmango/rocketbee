@@ -10,7 +10,7 @@ html.mfp-helper
     overflow: hidden
     height: 100%
     -webkit-transform: translateZ(0)
-    margin-bottom: 0 !important
+
 
 .modal
   margin: 40px auto
@@ -179,12 +179,15 @@ button.mfp-close
   &.mfp-ready .zoom-anim-dialog
     opacity: 1
     transform: scale(1)
-  &.mfp-removing .zoom-anim-dialog
-    transform: scale(0.8)
-    opacity: 0
+  &.mfp-removing
+    .zoom-anim-dialog
+      transform: scale(0.8)
+      opacity: 0
+    &.mfp-bg
+      opacity: 0 !important
   &.mfp-bg
     opacity: 0
-    transition: opacity 0.3s ease-out
+    transition: all .2s ease-in-out
   &.mfp-ready.mfp-bg
     opacity: 0.8
   &.mfp-removing.mfp-bg
